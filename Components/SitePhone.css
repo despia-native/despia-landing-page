@@ -49,10 +49,10 @@
 
 @media (min-width: 580px) {
   .sitephone-5 {
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 0rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
   }
 }
 
@@ -72,10 +72,10 @@
 
 @media (min-width: 580px) {
   .sitephone-6 {
-  border-top-left-radius: 4rem;
-  border-top-right-radius: 4rem;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 }
 
@@ -106,7 +106,7 @@
 
 @media (min-width: 400px) {
   .sitephone-8 {
-  padding-top: 5.5rem;
+    padding-top: 5.5rem;
   }
 }
 
@@ -270,7 +270,7 @@
 
 @media (min-width: 400px) {
   .sitephone-n {
-  padding-top: 5.5rem;
+    padding-top: 5.5rem;
   }
 }
 

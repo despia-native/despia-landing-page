@@ -34,7 +34,7 @@
 
 @media (min-width: 640px) {
   .sitefooter-3 {
-  flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -82,12 +82,12 @@
 
 @media (min-width: 640px) {
   .sitefooter-8 {
-  display: flex;
-  row-gap: 4rem;
-  column-gap: 4rem;
-  align-items: flex-start;
-  flex-direction: row;
-  justify-content: flex-end;
+    display: flex;
+    row-gap: 4rem;
+    column-gap: 4rem;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 }
 
@@ -237,7 +237,7 @@
 
 @media (min-width: 640px) {
   .sitefooter-k {
-  flex-direction: row;
+    flex-direction: row;
   }
 }
 

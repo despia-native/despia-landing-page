@@ -106,7 +106,7 @@
 
 @media (max-width: 750px) {
   .sitenavbar-6 {
-  display: none;
+    display: none;
   }
 }
 
@@ -179,10 +179,10 @@
 
 @media (max-width: 750px) {
   .sitenavbar-9 {
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  aspect-ratio: 1/1;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    aspect-ratio: 1/1;
   }
 }
 
@@ -239,7 +239,7 @@
 
 @starting-style {
   .sitenavbar-c {
-  translate: 0 -100% 0;
+    translate: 0 -100% 0;
   }
 }
 
@@ -259,21 +259,23 @@
   justify-content: flex-start;
 }
 
-.sitenavbar-c.light {
-  width: 100%;
-  height: auto;
-  display: flex;
-  row-gap: 0.75rem;
-  translate: 0 -100% 0;
-  background: var(--v3-ebebeb);
-  column-gap: 0.75rem;
-  align-items: flex-start;
-  padding-top: 0.75rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-bottom: 0.75rem;
-  backdrop-filter: blur(30px);
-  justify-content: flex-start;
+@starting-style {
+  .sitenavbar-c.light {
+    width: 100%;
+    height: auto;
+    display: flex;
+    row-gap: 0.75rem;
+    translate: 0 -100% 0;
+    background: var(--v3-ebebeb);
+    column-gap: 0.75rem;
+    align-items: flex-start;
+    padding-top: 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.75rem;
+    backdrop-filter: blur(30px);
+    justify-content: flex-start;
+  }
 }
 
 .sitenavbar-d {
