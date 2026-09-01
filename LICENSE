@@ -1,0 +1,50 @@
+Despia Landing Page: Source Available License
+Copyright (c) 2026 Despia LLC-FZ. All rights reserved.
+
+This repository is SOURCE AVAILABLE. It is not open source, and it is not licensed
+under any OSI approved licence. The source is published so that others can read it
+and learn from how we build with DSX. It remains our copyrighted marketing material.
+
+
+WHAT YOU MAY DO
+
+1. Read, study and reference this source for any purpose, including commercial work.
+
+2. Reuse the TECHNIQUES you learn here: routing patterns, component structure,
+   stylesheet organisation, state and motion patterns, and any DSX usage shown. Ideas,
+   patterns and approaches carry no restriction. Learning from this is the reason it
+   is published.
+
+3. Quote short excerpts of code with attribution, for teaching, review or discussion.
+
+
+WHAT YOU MAY NOT DO
+
+1. Copy, redistribute or republish this repository or any substantial part of it,
+   whether modified or not.
+
+2. Use the CONTENT: the marketing copy, page text, imagery, screenshots, video,
+   iconography, layout as a whole, or any file under public/.
+
+3. Use the Despia name, logo, wordmark, product names or brand assets, or present
+   your work in a way that suggests association with or endorsement by Despia.
+
+4. Deploy this site, or a derivative of it, as your own or on any domain.
+
+5. Remove or alter this notice.
+
+
+NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+The DSX framework and the Despia runtime are licensed separately. See
+https://github.com/despia-native for those terms.
+
+Questions about permitted use: support@despia.com

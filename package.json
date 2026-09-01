@@ -1,0 +1,17 @@
+{
+  "name": "despia-landing-page",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "despia.com, authored in DSX. Source available, not open source.",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "dev": "dsx dev",
+    "build": "dsx build",
+    "lint": "dsx lint --strict"
+  },
+  "devDependencies": {
+    "@despia-native/cli": "^0.0.1"
+  }
+}

@@ -1,0 +1,19 @@
+/* SiteSpinner: the component sheet. One class per node, plus its media-query, hover and
+   entry/exit variants. Generated; edit the page, not this file. */
+
+.sitespinner-1 {
+  color: inherit;
+  width: var(--size);
+  height: var(--size);
+  align-items: center;
+  justify-content: center;
+}
+
+.sitespinner-2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}

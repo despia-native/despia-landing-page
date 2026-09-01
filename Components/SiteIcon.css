@@ -1,0 +1,11 @@
+/* SiteIcon: the component sheet. One class per node, plus its media-query, hover and
+   entry/exit variants. Generated; edit the page, not this file. */
+
+.siteicon-1 {
+  color: inherit;
+}
+
+.siteicon-2 {
+  width: var(--width);
+  height: var(--height);
+}

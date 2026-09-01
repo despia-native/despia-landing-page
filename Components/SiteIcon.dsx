@@ -1,0 +1,18 @@
+<!-- SiteIcon: part of despia.com, authored in DSX.
+     Generated. The page is composed the way any DSX project is: a head block for the
+     contract (attributes, variables, actions, api), a body of pure markup, and one
+     sidecar stylesheet per component. Routing lives in dsx.config.json.
+     Copyright Despia LLC-FZ. Source available, not open source: see LICENSE. -->
+<stack class="ds siteicon-1">
+  <head>
+    <attribute as="name"/>
+    <attribute as="size"/>
+    <variable as="iconArt" computed="true">
+  if (dsx.attribute.name == 'terminal') return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path stroke="currentColor" d="M432 32 H80 C44.67 32.039 16.039 60.67 16 96 v320 C16.039 451.33 44.67 479.961 80 480 h352 C467.33 479.961 495.961 451.33 496 416 V96 C495.961 60.67 467.33 32.039 432 32 Z M96 256 C89.206 256 83.153 251.71 80.903 245.299 C78.653 238.889 80.697 231.756 86 227.51 L150.39 176 L86 124.49 C79.096 118.967 77.977 108.894 83.5 101.99 C89.023 95.086 99.096 93.967 106 99.49 l80 64 C189.8 166.526 192.013 171.126 192.013 175.99 C192.013 180.854 189.8 185.454 186 188.49 l-80 64 C103.162 254.762 99.635 256 96 256 Z m160 0 h-64 C183.163 256 176 248.837 176 240 C176 231.163 183.163 224 192 224 h64 C264.837 224 272 231.163 272 240 C272 248.837 264.837 256 256 256 Z"/></svg>'
+  if (dsx.attribute.name == 'layers-outline') return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M434.8 137.65l-149.36-68.1c-16.19-7.4-42.69-7.4-58.88 0L77.3 137.65c-17.6 8-17.6 21.09 0 29.09l148 67.5c16.89 7.7 44.69 7.7 61.58 0l148-67.5c17.52-8 17.52-21.1-.08-29.09zM160 308.52l-82.7 37.11c-17.6 8-17.6 21.1 0 29.1l148 67.5c16.89 7.69 44.69 7.69 61.58 0l148-67.5c17.6-8 17.6-21.1 0-29.1l-79.94-38.47" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M160 204.48l-82.8 37.16c-17.6 8-17.6 21.1 0 29.1l148 67.49c16.89 7.7 44.69 7.7 61.58 0l148-67.49c17.7-8 17.7-21.1.1-29.1L352 204.48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>'
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M336 336 h40 C398.091 336 416 318.091 416 296 V88 C416 65.909 398.091 48 376 48 H136 C113.909 48 96 65.909 96 88 v208 C96 318.091 113.909 336 136 336 h40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M176 240l80-80 80 80M256 464V176"/></svg>'
+    </variable>
+  </head>
+  <svg class="ds-icon ds siteicon-2" visible-if="dsx.attribute.name != 'loader'" style="--width: {{ dsx.attribute.size }}px; --height: {{ dsx.attribute.size }}px" src="{{ dsx.variable.iconArt }}"/>
+  <SiteSpinner sizePx="{{ !((dsx.attribute.size == null || String(dsx.attribute.size).length == 0 || String(dsx.attribute.size) == 'undefined' || String(dsx.attribute.size) == '-')) ? dsx.attribute.size : 24 }}" widthPx="2"/>
+</stack>

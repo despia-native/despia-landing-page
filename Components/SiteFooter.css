@@ -1,0 +1,253 @@
+/* SiteFooter: the component sheet. One class per node, plus its media-query, hover and
+   entry/exit variants. Generated; edit the page, not this file. */
+
+.sitefooter-1 {
+  color: var(--grey-900);
+  width: 100%;
+  display: block;
+  max-width: 85rem;
+  background: white;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  flex-direction: row;
+  padding-bottom: 2rem;
+}
+
+.sitefooter-2 {
+  gap: 3rem;
+  display: flex;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: column;
+}
+
+.sitefooter-3 {
+  gap: 2rem;
+  display: flex;
+  align-items: start;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  .sitefooter-3 {
+  flex-direction: row;
+  }
+}
+
+.sitefooter-4 {
+  gap: 1rem;
+  display: flex;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: column;
+}
+
+.sitefooter-5 {
+  width: 8rem;
+  box-sizing: border-box;
+}
+
+.sitefooter-6 {
+  color: var(--grey-700);
+  display: block;
+  font-size: 1rem;
+  max-width: 20rem;
+  font-family: Inter Tight;
+  font-weight: 400;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: row;
+}
+
+.sitefooter-7 {
+  color: var(--purple-600);
+  letter-spacing: -0.3px;
+}
+
+.sitefooter-8 {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  row-gap: 1rem;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .sitefooter-8 {
+  display: flex;
+  row-gap: 4rem;
+  column-gap: 4rem;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-end;
+  }
+}
+
+.sitefooter-9 {
+  gap: 1rem;
+  display: flex;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: column;
+}
+
+.sitefooter-a {
+  color: var(--grey-700);
+  display: block;
+  font-size: 1rem;
+  max-width: 20rem;
+  font-family: "Inter Tight";
+  font-weight: 500;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: row;
+}
+
+.sitefooter-b {
+  color: var(--grey-700);
+  display: block;
+  font-size: 1rem;
+  max-width: 20rem;
+  font-family: Inter Tight;
+  font-weight: 400;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: row;
+}
+
+.sitefooter-c {
+  gap: 1rem;
+  display: flex;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: column;
+}
+
+.sitefooter-d {
+  color: var(--grey-700);
+  display: block;
+  font-size: 1rem;
+  max-width: 20rem;
+  font-family: "Inter Tight";
+  font-weight: 500;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: row;
+}
+
+.sitefooter-e {
+  color: var(--grey-700);
+  display: block;
+  font-size: 1rem;
+  max-width: 20rem;
+  font-family: Inter Tight;
+  font-weight: 400;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: row;
+}
+
+.sitefooter-e:hover {
+  color: var(--v3-1a202c);
+}
+
+.sitefooter-f {
+  color: var(--grey-700);
+  display: block;
+  font-size: 1rem;
+  max-width: 20rem;
+  font-family: Inter Tight;
+  font-weight: 400;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: row;
+}
+
+.sitefooter-f:hover {
+  color: var(--v3-1a202c);
+}
+
+.sitefooter-g {
+  gap: 1rem;
+  display: flex;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: column;
+}
+
+.sitefooter-h {
+  color: var(--grey-700);
+  display: block;
+  font-size: 1rem;
+  max-width: 20rem;
+  font-family: "Inter Tight";
+  font-weight: 500;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: row;
+}
+
+.sitefooter-i {
+  gap: 0.5rem;
+  color: var(--grey-700);
+  display: flex;
+  font-size: 0.875rem;
+  font-family: 'Geist';
+  font-weight: 400;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: column;
+}
+
+.sitefooter-j {
+  color: var(--grey-700);
+  display: block;
+  font-size: 1rem;
+  max-width: 20rem;
+  font-family: Inter Tight;
+  font-weight: 400;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: row;
+}
+
+.sitefooter-j:hover {
+  color: var(--v3-1a202c);
+}
+
+.sitefooter-k {
+  gap: 1rem;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top-color: var(--grey-200);
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+@media (min-width: 640px) {
+  .sitefooter-k {
+  flex-direction: row;
+  }
+}
+
+.sitefooter-l {
+  color: var(--grey-700);
+  display: block;
+  font-size: 0.875rem;
+  font-family: 'Geist';
+  font-weight: 400;
+  border-style: solid;
+  border-width: 0;
+  flex-direction: row;
+}

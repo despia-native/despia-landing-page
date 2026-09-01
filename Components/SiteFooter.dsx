@@ -1,0 +1,67 @@
+<!-- SiteFooter: part of despia.com, authored in DSX.
+     Generated. The page is composed the way any DSX project is: a head block for the
+     contract (attributes, variables, actions, api), a body of pure markup, and one
+     sidecar stylesheet per component. Routing lives in dsx.config.json.
+     Copyright Despia LLC-FZ. Source available, not open source: see LICENSE. -->
+<stack class="ds sitefooter-1">
+  <head>
+    <script>
+function datafastGoal(name) {
+    // the datafa.st goal beacon; absent on a surface that never loaded the script
+    if (typeof datafast === 'function') datafast(name)
+  }
+    </script>
+  </head>
+  <stack class="ds sitefooter-2">
+    <stack class="ds sitefooter-3">
+      <stack class="ds sitefooter-4">
+        <svg class="ds ds-svg sitefooter-5" src="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 720 158.32&quot;&gt;&lt;path d=&quot;M79.16 0 C35.441 0 0 35.441 0 79.16 C43.719 79.16 79.16 43.719 79.16 0&quot;/&gt;&lt;path d=&quot;M0 79.16 H0 C0 122.879 35.441 158.32 79.16 158.32 C79.16 114.601 43.719 79.16 0 79.16&quot;/&gt;&lt;path d=&quot;M79.16 158.32 C122.879 158.32 158.32 122.879 158.32 79.16 h0 C114.601 79.16 79.16 114.601 79.16 158.32&quot;/&gt;&lt;path d=&quot;M125.77 63.75 C142.245 63.75 155.6 50.395 155.6 33.92 C155.6 17.445 142.245 4.09 125.77 4.09 C109.295 4.09 95.94 17.445 95.94 33.92 C95.946 50.392 109.298 63.744 125.77 63.75&quot;/&gt;&lt;path d=&quot;M199.7 23.18 h37.11 q23.34 0 39.08 15.15 t15.74 38.21 q0 23.07 -15.74 38.22 t-39.08 15.15 H199.7 Z m70.87 53.36 C270.73 67.221 267.167 58.223 260.67 51.54 C254.585 44.793 245.895 40.984 236.81 41.08 H219.92 V112 h16.89 C245.883 112.105 254.567 108.323 260.67 101.61 C267.167 94.927 270.73 85.929 270.57 76.61&quot;/&gt;&lt;path d=&quot;M391.92 88.63 C391.877 91.661 391.505 94.679 390.81 97.63 h-66.5 C325.572 102.502 328.466 106.794 332.51 109.79 C336.735 113.141 341.988 114.932 347.38 114.86 C351.212 114.922 354.992 113.963 358.33 112.08 C361.351 110.413 363.934 108.056 365.87 105.2 h21.95 C384.997 113.328 379.547 120.285 372.33 124.97 C364.948 129.893 356.252 132.472 347.38 132.37 q-18.61 0 -31.65 -12.61 t-13 -31.1 q0 -18.48 13.09 -31 t31.86 -12.54 C359.403 44.898 370.711 49.458 379 57.75 C387.473 65.764 392.19 76.969 392 88.63 m-67.33 -8 h45.72 C369.393 75.51 366.702 70.874 362.75 67.47 C358.595 63.877 353.241 61.977 347.75 62.15 C336.62 61.972 326.936 69.73 324.68 80.63&quot;/&gt;&lt;path d=&quot;M471.19 73 H451.6 C451.76 69.648 450.265 66.43 447.6 64.39 q-4 -3.06 -10.67 -3.06 q-6.39 0 -9.58 2.5 C425.295 65.334 424.101 67.744 424.15 70.29 C424.091 72.921 425.513 75.363 427.83 76.61 C430.665 78.213 433.821 79.162 437.07 79.39 C441.102 79.81 445.107 80.447 449.07 81.3 C453.139 82.148 457.148 83.264 461.07 84.64 C464.899 86.062 468.149 88.714 470.31 92.18 q3.67 5.56 3.68 14.24 q0 12.93 -10.32 19.42 t-26.65 6.5 q-16.05 0 -25.81 -7.61 t-9.76 -20.32 h19.8 C421.208 107.759 422.869 110.899 425.66 112.75 q4.41 3.19 11.36 3.19 q7.23 0 11.57 -2.47 C451.268 112.171 452.961 109.447 452.94 106.47 C453.042 103.734 451.622 101.167 449.25 99.8 C446.432 98.147 443.262 97.187 440 97 C436.014 96.632 432.049 96.065 428.12 95.3 C424.088 94.552 420.117 93.506 416.24 92.17 C412.433 90.782 409.203 88.155 407.07 84.71 q-3.69 -5.57 -3.69 -14.39 q0 -12.23 9 -18.72 t24.59 -6.5 q15.92 0 25.09 7.44 T471.19 73&quot;/&gt;&lt;path d=&quot;M509.3 47.5 V60.77 h0.28 C512.345 56.291 516.084 52.494 520.52 49.66 C525.436 46.529 531.173 44.931 537 45.07 C548.613 44.838 559.814 49.37 568 57.61 q12.75 12.54 12.75 31.16 T568 119.8 C559.814 128.04 548.613 132.572 537 132.34 q-16.81 0 -27.45 -14.38 h-0.28 v36.26 H489.08 V47.5 Z m0 41.27 C509.205 95.483 511.852 101.944 516.63 106.66 C521.33 111.439 527.752 114.131 534.455 114.131 C541.158 114.131 547.58 111.439 552.28 106.66 C562.145 96.734 562.145 80.706 552.28 70.78 C547.564 66.019 541.141 63.34 534.44 63.34 C527.739 63.34 521.316 66.019 516.6 70.78 C511.816 75.535 509.179 82.036 509.3 88.78&quot;/&gt;&lt;path d=&quot;M595.59 37.84 C593.349 35.617 592.089 32.591 592.089 29.435 C592.089 26.279 593.349 23.253 595.59 21.03 C597.803 18.724 600.874 17.442 604.07 17.49 C607.25 17.428 610.312 18.701 612.51 21 C617.15 25.643 617.15 33.167 612.51 37.81 C610.32 40.126 607.257 41.414 604.07 41.36 C600.872 41.41 597.799 40.123 595.59 37.81 M594 47.5 h20.22 v82.41 H594 Z&quot;/&gt;&lt;path d=&quot;M699.78 129.91 V116.7 h-0.28 C696.74 121.177 692.999 124.969 688.56 127.79 C683.628 130.899 677.888 132.482 672.06 132.34 C660.447 132.571 649.246 128.039 641.06 119.8 q-12.75 -12.54 -12.75 -31.17 q0 -18.48 12.75 -31 C649.246 49.391 660.447 44.859 672.06 45.09 q16.82 0 27.44 14.38 h0.28 v-12 H720 v82.41 Z m0 -41.28 C699.881 81.928 697.232 75.477 692.45 70.78 C687.751 66.004 681.33 63.314 674.63 63.314 C667.93 63.314 661.509 66.004 656.81 70.78 C646.943 80.693 646.943 96.717 656.81 106.63 C661.511 111.419 667.94 114.116 674.65 114.116 C681.36 114.116 687.789 111.419 692.49 106.63 C697.262 101.868 699.893 95.371 699.78 88.63&quot;/&gt;&lt;/svg&gt;"/>
+        <stack class="ds ds-inline sitefooter-6">
+          <text class="ds ds-text" value="Runtime Est. 2011"/>
+          <text class="ds-br" value="&#10;"/>
+          <stack class="ds ds-inline sitefooter-7">
+            <text class="ds ds-text" value="Formerly Advanced WebView"/>
+          </stack>
+        </stack>
+      </stack>
+      <stack class="ds sitefooter-8">
+        <stack class="ds sitefooter-9">
+          <stack class="ds sitefooter-a">
+            <text class="ds ds-text" value="Address"/>
+          </stack>
+          <stack class="ds ds-inline sitefooter-b">
+            <text class="ds ds-text" value="Meydan Grandstand, 6th Floor, Meydan Road,"/>
+            <text class="ds-br" value="&#10;"/>
+            <text class="ds ds-text" value="Nad Al Sheba, Dubai, United Arab Emirates"/>
+          </stack>
+        </stack>
+        <stack class="ds sitefooter-c">
+          <stack class="ds sitefooter-d">
+            <text class="ds ds-text" value="Pages"/>
+          </stack>
+          <pressable class="ds ds-a sitefooter-e" href="/" on:tap="datafastGoal('footer_contact_email')">
+            <text class="ds ds-text" value="Home"/>
+          </pressable>
+          <pressable class="ds ds-a sitefooter-f" href="/terms" on:tap="datafastGoal('footer_contact_email')">
+            <text class="ds ds-text" value="Legal Stuff"/>
+          </pressable>
+        </stack>
+        <stack class="ds sitefooter-g">
+          <stack class="ds sitefooter-h">
+            <text class="ds ds-text" value="Contact"/>
+          </stack>
+          <stack class="ds sitefooter-i">
+            <pressable class="ds ds-a sitefooter-j" href="mailto:hey@despia.com" on:tap="datafastGoal('footer_contact_email')">
+              <text class="ds ds-text" value="hey@despia.com"/>
+            </pressable>
+          </stack>
+        </stack>
+      </stack>
+    </stack>
+    <stack class="ds sitefooter-k">
+      <stack class="ds sitefooter-l">
+        <text class="ds ds-text" value="© 2011 - 2026 Despia LLC-FZ &amp; Affiliates. All rights reserved."/>
+      </stack>
+    </stack>
+  </stack>
+</stack>

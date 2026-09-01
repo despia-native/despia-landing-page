@@ -1,0 +1,470 @@
+<!-- SiteLovable: part of despia.com, authored in DSX.
+     Generated. The page is composed the way any DSX project is: a head block for the
+     contract (attributes, variables, actions, api), a body of pure markup, and one
+     sidecar stylesheet per component. Routing lives in dsx.config.json.
+     Copyright Despia LLC-FZ. Source available, not open source: see LICENSE. -->
+<stack class="ds-page" grow="true">
+  <head>
+    <api as="features" url="https://cloud.despia.com/api:Hk1puj62/features/all" method="GET" auto="true"/>
+    <script>
+function datafastGoal(name) {
+    // the datafa.st goal beacon; absent on a surface that never loaded the script
+    if (typeof datafast === 'function') datafast(name)
+  }
+    </script>
+  </head>
+  <stack class="ds sitelovable-1">
+    <stack class="ds sitelovable-2">
+      <SiteNavbar themeMode="light" currentPage="/" menuOptions="{{ [{ 'name': 'Home', 'href': '/' }, { 'name': 'Documentation', 'href': 'https://lovable.despia.com' }, { 'name': 'Login', 'href': 'https://v3.despia.com/' }] }}" homepageLink="/" mainCtaLink="https://v3.despia.com" mainCtaName="Ship to Native">
+        <svg class="ds ds-svg sitelovable-3" slot="logo" src="&lt;svg fill=&quot;currentColor&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 400&quot;&gt;&lt;path d=&quot;M200,0C89.54,0,0,89.54,0,200c110.46,0,200-89.54,200-200&quot;/&gt;&lt;path d=&quot;M0,200H0C0,310.46,89.54,400,200,400c0-110.46-89.54-200-200-200&quot;/&gt;&lt;path d=&quot;M200,400c110.46,0,200-89.54,200-200h0c-110.46,0-200,89.54-200,200&quot;/&gt;&lt;path d=&quot;M317.75 161.05 C359.37 161.05 393.11 127.31 393.11 85.69 C393.11 44.07 359.37 10.33 317.75 10.33 C276.13 10.33 242.39 44.07 242.39 85.69 C242.39 105.677 250.33 124.845 264.462 138.978 C278.595 153.11 297.763 161.05 317.75 161.05&quot;/&gt;&lt;/svg&gt;"/>
+      </SiteNavbar>
+      <stack class="ds sitelovable-4">
+        <stack class="ds sitelovable-5"/>
+        <stack class="ds sitelovable-6">
+          <image class="ds ds-img sitelovable-7" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:3739b02f-b02f-4b69-8fd4-2cbae4b4454d.png/public" a11yLabel="Gradient" contentFit="cover"/>
+          <stack class="ds sitelovable-8">
+            <stack class="ds sitelovable-9">
+              <stack class="ds sitelovable-a">
+                <image class="ds ds-img sitelovable-b" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:lovable-icon-bg-dark.png/public" a11yLabel="Despia Lovable Logo" contentFit="cover"/>
+              </stack>
+              <stack class="ds sitelovable-c"/>
+              <stack class="ds sitelovable-d">
+                <stack class="ds sitelovable-e">
+                  <stack class="ds sitelovable-f">
+                    <image class="ds ds-img sitelovable-g" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:google-play-store-icon-logo-symbol-free-png.webp/full" a11yLabel="Despia PlayStore" contentFit="cover"/>
+                  </stack>
+                </stack>
+                <stack class="ds sitelovable-h"/>
+                <stack class="ds sitelovable-i">
+                  <image class="ds ds-img sitelovable-j" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:app-store-s-128x128_2x.png/full" a11yLabel="Despia AppStore" contentFit="cover"/>
+                </stack>
+              </stack>
+            </stack>
+            <stack class="ds sitelovable-k">
+              <stack class="ds sitelovable-l">
+                <text class="ds-cliptext ds ds-inline sitelovable-m" value="Stay in Lovable
+  Get Approved"/>
+              </stack>
+              <stack class="ds ds-inline sitelovable-n">
+                <text class="ds ds-text" value="Lovable builds the app. Despia gets it approved. Plug in 50+ native features the App Store and Play Store require - without changing your stack."/>
+              </stack>
+            </stack>
+            <pressable class="ds ds-a sitelovable-o" href="https://v3.despia.com/" on:tap="datafastGoal('hero_start')">
+              <text class="ds ds-text" value="Get Started for Free"/>
+            </pressable>
+          </stack>
+          <stack class="ds sitelovable-p">
+            <stack class="ds sitelovable-q">
+              <WebView class="ds sitelovable-r" src="https://www.tella.tv/video/cmfn8v9co00050bjpevb5g38z/embed?b=0&amp;title=0&amp;a=1&amp;loop=0&amp;t=0&amp;muted=0&amp;wt=0"/>
+            </stack>
+          </stack>
+        </stack>
+      </stack>
+      <stack class="ds sitelovable-s">
+        <stack class="ds sitelovable-t">
+          <stack class="ds sitelovable-u"/>
+          <stack class="ds sitelovable-v"/>
+          <stack class="ds sitelovable-w">
+            <stack class="ds sitelovable-x">
+              <list class="ds-repeat" key="index" bind="(features.data || []).filter(row => row.category == 'feature')">
+                <stack class="ds sitelovable-y">
+                  <text class="ds ds-text" value="{{ item.name }}"/>
+                </stack>
+              </list>
+            </stack>
+          </stack>
+        </stack>
+      </stack>
+      <stack class="ds sitelovable-z">
+        <stack class="ds sitelovable-10 container">
+          <stack class="ds sitelovable-11 grid">
+            <stack class="ds sitelovable-12">
+              <stack class="ds sitelovable-13">
+                <stack class="ds sitelovable-14"/>
+                <stack class="ds sitelovable-15">
+                  <stack class="ds sitelovable-16">
+                    <stack class="ds ds-inline sitelovable-17">
+                      <text class="ds ds-text" value="Native App Features"/>
+                    </stack>
+                    <stack class="ds ds-inline sitelovable-18">
+                      <text class="ds ds-text" value="Access "/>
+                      <stack class="ds ds-inline sitelovable-19">
+                        <text class="ds ds-text" value="Real Native Features"/>
+                      </stack>
+                      <text class="ds ds-text" value=" using our simple JavaScript SDK or NoCode Plugins &amp; Integrations"/>
+                    </stack>
+                  </stack>
+                  <stack class="ds sitelovable-1a">
+                    <pressable class="ds ds-a sitelovable-1b" href="https://v3.despia.com/" on:tap="datafastGoal('features_explore')">
+                      <text class="ds ds-text" value="Explore all Features"/>
+                    </pressable>
+                  </stack>
+                </stack>
+                <stack class="ds sitelovable-1c">
+                  <stack class="ds sitelovable-1d">
+                    <stack class="ds sitelovable-1e">
+                      <svg class="ds ds-svg sitelovable-1f" slot="logo" src="&lt;svg fill=&quot;currentColor&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 400&quot;&gt;&lt;path d=&quot;M200,0C89.54,0,0,89.54,0,200c110.46,0,200-89.54,200-200&quot;/&gt;&lt;path d=&quot;M0,200H0C0,310.46,89.54,400,200,400c0-110.46-89.54-200-200-200&quot;/&gt;&lt;path d=&quot;M200,400c110.46,0,200-89.54,200-200h0c-110.46,0-200,89.54-200,200&quot;/&gt;&lt;path d=&quot;M317.75 161.05 C359.37 161.05 393.11 127.31 393.11 85.69 C393.11 44.07 359.37 10.33 317.75 10.33 C276.13 10.33 242.39 44.07 242.39 85.69 C242.39 105.677 250.33 124.845 264.462 138.978 C278.595 153.11 297.763 161.05 317.75 161.05&quot;/&gt;&lt;/svg&gt;"/>
+                    </stack>
+                    <stack class="ds sitelovable-1g">
+                      <stack class="ds sitelovable-1h">
+                        <stack class="ds ds-inline sitelovable-1i">
+                          <text class="ds ds-text" value="Native Push Notification"/>
+                        </stack>
+                        <stack class="ds ds-inline sitelovable-1j">
+                          <text class="ds ds-text" value="now"/>
+                        </stack>
+                      </stack>
+                      <stack class="ds ds-inline sitelovable-1k">
+                        <text class="ds ds-text" value="This is a real native push notification that can be sent to a specific user based on their User ID"/>
+                      </stack>
+                    </stack>
+                  </stack>
+                  <stack class="ds sitelovable-1l">
+                    <stack class="ds sitelovable-1m">
+                      <stack class="ds ds-inline sitelovable-1n">
+                        <text class="ds ds-text" value="AppStore Payments"/>
+                      </stack>
+                      <stack class="ds sitelovable-1o">
+                        <stack class="ds sitelovable-1p">
+                          <stack class="ds sitelovable-1q">
+                            <stack class="ds ds-inline sitelovable-1r">
+                              <text class="ds ds-text" value="$7/month"/>
+                            </stack>
+                          </stack>
+                          <stack class="ds ds-inline sitelovable-1s">
+                            <text class="ds ds-text" value="{{ 'Starting ' + new Date(Date.now()).toLocaleDateString() }}"/>
+                          </stack>
+                        </stack>
+                      </stack>
+                    </stack>
+                    <stack class="ds sitelovable-1t">
+                      <svg class="ds ds-svg" src="&lt;svg width=&quot;48&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; height=&quot;48&quot; viewBox=&quot;0 0 24 24&quot; preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;&lt;path d=&quot;M7 3 H5 C3.895 3 3 3.895 3 5 v2 m14 -4 h2 C20.105 3 21 3.895 21 5 v2 m-5 1 v2 M8 8 v2 m1 6 s1 1 3 1 s3 -1 3 -1 m-3 -8 v5 h-1 m-4 8 H5 C3.895 21 3 20.105 3 19 v-2 m14 4 h2 C20.105 21 21 20.105 21 19 v-2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;"/>
+                    </stack>
+                  </stack>
+                </stack>
+              </stack>
+            </stack>
+            <stack class="ds sitelovable-1u">
+              <stack class="ds sitelovable-1v">
+                <stack class="ds sitelovable-1w"/>
+                <stack class="ds sitelovable-1x">
+                  <stack class="ds ds-inline sitelovable-1y">
+                    <text class="ds ds-text" value="One Click"/>
+                    <text class="ds-br" value="&#10;"/>
+                    <stack class="ds ds-inline sitelovable-1z">
+                      <text class="ds ds-text" value="Publishing"/>
+                    </stack>
+                  </stack>
+                </stack>
+                <stack class="ds sitelovable-20">
+                  <stack class="ds sitelovable-21">
+                    <stack class="ds sitelovable-22">
+                      <stack class="ds sitelovable-23">
+                        <stack class="ds sitelovable-24">
+                          <stack class="ds sitelovable-25">
+                            <SiteIcon name="terminal" size="20"/>
+                            <stack class="ds ds-inline sitelovable-26">
+                              <text class="ds ds-text" value="Publishing App"/>
+                            </stack>
+                          </stack>
+                        </stack>
+                        <stack class="ds sitelovable-27">
+                          <stack class="ds sitelovable-28">
+                            <stack class="ds ds-inline sitelovable-29 loader"/>
+                          </stack>
+                          <stack class="ds sitelovable-2a">
+                            <stack class="ds ds-inline sitelovable-2b">
+                              <text class="ds ds-text" value="Shipping to AppStore"/>
+                            </stack>
+                            <stack class="ds ds-inline sitelovable-2c">
+                              <text class="ds ds-text" value="Powered by Apple Silicon"/>
+                            </stack>
+                          </stack>
+                        </stack>
+                      </stack>
+                      <stack class="ds sitelovable-2d">
+                        <stack class="ds sitelovable-2e">
+                          <stack class="ds ds-inline sitelovable-2f">
+                            <svg class="ds ds-svg sitelovable-2g" src="&lt;svg width=&quot;22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; height=&quot;22&quot; viewBox=&quot;0 0 24 24&quot; preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;&lt;path d=&quot;m5 7l5 5l-5 5m7 2h7&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;"/>
+                            <text class="ds ds-text" value="Build Overview"/>
+                          </stack>
+                        </stack>
+                        <stack class="ds sitelovable-2h">
+                          <stack class="ds sitelovable-2i">
+                            <stack class="ds ds-inline sitelovable-2j">
+                              <text class="ds ds-text" value="Preparing M2 Build Machine"/>
+                            </stack>
+                          </stack>
+                          <stack class="ds sitelovable-2k">
+                            <stack class="ds ds-inline sitelovable-2l">
+                              <text class="ds ds-text" value="Building Application in "/>
+                              <stack class="ds ds-inline sitelovable-2m">
+                                <text class="ds ds-text" value="Xcode"/>
+                              </stack>
+                            </stack>
+                          </stack>
+                          <stack class="ds sitelovable-2n">
+                            <stack class="ds ds-inline sitelovable-2o">
+                              <text class="ds ds-text" value="Publishing to the AppStore"/>
+                            </stack>
+                          </stack>
+                        </stack>
+                      </stack>
+                    </stack>
+                  </stack>
+                  <stack class="ds sitelovable-2p">
+                    <svg class="ds ds-svg sitelovable-2q" src="&lt;svg fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M20.5056 10.7754C21.1225 10.5355 21.431 10.4155 21.5176 10.2459C21.5926 10.099 21.5903 9.92446 21.5115 9.77954C21.4205 9.61226 21.109 9.50044 20.486 9.2768L4.59629 3.5728C4.0866 3.38983 3.83175 3.29835 3.66514 3.35605C3.52029 3.40621 3.40645 3.52004 3.35629 3.6649C3.29859 3.8315 3.39008 4.08635 3.57304 4.59605L9.277 20.4858C9.50064 21.1088 9.61246 21.4203 9.77973 21.5113C9.92465 21.5901 10.0991 21.5924 10.2461 21.5174C10.4157 21.4308 10.5356 21.1223 10.7756 20.5054L13.3724 13.8278C13.4194 13.707 13.4429 13.6466 13.4792 13.5957C13.5114 13.5506 13.5508 13.5112 13.5959 13.479C13.6468 13.4427 13.7072 13.4192 13.828 13.3722L20.5056 10.7754Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;"/>
+                  </stack>
+                </stack>
+                <stack class="ds sitelovable-2r"/>
+                <stack class="ds sitelovable-2s">
+                  <stack class="ds sitelovable-2t">
+                    <stack class="ds sitelovable-2u">
+                      <image class="ds ds-img sitelovable-2v" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:google-play-store-icon-logo-symbol-free-png.webp/full" a11yLabel="Despia PlayStore" contentFit="cover"/>
+                    </stack>
+                  </stack>
+                  <stack class="ds sitelovable-2w"/>
+                  <stack class="ds sitelovable-2x">
+                    <image class="ds ds-img sitelovable-2y" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:app-store-s-128x128_2x.png/full" a11yLabel="Despia AppStore" contentFit="cover"/>
+                  </stack>
+                </stack>
+              </stack>
+            </stack>
+            <stack class="ds sitelovable-2z">
+              <stack class="ds sitelovable-30">
+                <svg class="ds ds-svg sitelovable-31" src="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 256 256&quot; preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;&lt;path d=&quot;M128 24 C70.562 24 24 70.562 24 128 C24 185.438 70.562 232 128 232 C185.438 232 232 185.438 232 128 C231.934 70.59 185.41 24.066 128 24 m88 104 C216.007 136.116 214.886 144.193 212.67 152 h-38.51 C176.614 136.094 176.614 119.906 174.16 104 h38.51 C214.886 111.807 216.007 119.884 216 128 m-114 40 h52 C148.877 184.786 139.984 200.178 128 213 C116.022 200.174 107.129 184.783 102 168 m-3.9 -16 C95.353 136.118 95.353 119.882 98.1 104 h59.88 C160.727 119.882 160.727 136.118 157.98 152 Z M40 128 C39.993 119.884 41.114 111.807 43.33 104 h38.51 C79.386 119.906 79.386 136.094 81.84 152 H43.33 C41.114 144.193 39.993 136.116 40 128 m114 -40 h-52 C107.123 71.214 116.016 55.822 128 43 C139.978 55.826 148.871 71.217 154 88 m52.33 0 h-35.62 C166.22 71.529 158.654 56.057 148.41 42.4 C173.457 48.417 194.627 65.073 206.37 88 Z m-98.74 -45.6 C97.346 56.057 89.78 71.529 85.29 88 H49.63 C61.373 65.073 82.543 48.417 107.59 42.4 M49.63 168 h35.66 C89.78 184.471 97.346 199.943 107.59 213.6 C82.543 207.583 61.373 190.927 49.63 168 m98.78 45.6 C158.654 199.943 166.22 184.471 170.71 168 h35.66 C194.627 190.927 173.457 207.583 148.41 213.6&quot; fill=&quot;currentColor&quot;/&gt;&lt;/svg&gt;"/>
+                <stack class="ds sitelovable-32">
+                  <stack class="ds">
+                    <stack class="ds ds-inline sitelovable-33">
+                      <text class="ds ds-text" value="Over The Air"/>
+                    </stack>
+                    <stack class="ds ds-inline sitelovable-34">
+                      <text class="ds ds-text" value="App Updates"/>
+                    </stack>
+                  </stack>
+                  <stack class="ds ds-inline sitelovable-35">
+                    <text class="ds ds-text" value="Push urgent fixes live in seconds, with zero approval wait. "/>
+                    <stack class="ds ds-inline sitelovable-36">
+                      <text class="ds ds-text" value="Fully Compliant"/>
+                    </stack>
+                  </stack>
+                </stack>
+                <stack class="ds sitelovable-37">
+                  <stack class="ds sitelovable-38">
+                    <stack class="ds sitelovable-39">
+                      <image class="ds ds-img sitelovable-3a" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:lovable-icon-bg-dark.png/public" a11yLabel="Despia Lovable Logo" contentFit="cover"/>
+                    </stack>
+                    <stack class="ds sitelovable-3b"/>
+                    <stack class="ds sitelovable-3c">
+                      <image class="ds ds-img sitelovable-3d" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:Despia.com(15).png/full" a11yLabel="Despia Icon" contentFit="cover"/>
+                    </stack>
+                    <stack class="ds sitelovable-3e"/>
+                    <stack class="ds sitelovable-3f">
+                      <stack class="ds sitelovable-3g">
+                        <stack class="ds sitelovable-3h">
+                          <image class="ds ds-img sitelovable-3i" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:google-play-store-icon-logo-symbol-free-png.webp/full" a11yLabel="Despia PlayStore" contentFit="cover"/>
+                        </stack>
+                      </stack>
+                      <stack class="ds sitelovable-3j"/>
+                      <stack class="ds sitelovable-3k">
+                        <image class="ds ds-img sitelovable-3l" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:app-store-s-128x128_2x.png/full" a11yLabel="Despia AppStore" contentFit="cover"/>
+                      </stack>
+                    </stack>
+                  </stack>
+                </stack>
+              </stack>
+            </stack>
+            <stack class="ds sitelovable-3m">
+              <stack class="ds sitelovable-3n">
+                <stack class="ds sitelovable-3o">
+                  <stack class="ds sitelovable-3p">
+                    <stack class="ds sitelovable-3q">
+                      <svg class="ds ds-svg sitelovable-3r" src="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 720 158.32&quot;&gt;&lt;path d=&quot;M79.16 0 C35.441 0 0 35.441 0 79.16 C43.719 79.16 79.16 43.719 79.16 0&quot;/&gt;&lt;path d=&quot;M0 79.16 H0 C0 122.879 35.441 158.32 79.16 158.32 C79.16 114.601 43.719 79.16 0 79.16&quot;/&gt;&lt;path d=&quot;M79.16 158.32 C122.879 158.32 158.32 122.879 158.32 79.16 h0 C114.601 79.16 79.16 114.601 79.16 158.32&quot;/&gt;&lt;path d=&quot;M125.77 63.75 C142.245 63.75 155.6 50.395 155.6 33.92 C155.6 17.445 142.245 4.09 125.77 4.09 C109.295 4.09 95.94 17.445 95.94 33.92 C95.946 50.392 109.298 63.744 125.77 63.75&quot;/&gt;&lt;path d=&quot;M199.7 23.18 h37.11 q23.34 0 39.08 15.15 t15.74 38.21 q0 23.07 -15.74 38.22 t-39.08 15.15 H199.7 Z m70.87 53.36 C270.73 67.221 267.167 58.223 260.67 51.54 C254.585 44.793 245.895 40.984 236.81 41.08 H219.92 V112 h16.89 C245.883 112.105 254.567 108.323 260.67 101.61 C267.167 94.927 270.73 85.929 270.57 76.61&quot;/&gt;&lt;path d=&quot;M391.92 88.63 C391.877 91.661 391.505 94.679 390.81 97.63 h-66.5 C325.572 102.502 328.466 106.794 332.51 109.79 C336.735 113.141 341.988 114.932 347.38 114.86 C351.212 114.922 354.992 113.963 358.33 112.08 C361.351 110.413 363.934 108.056 365.87 105.2 h21.95 C384.997 113.328 379.547 120.285 372.33 124.97 C364.948 129.893 356.252 132.472 347.38 132.37 q-18.61 0 -31.65 -12.61 t-13 -31.1 q0 -18.48 13.09 -31 t31.86 -12.54 C359.403 44.898 370.711 49.458 379 57.75 C387.473 65.764 392.19 76.969 392 88.63 m-67.33 -8 h45.72 C369.393 75.51 366.702 70.874 362.75 67.47 C358.595 63.877 353.241 61.977 347.75 62.15 C336.62 61.972 326.936 69.73 324.68 80.63&quot;/&gt;&lt;path d=&quot;M471.19 73 H451.6 C451.76 69.648 450.265 66.43 447.6 64.39 q-4 -3.06 -10.67 -3.06 q-6.39 0 -9.58 2.5 C425.295 65.334 424.101 67.744 424.15 70.29 C424.091 72.921 425.513 75.363 427.83 76.61 C430.665 78.213 433.821 79.162 437.07 79.39 C441.102 79.81 445.107 80.447 449.07 81.3 C453.139 82.148 457.148 83.264 461.07 84.64 C464.899 86.062 468.149 88.714 470.31 92.18 q3.67 5.56 3.68 14.24 q0 12.93 -10.32 19.42 t-26.65 6.5 q-16.05 0 -25.81 -7.61 t-9.76 -20.32 h19.8 C421.208 107.759 422.869 110.899 425.66 112.75 q4.41 3.19 11.36 3.19 q7.23 0 11.57 -2.47 C451.268 112.171 452.961 109.447 452.94 106.47 C453.042 103.734 451.622 101.167 449.25 99.8 C446.432 98.147 443.262 97.187 440 97 C436.014 96.632 432.049 96.065 428.12 95.3 C424.088 94.552 420.117 93.506 416.24 92.17 C412.433 90.782 409.203 88.155 407.07 84.71 q-3.69 -5.57 -3.69 -14.39 q0 -12.23 9 -18.72 t24.59 -6.5 q15.92 0 25.09 7.44 T471.19 73&quot;/&gt;&lt;path d=&quot;M509.3 47.5 V60.77 h0.28 C512.345 56.291 516.084 52.494 520.52 49.66 C525.436 46.529 531.173 44.931 537 45.07 C548.613 44.838 559.814 49.37 568 57.61 q12.75 12.54 12.75 31.16 T568 119.8 C559.814 128.04 548.613 132.572 537 132.34 q-16.81 0 -27.45 -14.38 h-0.28 v36.26 H489.08 V47.5 Z m0 41.27 C509.205 95.483 511.852 101.944 516.63 106.66 C521.33 111.439 527.752 114.131 534.455 114.131 C541.158 114.131 547.58 111.439 552.28 106.66 C562.145 96.734 562.145 80.706 552.28 70.78 C547.564 66.019 541.141 63.34 534.44 63.34 C527.739 63.34 521.316 66.019 516.6 70.78 C511.816 75.535 509.179 82.036 509.3 88.78&quot;/&gt;&lt;path d=&quot;M595.59 37.84 C593.349 35.617 592.089 32.591 592.089 29.435 C592.089 26.279 593.349 23.253 595.59 21.03 C597.803 18.724 600.874 17.442 604.07 17.49 C607.25 17.428 610.312 18.701 612.51 21 C617.15 25.643 617.15 33.167 612.51 37.81 C610.32 40.126 607.257 41.414 604.07 41.36 C600.872 41.41 597.799 40.123 595.59 37.81 M594 47.5 h20.22 v82.41 H594 Z&quot;/&gt;&lt;path d=&quot;M699.78 129.91 V116.7 h-0.28 C696.74 121.177 692.999 124.969 688.56 127.79 C683.628 130.899 677.888 132.482 672.06 132.34 C660.447 132.571 649.246 128.039 641.06 119.8 q-12.75 -12.54 -12.75 -31.17 q0 -18.48 12.75 -31 C649.246 49.391 660.447 44.859 672.06 45.09 q16.82 0 27.44 14.38 h0.28 v-12 H720 v82.41 Z m0 -41.28 C699.881 81.928 697.232 75.477 692.45 70.78 C687.751 66.004 681.33 63.314 674.63 63.314 C667.93 63.314 661.509 66.004 656.81 70.78 C646.943 80.693 646.943 96.717 656.81 106.63 C661.511 111.419 667.94 114.116 674.65 114.116 C681.36 114.116 687.789 111.419 692.49 106.63 C697.262 101.868 699.893 95.371 699.78 88.63&quot;/&gt;&lt;/svg&gt;"/>
+                    </stack>
+                    <stack class="ds sitelovable-3s">
+                      <stack class="ds sitelovable-3t">
+                        <list class="ds-repeat" key="index" bind="['One-time Payment', 'All Plugins are Free', 'One-Click Submissions', 'Free Lifetime Updates', 'Realtime App Updates', 'Selfhost Web Codebase', 'No Vendor Lock-in']">
+                          <stack class="ds sitelovable-3u">
+                            <svg class="ds ds-svg sitelovable-3v" src="&lt;svg width=&quot;22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; height=&quot;22&quot; viewBox=&quot;0 0 24 24&quot; preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;&lt;path d=&quot;M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10s10-4.486 10-10S17.514 2 12 2zm-1.999 14.413l-3.713-3.705L7.7 11.292l2.299 2.295l5.294-5.294l1.414 1.414l-6.706 6.706z&quot; fill=&quot;currentColor&quot;/&gt;&lt;/svg&gt;"/>
+                            <stack class="ds ds-inline sitelovable-3w">
+                              <text class="ds ds-text" value="{{ item.value }}"/>
+                            </stack>
+                          </stack>
+                        </list>
+                      </stack>
+                    </stack>
+                  </stack>
+                  <stack class="ds sitelovable-3x">
+                    <stack class="ds sitelovable-3y">
+                      <stack class="ds sitelovable-3z">
+                        <svg class="ds ds-svg" src="&lt;svg fill=&quot;none&quot; width=&quot;40&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; height=&quot;40&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19.2007 14C20.3305 14.8357 21 15.8744 21 17C21 19.7614 16.9706 22 12 22C7.02944 22 3 19.7614 3 17C3 15.8744 3.6695 14.8357 4.79934 14&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;/&gt;&lt;path d=&quot;M12.7585 8C11.2229 7.11636 9.9284 6.78583 8.89652 6.79725M8.89652 6.79725C7.009 6.81815 6 7.9832 6 9C6 10.6569 8.59363 12 11.793 12C14.9924 12 16.8707 10.4819 17.5861 9C19.0343 6 16.6206 2.5 11.3103 2C12.4367 3.36484 13.531 6.23506 8.89652 6.79725Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;path d=&quot;M17.0144 10C18.8351 10.7211 20 11.8265 20 13.0657C20 15.2386 16.4183 17 12 17C7.58172 17 4 15.2386 4 13.0657C4 11.9588 4.92955 10.9586 6.42571 10.2437&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;"/>
+                        <stack class="ds ds-inline sitelovable-40">
+                          <text class="ds ds-text" value="The Others"/>
+                        </stack>
+                      </stack>
+                    </stack>
+                    <stack class="ds sitelovable-41">
+                      <stack class="ds sitelovable-42">
+                        <list class="ds-repeat" key="index" bind="['Setup Fee + Annual plan', 'Expensive Paid Add-ons', 'Paid Submission Service', 'Annual Plan for Updates', 'Partial Vendor Lock-in', 'Requires Coding Skills', 'Outdated Codebase']">
+                          <stack class="ds sitelovable-43">
+                            <svg class="ds ds-svg" src="&lt;svg width=&quot;22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; height=&quot;22&quot; viewBox=&quot;0 0 32 32&quot; preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;&lt;path d=&quot;M16 2C8.2 2 2 8.2 2 16s6.2 14 14 14s14-6.2 14-14S23.8 2 16 2m5.4 21L16 17.6L10.6 23L9 21.4l5.4-5.4L9 10.6L10.6 9l5.4 5.4L21.4 9l1.6 1.6l-5.4 5.4l5.4 5.4z&quot; fill=&quot;currentColor&quot;/&gt;&lt;/svg&gt;"/>
+                            <stack class="ds ds-inline sitelovable-44">
+                              <text class="ds ds-text" value="{{ item.value }}"/>
+                            </stack>
+                          </stack>
+                        </list>
+                      </stack>
+                    </stack>
+                  </stack>
+                </stack>
+              </stack>
+            </stack>
+          </stack>
+        </stack>
+      </stack>
+      <stack class="ds sitelovable-45">
+        <stack class="ds sitelovable-46">
+          <stack class="ds sitelovable-47">
+            <stack class="ds sitelovable-48">
+              <stack class="ds sitelovable-49">
+                <stack class="ds sitelovable-4a">
+                  <stack class="ds ds-inline sitelovable-4b">
+                    <text class="ds ds-text" value="Solo Pack"/>
+                  </stack>
+                  <stack class="ds sitelovable-4c">
+                    <stack class="ds ds-inline sitelovable-4d">
+                      <text class="ds ds-text" value="$249"/>
+                    </stack>
+                    <stack class="ds ds-inline sitelovable-4e">
+                      <text class="ds ds-text" value="/ onetime"/>
+                    </stack>
+                  </stack>
+                  <stack class="ds ds-inline sitelovable-4f">
+                    <text class="ds ds-text" value="Everything you need to convert your web application and deploy it to either the AppStore or GooglePlay."/>
+                  </stack>
+                </stack>
+                <stack class="ds sitelovable-4g">
+                  <list class="ds-repeat" key="index" bind="['iOS or Android License', '200 M2 Build Minutes', 'Full Source Code Export']">
+                    <stack class="ds sitelovable-4h">
+                      <svg class="ds ds-svg sitelovable-4i" src="&lt;svg fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;2&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt;"/>
+                      <stack class="ds ds-inline sitelovable-4j">
+                        <text class="ds ds-text" value="{{ item.value }}"/>
+                      </stack>
+                    </stack>
+                  </list>
+                </stack>
+                <pressable class="ds ds-a sitelovable-4k" href="https://v3.despia.com/" on:tap="datafastGoal('start_solo_pack')">
+                  <text class="ds ds-text" value="Start for Free"/>
+                </pressable>
+              </stack>
+            </stack>
+            <stack class="ds sitelovable-4l">
+              <stack class="ds sitelovable-4m">
+                <stack class="ds sitelovable-4n">
+                  <stack class="ds ds-inline sitelovable-4o">
+                    <text class="ds ds-text" value="Hybrid Pack"/>
+                  </stack>
+                  <stack class="ds sitelovable-4p">
+                    <stack class="ds ds-inline sitelovable-4q">
+                      <text class="ds ds-text" value="$498"/>
+                    </stack>
+                    <stack class="ds ds-inline sitelovable-4r">
+                      <text class="ds ds-text" value="/ onetime"/>
+                    </stack>
+                  </stack>
+                  <stack class="ds ds-inline sitelovable-4s">
+                    <text class="ds ds-text" value="Everything you need to convert your web application and deploy it to both the AppStore and GooglePlay."/>
+                  </stack>
+                </stack>
+                <stack class="ds sitelovable-4t">
+                  <list class="ds-repeat" key="index" bind="['iOS and Android License', '400 M2 Build Minutes', 'Full Source Code Export']">
+                    <stack class="ds sitelovable-4u">
+                      <svg class="ds ds-svg sitelovable-4v" src="&lt;svg fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;2&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt;"/>
+                      <stack class="ds ds-inline sitelovable-4w">
+                        <text class="ds ds-text" value="{{ item.value }}"/>
+                      </stack>
+                    </stack>
+                  </list>
+                </stack>
+                <pressable class="ds ds-a sitelovable-4x" href="https://v3.despia.com/" on:tap="datafastGoal('start_hybrid_pack')">
+                  <text class="ds ds-text" value="Start for Free"/>
+                </pressable>
+              </stack>
+            </stack>
+            <stack class="ds sitelovable-4y">
+              <stack class="ds sitelovable-4z">
+                <stack class="ds sitelovable-50">
+                  <stack class="ds ds-inline sitelovable-51">
+                    <text class="ds ds-text" value="Platform API"/>
+                  </stack>
+                  <stack class="ds sitelovable-52">
+                    <stack class="ds ds-inline sitelovable-53">
+                      <text class="ds ds-text" value="Get Quote"/>
+                    </stack>
+                  </stack>
+                  <stack class="ds ds-inline sitelovable-54">
+                    <text class="ds ds-text" value="Add Despia’s runtime and CI/CD technology to your NoCode/AI platform and instantly deliver mobile apps."/>
+                  </stack>
+                </stack>
+                <stack class="ds sitelovable-55">
+                  <list class="ds-repeat" key="index" bind="['100% Whitelabel Apps', 'Unlimited M2 HQ Builds', 'Custom Branded Runtime']">
+                    <stack class="ds sitelovable-56">
+                      <svg class="ds ds-svg sitelovable-57" src="&lt;svg fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;2&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt;"/>
+                      <stack class="ds ds-inline sitelovable-58">
+                        <text class="ds ds-text" value="{{ item.value }}"/>
+                      </stack>
+                    </stack>
+                  </list>
+                </stack>
+                <pressable class="ds ds-a sitelovable-59" href="mailto:enterprise@despia.com" on:tap="datafastGoal('contact_platform_api')">
+                  <text class="ds ds-text" value="Contact Enterprise Sales"/>
+                </pressable>
+              </stack>
+            </stack>
+          </stack>
+        </stack>
+      </stack>
+      <stack class="ds sitelovable-5a">
+        <stack class="ds sitelovable-5b">
+          <stack class="ds sitelovable-5c">
+            <stack class="ds sitelovable-5d">
+              <stack class="ds sitelovable-5e">
+                <image class="ds ds-img sitelovable-5f" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:lovable-icon-bg-dark.png/public" a11yLabel="Despia Lovable Logo" contentFit="cover"/>
+              </stack>
+              <stack class="ds sitelovable-5g"/>
+              <stack class="ds sitelovable-5h">
+                <stack class="ds sitelovable-5i">
+                  <stack class="ds sitelovable-5j">
+                    <image class="ds ds-img sitelovable-5k" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:google-play-store-icon-logo-symbol-free-png.webp/full" a11yLabel="Despia PlayStore" contentFit="cover"/>
+                  </stack>
+                </stack>
+                <stack class="ds sitelovable-5l"/>
+                <stack class="ds sitelovable-5m">
+                  <image class="ds ds-img sitelovable-5n" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:app-store-s-128x128_2x.png/full" a11yLabel="Despia AppStore" contentFit="cover"/>
+                </stack>
+              </stack>
+            </stack>
+            <stack class="ds sitelovable-5o">
+              <stack class="ds ds-inline sitelovable-5p">
+                <text class="ds ds-text" value="Convinced?"/>
+                <stack class="ds ds-inline sitelovable-5q">
+                  <text class="ds ds-text" value=" - "/>
+                </stack>
+                <stack class="ds ds-inline sitelovable-5r">
+                  <text class="ds ds-text" value="Let's Start"/>
+                </stack>
+              </stack>
+              <stack class="ds ds-inline sitelovable-5s">
+                <text class="ds ds-text" value="Get started today - turn your Lovable web app into a native mobile app in under 60 minutes. No rebuilds, no hassle, just one click to test it on your phone."/>
+              </stack>
+            </stack>
+            <pressable class="ds ds-a sitelovable-5t" href="https://v3.despia.com/" on:tap="datafastGoal('end_cta')">
+              <text class="ds ds-text" value="Go from Web to Native"/>
+            </pressable>
+          </stack>
+        </stack>
+      </stack>
+      <SiteFooter/>
+    </stack>
+  </stack>
+</stack>

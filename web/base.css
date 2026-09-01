@@ -1,0 +1,116 @@
+/* The site's base layer. Every element on the page starts from THIS box model, not
+   the browser's default and not DSX's element layer, so it travels with the markup.
+   Emitted first: the per-node rules below share its specificity and win on source
+   order. */
+.ds {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: var(--text-base);
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-normal);
+  /* NO line-height here. It is INHERITED, so pinning it per node blocks an ancestor's
+     value from ever reaching a descendant (measured, a 52px heading lost its 1.1
+     leading and came out 6px short). It is set once, on .ds-page; the text leaf takes
+     its leading from font:inherit on .ds-text. */
+  background: transparent;
+  color: inherit;
+  border: none;
+  box-shadow: none;
+  /* DSX's element layer adds these; this page wants their CSS initials. The
+     align-self line is load-bearing: without it a converted box stretched to its
+     parent's full width instead of hugging its content (measured: the hero column
+     came out 1146px against the original's 544px). */
+  align-items: normal;
+  align-self: auto;
+  min-width: auto;
+  min-height: auto;
+  gap: 0;
+}
+/* the inline family: p, h1-h6, label, span, strong, b, i */
+.ds-inline { display: inline-block; overflow-wrap: break-word; color: inherit; }
+/* the text leaf. DSX's .dsx-text carries the product type ramp (font, size, weight,
+   tracking, leading); font:inherit hands the whole ramp back to the ancestor this
+   page's own type inherits from. */
+.ds-text {
+  font: inherit;
+  line-height: inherit;
+  display: inline;
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  letter-spacing: inherit;
+  min-width: auto;
+  overflow-wrap: break-word;
+  /* A newline inside a text node is a real line break on this page. pre-line is the
+     rule that says so: newlines break, every other run of whitespace still collapses. */
+  white-space: pre-line;
+}
+/* a line break that also occupies its line box, built from the element
+   vocabulary DSX has */
+/* a merged background-clip:text run keeps display:block but must still hug its
+   glyphs, the way the original inline-block box did, otherwise it fills the line. */
+/* THE DOCUMENT SCROLLS. A DSX route frame is a fixed-size surface (position:absolute,
+   overflow:hidden) with its own inner <scroll>, because a frame keeps its DOM and its
+   scroll offset while covered. A marketing page wants the opposite: the real document
+   scroller, so the browser gives a scrollbar, overscroll, scroll-linked chrome and
+   window-level anchor scrolling.
+   Only the ACTIVE frame is handed back to the document, a covered frame is marked
+   inert by the router and stays absolute and hidden, so it neither paints nor adds
+   height. */
+html, body { height: auto; min-height: 100%; overflow: visible; }
+[data-dsx-root] { position: static; overflow: visible; height: auto; min-height: 100%; }
+.dsx-frame:not([inert]) {
+  position: static;
+  overflow: visible;
+  height: auto;
+  min-height: 100%;
+}
+.dsx-frame:not([inert]) > * { min-height: 0; }
+/* The active frame is now static, and a static box ignores z-index, so the covered
+   frame (absolute, z-index 10) painted over it. With the document scrolling there is
+   no frame stack to preserve, so a covered frame is simply not rendered. */
+.dsx-frame[inert] { display: none; }
+/* The page wrapper must STRETCH its child to the frame width. .dsx-stack aligns its
+   children to start, so the root hugged its own max-content (1360px, its max-width)
+   and overflowed a 1226px frame, every box on the page came out 134px wide. */
+.ds-page { align-items: stretch; width: 100%; max-width: 100%; line-height: normal; }
+/* The node reads width:var(--width)/height:var(--height); those are ion-icon's OWN
+   internals, declared by the web component and absent from the export. Supplying its
+   documented default (1em) on the replacement keeps the icon at the original box. */
+.ds-icon { --width: 1em; --height: 1em; }
+
+.ds-cliptext {
+  width: fit-content;
+  /* it is a <text>, so .dsx-text's leading applies to it too - hand it back like .ds-text */
+  font: inherit;
+  line-height: inherit;
+  /* the merged run still carries the original's newlines; without pre-line they
+     collapse to spaces, max-content becomes the whole string and the box fills the
+     line instead of hugging the longer of the two lines (measured: 544 vs 465). */
+  white-space: pre-line;
+}
+.ds-br {
+  display: inline;
+  white-space: pre;
+  font: inherit;
+  line-height: inherit;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.ds-a { color: inherit; text-decoration: none; border-radius: 0; cursor: pointer; }
+.ds-list { list-style: none; }
+/* A repeated row belongs in the parent's own flow. DSX's <list> is a real container
+   (.dsx-list) with a wrapper per row (.dsx-row.dsx-collection-row) and its own axis;
+   a display:contents pair dissolves both boxes so the parent's flex-direction, gap and
+   alignment govern the rows directly. */
+.ds-repeat, .ds-repeat > .dsx-row.dsx-collection-row { display: contents; }
+.ds-img { display: block; max-width: none; }
+.ds-svg { display: inline-grid; max-inline-size: none; }

@@ -1,0 +1,14 @@
+<!-- MotionDemo, the POSE plane end to end, in a real build. `@starting-style` is the
+     browser's own entry at-rule; `@ending-style` is DSX's exit counterpart, which no
+     browser has: the compiler lowers it to a [data-dsx-leaving] rule and the runtime holds
+     the element in the tree until the pose settles. Corpus: Conformance/motion/pose.json. -->
+<stack class="md-page" grow="true">
+  <head>
+    <variable as="shown">return true</variable>
+  </head>
+  <text class="md-title" value="@starting-style / @ending-style"/>
+  <button class="md-toggle" label="Toggle the card" on:tap="dsx.variable.shown = !(dsx.variable.shown)"/>
+  <stack class="md-card" visible-if="dsx.variable.shown" animDuration="0.6">
+    <text class="md-card-text" value="I fade + rise in, and slide + shrink out."/>
+  </stack>
+</stack>

@@ -1,0 +1,16 @@
+/* SiteMcp: the component sheet. One class per node, plus its media-query, hover and
+   entry/exit variants. Generated; edit the page, not this file. */
+
+.sitemcp-1 {
+  color: var(--grey-100);
+  display: flex;
+  font-size: inherit;
+  background: var(--v3-ffffff);
+  min-height: 100vh;
+  align-items: center;
+  flex-shrink: 1;
+  font-family: var(--font-sans);
+  font-weight: inherit;
+  flex-direction: row;
+  justify-content: center;
+}

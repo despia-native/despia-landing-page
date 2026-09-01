@@ -1,0 +1,18 @@
+{
+  "_note": "despia.com as a DSX package: the same manifest, Components/ folder and web block any project uses.",
+  "name": "Despia Site",
+  "scheme": "site",
+  "version": "0.1.0",
+  "platforms": [
+    "desktop",
+    "phone"
+  ],
+  "web": {
+    "styles": [
+      "web/fonts.css",
+      "web/theme.css",
+      "web/colors.css",
+      "web/base.css"
+    ]
+  }
+}

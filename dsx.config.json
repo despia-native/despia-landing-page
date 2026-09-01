@@ -1,0 +1,63 @@
+{
+  "_note": "despia.com, authored in DSX. Every page route and the rewrite/redirect table below is the whole routing story: one table, static export, no server required.",
+  "name": "Despia Site",
+  "scheme": "site",
+  "entry": "SiteHome",
+  "outDir": "dist",
+  "routes": [
+    {
+      "path": "/",
+      "component": "site.SiteHome"
+    },
+    {
+      "path": "/terms",
+      "component": "site.SiteTerms"
+    },
+    {
+      "path": "/base44",
+      "component": "site.SiteBase44"
+    },
+    {
+      "path": "/lovable",
+      "component": "site.SiteLovable"
+    },
+    {
+      "path": "/license",
+      "redirect": "https://legal.despia.com",
+      "status": 302
+    },
+    {
+      "path": "/mcp/:tool",
+      "component": "site.SiteMcp"
+    },
+    {
+      "path": "/api/events",
+      "redirect": "https://datafa.st/api/events",
+      "status": 302
+    },
+    {
+      "path": "/js/script.js",
+      "redirect": "https://datafa.st/js/script.js",
+      "status": 302
+    },
+    {
+      "path": "/setup/lovable",
+      "component": "site.SiteLovableRedirect"
+    },
+    {
+      "path": "/open-source-supporter",
+      "redirect": "https://buy.polar.sh/polar_cl_9NXzS9g1NzeVn3GhYhYZNittcPCgegpox620o4Nds92",
+      "status": 308
+    },
+    {
+      "path": "/motion",
+      "component": "site.MotionDemo"
+    }
+  ],
+  "app": {
+    "name": "Despia",
+    "version": "0.1.0",
+    "build": "web",
+    "env": "debug"
+  }
+}

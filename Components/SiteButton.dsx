@@ -1,0 +1,24 @@
+<!-- SiteButton: part of despia.com, authored in DSX.
+     Generated. The page is composed the way any DSX project is: a head block for the
+     contract (attributes, variables, actions, api), a body of pure markup, and one
+     sidecar stylesheet per component. Routing lives in dsx.config.json.
+     Copyright Despia LLC-FZ. Source available, not open source: see LICENSE. -->
+<button class="ds sitebutton-1 dark flat plain icon-only highlighted" on:tap="dsx.event('click')" on:doubleTap="dsx.event('dblclick')">
+  <head>
+    <attribute as="flat"/>
+    <attribute as="icon"/>
+    <attribute as="text"/>
+    <attribute as="theme"/>
+    <attribute as="loading"/>
+    <attribute as="onclick"/>
+    <attribute as="disabled"/>
+    <attribute as="highlighted"/>
+    <event as="click"/>
+    <event as="dblclick"/>
+  </head>
+  <SiteIcon name="{{ dsx.attribute.icon }}" size="18"/>
+  <text class="ds ds-text" value="{{ dsx.attribute.text.length &gt; 0 ? dsx.attribute.text : 'Button' }}"/>
+  <stack class="ds sitebutton-2 hidden">
+    <SiteSpinner sizePx="18" widthPx="2.5"/>
+  </stack>
+</button>

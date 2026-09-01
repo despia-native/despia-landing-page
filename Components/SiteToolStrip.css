@@ -1,0 +1,78 @@
+/* SiteToolStrip: the component sheet. One class per node, plus its media-query, hover and
+   entry/exit variants. Generated; edit the page, not this file. */
+
+.sitetoolstrip-1 {
+  color: var(--v3-ffffff);
+}
+
+.sitetoolstrip-2 {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.sitetoolstrip-3 {
+  color: inherit;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -0.15px;
+}
+
+.sitetoolstrip-4 {
+  width: 80%;
+  height: 2px;
+  background:  var(--v3-3d3d3dba);
+}
+
+.sitetoolstrip-5 {
+  gap: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.sitetoolstrip-6 {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.sitetoolstrip-7 {
+  width: 7rem;
+  box-sizing: border-box;
+}
+
+.sitetoolstrip-7 {
+  height: auto;
+}
+
+.sitetoolstrip-8 {
+  width: 7rem;
+  box-sizing: border-box;
+}
+
+.sitetoolstrip-8 {
+  height: auto;
+}
+
+.sitetoolstrip-9 {
+  color: inherit;
+  display: inline-block;
+  font-size: 12.5px;
+  background:  var(--v3-1c1c1c);
+  font-weight: 400;
+  padding-top: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  letter-spacing: -0.15px;
+  padding-bottom: 0.25rem;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}

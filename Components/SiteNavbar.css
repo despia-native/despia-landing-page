@@ -1,0 +1,319 @@
+/* SiteNavbar: the component sheet. One class per node, plus its media-query, hover and
+   entry/exit variants. Generated; edit the page, not this file. */
+
+.sitenavbar-1 {
+  top: 0px;
+  color: white;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  z-index: 99;
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom-color: var(--grey-800);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.sitenavbar-1.light {
+  top: 0px;
+  left: 0px;
+  color: var(--grey-900);
+  right: 0px;
+  width: 100%;
+  display: flex;
+  z-index: 99;
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom-color: var(--grey-200);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.sitenavbar-2 {
+  color: white;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  z-index: 999999;
+  font-size: 1rem;
+  background: var(--purple-600);
+  align-items: center;
+  font-family: "Inter Tight";
+  font-weight: 700;
+  justify-content: center;
+}
+
+.sitenavbar-3 {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  z-index: 99;
+  background:  var(--grey-900);
+  align-items: center;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-direction: row;
+  padding-bottom: 1rem;
+  justify-content: center;
+}
+
+.sitenavbar-3.light {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  z-index: 99;
+  background: var(--grey-50);
+  align-items: center;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-direction: row;
+  padding-bottom: 1rem;
+  justify-content: center;
+}
+
+.sitenavbar-4 {
+  width: 100%;
+  display: flex;
+  max-width: 85rem;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sitenavbar-5 {
+  display: flex;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.sitenavbar-6 {
+  row-gap: 1rem;
+  column-gap: 1rem;
+  flex-direction: row;
+}
+
+@media (max-width: 750px) {
+  .sitenavbar-6 {
+  display: none;
+  }
+}
+
+.sitenavbar-7 {
+  color: var(--grey-400);
+  font-weight: 400;
+  padding-right: 0.75rem;
+  letter-spacing: -0.3px;
+  border-right-color: var(--grey-700);
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+.sitenavbar-7.current {
+  color: white;
+}
+
+.sitenavbar-7.light {
+  color: var(--grey-500);
+  font-weight: 400;
+  padding-right: 0.75rem;
+  letter-spacing: -0.3px;
+  border-right-color: var(--grey-300);
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+.sitenavbar-7.current-light {
+  color: var(--grey-800);
+  font-weight: 400;
+  padding-right: 0.75rem;
+  letter-spacing: -0.3px;
+  border-right-color: var(--grey-300);
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+.sitenavbar-8 {
+  background: var(--v3-212121);
+  padding-top: 0.65rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  letter-spacing: -0.3px;
+  padding-bottom: 0.65rem;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.sitenavbar-8.light {
+  background: var(--grey-200);
+  padding-top: 0.65rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  letter-spacing: -0.3px;
+  padding-bottom: 0.65rem;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.sitenavbar-9 {
+  width: 2rem;
+  height: 2rem;
+  display: none;
+  aspect-ratio: 1/1;
+}
+
+@media (max-width: 750px) {
+  .sitenavbar-9 {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  aspect-ratio: 1/1;
+  }
+}
+
+.sitenavbar-a {
+  left: 0px;
+  right: 0px;
+  width: auto;
+  bottom: 0px;
+  height: 0px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sitenavbar-b {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  bottom: 0px;
+  height: 100%;
+  position: fixed;
+  background:  var(--v3-17171775);
+}
+
+.sitenavbar-b.light {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  bottom: 0px;
+  height: 100%;
+  position: fixed;
+  background: var(--v3-1717172e);
+}
+
+.sitenavbar-c {
+  width: 100%;
+  height: auto;
+  display: flex;
+  row-gap: 0.75rem;
+  background:  var(--v3-262626c2);
+  column-gap: 0.75rem;
+  transition: translate 300ms ease;
+  align-items: flex-start;
+  padding-top: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.75rem;
+  backdrop-filter: blur(30px);
+  justify-content: flex-start;
+}
+
+@starting-style {
+  .sitenavbar-c {
+  translate: 0 -100% 0;
+  }
+}
+
+.sitenavbar-c.light {
+  width: 100%;
+  height: auto;
+  display: flex;
+  row-gap: 0.75rem;
+  background: var(--v3-ebebeb);
+  column-gap: 0.75rem;
+  align-items: flex-start;
+  padding-top: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.75rem;
+  backdrop-filter: blur(30px);
+  justify-content: flex-start;
+}
+
+.sitenavbar-c.light {
+  width: 100%;
+  height: auto;
+  display: flex;
+  row-gap: 0.75rem;
+  translate: 0 -100% 0;
+  background: var(--v3-ebebeb);
+  column-gap: 0.75rem;
+  align-items: flex-start;
+  padding-top: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.75rem;
+  backdrop-filter: blur(30px);
+  justify-content: flex-start;
+}
+
+.sitenavbar-d {
+  color: var(--v3-ffffff);
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  background:  var(--v3-2e2e2e);
+  align-items: center;
+  font-weight: 400;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  letter-spacing: -0.3px;
+  padding-bottom: 1rem;
+  justify-content: center;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.sitenavbar-d.light {
+  color: var(--grey-800);
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  background: var(--v3-dedede);
+  align-items: center;
+  font-weight: 400;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  letter-spacing: -0.3px;
+  padding-bottom: 1rem;
+  justify-content: center;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}

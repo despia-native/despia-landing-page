@@ -1,0 +1,80 @@
+<!-- SitePhone: part of despia.com, authored in DSX.
+     Generated. The page is composed the way any DSX project is: a head block for the
+     contract (attributes, variables, actions, api), a body of pure markup, and one
+     sidecar stylesheet per component. Routing lives in dsx.config.json.
+     Copyright Despia LLC-FZ. Source available, not open source: see LICENSE. -->
+<stack class="ds sitephone-1">
+  <stack class="ds sitephone-2">
+    <image class="ds ds-img sitephone-3" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/rose_jocasta_nu_vast_chickadee:63529268a072fe31153a1d1f_iPhone14-space-black-min.svg/public" contentFit="cover"/>
+    <stack class="ds sitephone-4"/>
+  </stack>
+  <stack class="ds sitephone-5">
+    <stack class="ds sitephone-6">
+      <image class="ds ds-img sitephone-7" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/rose_jocasta_nu_vast_chickadee:glowing-purple-gradient-beautiful-18-09-2024-1726695994.jpg/public" contentFit="cover"/>
+      <stack class="ds sitephone-8">
+        <stack class="ds sitephone-9">
+          <stack class="ds sitephone-a">
+            <stack class="ds sitephone-b">
+              <image class="ds ds-img sitephone-c" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/rose_jocasta_nu_vast_chickadee:App_Store_(iOS).svg.png/public" contentFit="cover"/>
+            </stack>
+            <stack class="ds ds-inline sitephone-d">
+              <text class="ds ds-text" value="AppStore"/>
+            </stack>
+          </stack>
+          <stack class="ds sitephone-e"/>
+          <stack class="ds sitephone-f">
+            <stack class="ds sitephone-g">
+              <image class="ds ds-img sitephone-h" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/rose_jocasta_nu_vast_chickadee:qqVhYj00vUL-ChOC3xD77w.jpg/public" contentFit="cover"/>
+            </stack>
+            <stack class="ds ds-inline sitephone-i">
+              <text class="ds ds-text" value="Health"/>
+            </stack>
+          </stack>
+          <stack class="ds sitephone-j">
+            <stack class="ds sitephone-k">
+              <image class="ds ds-img sitephone-l" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/rose_jocasta_nu_vast_chickadee:d230a25cb974f8908871af04caad89a1(1).png/public" contentFit="cover"/>
+            </stack>
+            <stack class="ds ds-inline sitephone-m">
+              <text class="ds ds-text" value="Shortcuts"/>
+            </stack>
+          </stack>
+        </stack>
+      </stack>
+      <stack class="ds sitephone-n">
+        <stack class="ds sitephone-o">
+          <stack class="ds sitephone-p"/>
+          <stack class="ds sitephone-q">
+            <stack class="ds sitephone-r">
+              <image class="ds ds-img sitephone-s" src="https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/despia_v3_landing:Despia.com(2).png/public" contentFit="cover"/>
+            </stack>
+            <stack class="ds ds-inline sitephone-t">
+              <text class="ds ds-text" value="My App"/>
+            </stack>
+          </stack>
+          <stack class="ds sitephone-u"/>
+          <stack class="ds sitephone-v"/>
+        </stack>
+        <stack class="ds sitephone-w">
+          <stack class="ds sitephone-x">
+            <stack class="ds sitephone-y">
+              <SiteIcon name="layers-outline"/>
+              <stack class="ds ds-inline sitephone-z">
+                <text class="ds ds-text" value="My"/>
+                <stack class="ds ds-inline sitephone-10">
+                  <text class="ds ds-text" value="Widget"/>
+                </stack>
+              </stack>
+            </stack>
+            <stack class="ds sitephone-11">
+              <list class="ds-repeat" key="index" bind="[70, 50, 60, 80, 95, 85, 65, 60, 80, 90, 100]">
+                <stack class="ds sitephone-12"/>
+              </list>
+            </stack>
+          </stack>
+        </stack>
+      </stack>
+    </stack>
+  </stack>
+  <stack class="ds sitephone-13"/>
+  <stack class="ds sitephone-14"/>
+</stack>

@@ -1,0 +1,12 @@
+/* SiteMotion: the component sheet. One class per node, plus its media-query, hover and
+   entry/exit variants. Generated; edit the page, not this file. */
+
+.sitemotion-1 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.sitemotion-2 {
+  box-sizing: border-box;
+}
