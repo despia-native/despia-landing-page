@@ -65,11 +65,13 @@
           <stack class="ds sitehome-v"/>
           <stack class="ds sitehome-w">
             <stack class="ds sitehome-x">
-              <list class="ds-repeat" key="index" bind="(features.data || []).filter(row => row.category == 'feature')">
+              <stack class="ds-marquee" style="--ds-marquee-dur: {{ ((features.data || []).filter(row => row.category == 'feature')).length * 1.91 }}s">
+              <list class="ds-repeat" key="index" bind="((features.data || []).filter(row => row.category == 'feature')).concat((features.data || []).filter(row => row.category == 'feature'))">
                 <stack class="ds sitehome-y">
                   <text class="ds ds-text" value="{{ item.name }}"/>
                 </stack>
               </list>
+              </stack>
             </stack>
           </stack>
         </stack>

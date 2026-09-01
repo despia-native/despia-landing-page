@@ -3,10 +3,11 @@
      contract (attributes, variables, actions, api), a body of pure markup, and one
      sidecar stylesheet per component. Routing lives in dsx.config.json.
      Copyright Despia LLC-FZ. Source available, not open source: see LICENSE. -->
-<stack class="ds sitetoolicon-1">
+<stack class="ds sitetoolicon-1" on:appear="onAppear()">
   <head>
     <variable as="allTools">return [{ 'name': 'weweb', 'src': 'https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:weweb_io_logo.jpg/public' }, { 'name': 'lovable', 'src': 'https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:lovable-icon-bg-dark.png/public' }, { 'name': 'base44', 'src': 'https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:base44.jpg/public' }, { 'name': 'replit', 'src': 'https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:unnamed.jpg/public' }, { 'name': 'v0', 'src': 'https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:v0-icon-filled-256.webp/public' }, { 'name': 'nordcraft', 'src': 'https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:channels4_profile.jpg/public' }]</variable>
     <variable as="currentTool">return { 'name': 'weweb', 'src': 'https://despia.com/cdn-cgi/imagedelivery/ZIty0Vhmkm0nD-fBKJrTZQ/sapphire_gasgano_selfish_vulture:weweb_io_logo.jpg/public' }</variable>
+    <action as="onAppear">setInterval(() =&gt; { if (dsx.variable.allTools.findIndex(row =&gt; row.name == dsx.variable.currentTool.name) == dsx.variable.allTools.length - 1) { dsx.variable.currentTool = dsx.variable.allTools[0] } else { dsx.variable.currentTool = dsx.variable.allTools[dsx.variable.allTools.findIndex(row =&gt; row.name == dsx.variable.currentTool.name) + 1] } }, 7000, 'iv:tool_icon')</action>
   </head>
   <list class="ds-repeat" key="index" bind="dsx.variable.allTools">
     <image class="ds ds-img sitetoolicon-2" visible-if="item.name == dsx.variable.currentTool.name" src="{{ item.src }}" a11yLabel="Despia Icon" contentFit="cover"/>

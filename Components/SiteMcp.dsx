@@ -4,7 +4,10 @@
      sidecar stylesheet per component. Routing lives in dsx.config.json.
      Copyright Despia LLC-FZ. Source available, not open source: see LICENSE. -->
 <stack class="ds-page" grow="true">
-  <stack class="ds sitemcp-1">
+  <head>
+    <action as="onAppear">route.path = route.query.tool == 'cursor' ? 'cursor://anysphere.cursor-deeplink/mcp/install?name=Despia&amp;config=eyJ0eXBlIjoiaHR0cCIsInVybCI6Imh0dHBzOi8vc2V0dXAuZGVzcGlhLmNvbS9tY3AifQ==' : route.query.tool == 'vs-code' ? 'vscode:mcp/install?%7B%22name%22%3A%22Despia%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fsetup.despia.com%2Fmcp%22%7D' : false</action>
+  </head>
+  <stack class="ds sitemcp-1" on:appear="onAppear()">
     <SiteButton text="Go Back" highlighted="true"/>
   </stack>
 </stack>

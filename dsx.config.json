@@ -4,6 +4,7 @@
   "scheme": "site",
   "entry": "SiteHome",
   "outDir": "dist",
+  "ssrSeed": true,
   "packages": [
     "Modules/Tracking"
   ],

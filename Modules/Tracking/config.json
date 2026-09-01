@@ -1,16 +1,35 @@
 {
   "_note": "Every vendor id the site reports to, in one file. Nothing here is a secret: these are public, client-side ids that ship in the page either way. A blank id disables that vendor on every lane, which is how a fork of this repo runs the site without reporting into our accounts.",
-
-  "datafastWebsiteId": { "value": "685db5e50847c9e5e7178c26" },
-  "datafastDomain":    { "value": "despia.com" },
-  "datafastScript":    { "value": "/js/script.js" },
-
+  "datafastWebsiteId": {
+    "value": "685db5e50847c9e5e7178c26"
+  },
+  "datafastDomain": {
+    "value": "despia.com"
+  },
+  "datafastScript": {
+    "value": "/js/script.js"
+  },
+  "_datafastOrigin": "The vendor's own origin, used only when the first-party path above is not proxied by the host. Blank the path to skip straight to this.",
+  "datafastOrigin": {
+    "value": "https://datafa.st/js/script.js"
+  },
   "_affonso": "The affiliate programme. `?via=<code>` on any inbound link is the referral, and it is already carried through every CTA on the site. Set the programme id to switch attribution on.",
-  "affonsoProgramId":  { "value": "" },
-  "affonsoCookieDays": { "value": 30 },
-
-  "gaMeasurementId":   { "value": "G-XLXVPKJQD4" },
-  "xPixelId":          { "value": "qhecu" },
-  "promptWatchProjectId": { "value": "b0214ced-57ba-4364-8e71-09c628154fbf" },
-  "intercomAppId":     { "value": "tjfnyr17" }
+  "affonsoProgramId": {
+    "value": ""
+  },
+  "affonsoCookieDays": {
+    "value": 30
+  },
+  "gaMeasurementId": {
+    "value": "G-XLXVPKJQD4"
+  },
+  "xPixelId": {
+    "value": "qhecu"
+  },
+  "promptWatchProjectId": {
+    "value": "b0214ced-57ba-4364-8e71-09c628154fbf"
+  },
+  "intercomAppId": {
+    "value": "tjfnyr17"
+  }
 }

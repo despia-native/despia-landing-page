@@ -19,6 +19,12 @@ npx dsx dev
 `npx dsx build` writes a static site to `dist/`. There is no server: every page, including
 the redirects, is a file.
 
+Every page is server-rendered. The exported HTML holds the real markup, and because
+`dsx.config.json` sets `"ssrSeed": true` it also holds the data: the build resolves each page's
+`<api>` blocks and writes the results into both the body and the hydration payload, so the
+feature list is in the HTML on first paint rather than after a client fetch. The client then
+adopts that DOM in place instead of re-mounting it.
+
 ## What is where
 
 | Path | What it is |
@@ -140,6 +146,33 @@ This is where app-specific native code belongs. Affiliate tracking is not someth
 Despia app needs, so it is not something DSX ships: it is four files in this repo. See
 [Modules/Tracking/README.md](./Modules/Tracking/README.md) for the actions and for which
 vendors are full on every platform and which are named as limited.
+
+## Movement
+
+Two things on the home page move, and neither is scripted.
+
+The **tool logo** cycles every seven seconds. That is a `<variable>` and a `setInterval` in an
+`<action>` the root calls from `on:appear`:
+
+```xml
+<action as="onAppear">setInterval(() => { ... }, 7000, 'iv:tool_icon')</action>
+```
+
+`setInterval` is part of the expression language, not a browser API, so it means the same thing
+on a phone. The key in the third argument makes it idempotent: mounting twice replaces the
+timer instead of stacking a second one.
+
+The **compatibility strip** scrolls continuously. The list is bound to its rows concatenated
+with themselves, and an inner `max-content` wrapper animates to `translateX(-50%)`, which lands
+on the identical frame and so wraps seamlessly. Its duration is bound to the row count, which
+holds the speed constant however much data the API returns:
+
+```xml
+<stack class="ds-marquee" style="--ds-marquee-dur: {{ rows.length * 1.91 }}s">
+```
+
+Declaring it rather than stepping a transform on every animation frame is what lets it run on
+all three renderers, and what lets `prefers-reduced-motion` switch it off in one rule.
 
 ## Motion
 

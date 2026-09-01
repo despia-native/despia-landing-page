@@ -80,10 +80,24 @@ function referralOf(cfg) {
 function datafast(cfg) {
   const id = String(cfg.datafastWebsiteId ?? "");
   if (id === "") return false;
-  script(String(cfg.datafastScript ?? "/js/script.js"), {
+  const attrs = {
     defer: true,
     "data-website-id": id,
     "data-domain": cfg.datafastDomain ?? location.hostname,
+  };
+  // FIRST-PARTY FIRST. The configured path is served from our own origin by a host-level
+  // reverse proxy, which is the whole point: an ad blocker or a third-party-cookie rule that
+  // would drop datafa.st does not drop us. A static host with no proxy configured answers
+  // that path with something that is not JavaScript, so the vendor's own origin is the
+  // fallback rather than the default: analytics degrade to third-party instead of vanishing.
+  const proxied = String(cfg.datafastScript ?? "");
+  const origin = String(cfg.datafastOrigin ?? "https://datafa.st/js/script.js");
+  if (proxied === "") { script(origin, attrs); return true; }
+  // The check is BEHAVIOURAL, not transport. A static host with no proxy answers that path
+  // with a 200 and an HTML body, so the load event fires happily and the parse is what fails.
+  // What settles it is whether the vendor's own global actually turned up.
+  script(proxied, attrs).then(() => {
+    if (typeof window.datafast !== "function") script(origin, attrs);
   });
   return true;
 }
