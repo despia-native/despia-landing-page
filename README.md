@@ -16,14 +16,36 @@ a real DSX project. Every page, route, stylesheet and piece of logic below is wh
 npx dsx dev
 ```
 
-`npx dsx build` writes a static site to `dist/`. There is no server: every page, including
-the redirects, is a file.
+`npx dsx build` writes the site to `dist/`, and `npm start` serves it.
 
-Every page is server-rendered. The exported HTML holds the real markup, and because
-`dsx.config.json` sets `"ssrSeed": true` it also holds the data: the build resolves each page's
-`<api>` blocks and writes the results into both the body and the hydration payload, so the
-feature list is in the HTML on first paint rather than after a client fetch. The client then
-adopts that DOM in place instead of re-mounting it.
+## Rendering
+
+Every page is server-rendered, at two levels, and both ship.
+
+**The build renders each route to a file.** The exported HTML holds the real markup, and
+because `dsx.config.json` sets `"ssrSeed": true` it also holds the data: the build resolves
+each page's `<api>` blocks and writes the results into both the body and the hydration
+payload. The feature list is in the HTML on first paint, not after a client fetch. The client
+then adopts that DOM in place rather than re-mounting it. This alone is a complete site, and
+any static host can serve `dist/` as-is.
+
+**`server.mjs` renders each request live.** A file cannot do two things: a dynamic route like
+`/mcp/:tool` has one skeleton rather than a page per tool, and its data is only as fresh as the
+last build. So when a server is present the page handler renders on request instead, with the
+same documents and the same seeding, resolved now.
+
+The server also restores the two first-party analytics paths. On our own domain `/js/script.js`
+and `/api/events` are a reverse proxy, which is the point: an ad blocker or a third-party-cookie
+rule that would drop the vendor does not drop us. A static host has nowhere to put a proxy, so
+there the tracking module falls back to the vendor's own origin and analytics degrade to
+third-party instead of disappearing.
+
+Redirect rows answer with their real status (302, 308) when the server is running; the static
+export writes each as a meta-refresh page, which is the most a file can do.
+
+```bash
+npm run build && npm start     # PORT and DIST override the defaults
+```
 
 ## What is where
 
@@ -35,6 +57,7 @@ adopts that DOM in place instead of re-mounting it.
 | `Components/*.css` | one sidecar sheet per component, owner scoped at build time |
 | `web/*.css` | the four project sheets: fonts, theme, colors, base |
 | `Modules/*/` | custom modules: one folder per capability, with a lane per platform |
+| `server.mjs` | the live-SSR host: per-request rendering, real redirects, the analytics proxy |
 | `public/` | static assets served as-is |
 
 ## Routing
