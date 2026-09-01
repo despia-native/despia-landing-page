@@ -6,12 +6,6 @@
 <stack class="ds-page" grow="true">
   <head>
     <api as="features" url="https://cloud.despia.com/api:Hk1puj62/features/all" method="GET" auto="true"/>
-    <script>
-function datafastGoal(name) {
-    // the datafa.st goal beacon; absent on a surface that never loaded the script
-    if (typeof datafast === 'function') datafast(name)
-  }
-    </script>
   </head>
   <stack class="ds sitehome-1">
     <stack class="ds sitehome-2">
@@ -54,7 +48,7 @@ function datafastGoal(name) {
                 </list>
               </stack>
             </stack>
-            <pressable class="ds ds-a sitehome-o" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="datafastGoal('hero_start')">
+            <pressable class="ds ds-a sitehome-o" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="dsx.module.tracking.goal({ name: 'hero_start' })">
               <text class="ds ds-text" value="Get Started for Free"/>
             </pressable>
           </stack>
@@ -100,7 +94,7 @@ function datafastGoal(name) {
                     </stack>
                   </stack>
                   <stack class="ds sitehome-1a">
-                    <pressable class="ds ds-a sitehome-1b" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="datafastGoal('features_explore')">
+                    <pressable class="ds ds-a sitehome-1b" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="dsx.module.tracking.goal({ name: 'features_explore' })">
                       <text class="ds ds-text" value="Explore all Features"/>
                     </pressable>
                   </stack>
@@ -344,7 +338,7 @@ function datafastGoal(name) {
                 <text class="ds ds-text" value=" Despia works with your existing web hosting, no pricy proprietary mobile app hosting needed."/>
               </stack>
             </stack>
-            <pressable class="ds ds-a sitehome-4c" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="datafastGoal('end_cta')">
+            <pressable class="ds ds-a sitehome-4c" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="dsx.module.tracking.goal({ name: 'end_cta' })">
               <text class="ds ds-text" value="Start for Free"/>
             </pressable>
           </stack>
@@ -385,7 +379,7 @@ function datafastGoal(name) {
                     </stack>
                   </list>
                 </stack>
-                <pressable class="ds ds-a sitehome-4t" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="datafastGoal('start_solo_pack')">
+                <pressable class="ds ds-a sitehome-4t" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="dsx.module.tracking.goal({ name: 'start_solo_pack' })">
                   <text class="ds ds-text" value="Start for Free"/>
                 </pressable>
                 <stack class="ds sitehome-4u">
@@ -436,7 +430,7 @@ function datafastGoal(name) {
                     </stack>
                   </list>
                 </stack>
-                <pressable class="ds ds-a sitehome-5c" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="datafastGoal('start_hybrid_pack')">
+                <pressable class="ds ds-a sitehome-5c" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="dsx.module.tracking.goal({ name: 'start_hybrid_pack' })">
                   <text class="ds ds-text" value="Start for Free"/>
                 </pressable>
               </stack>
@@ -480,7 +474,7 @@ function datafastGoal(name) {
                     </stack>
                   </list>
                 </stack>
-                <pressable class="ds ds-a sitehome-5t" href="mailto:enterprise@despia.com" on:tap="datafastGoal('contact_platform_api')">
+                <pressable class="ds ds-a sitehome-5t" href="mailto:enterprise@despia.com" on:tap="dsx.module.tracking.goal({ name: 'contact_platform_api' })">
                   <text class="ds ds-text" value="Contact Enterprise Sales"/>
                 </pressable>
               </stack>
@@ -534,7 +528,7 @@ function datafastGoal(name) {
                 <text class="ds ds-text" value="Get started today - turn your existing web app into a native mobile app in under 60 minutes. No rebuilds, no hassle, just one click to test it on your phone."/>
               </stack>
             </stack>
-            <pressable class="ds ds-a sitehome-6g" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="datafastGoal('end_cta')">
+            <pressable class="ds ds-a sitehome-6g" href="{{ route.query.via.length &gt; 0 ? 'https://v3.despia.com' + '?via=' + route.query.via : 'https://v3.despia.com' }}" on:tap="dsx.module.tracking.goal({ name: 'end_cta' })">
               <text class="ds ds-text" value="Ship Your First App"/>
             </pressable>
           </stack>

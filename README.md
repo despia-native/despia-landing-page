@@ -28,6 +28,7 @@ the redirects, is a file.
 | `Components/*.dsx` | one file per component. Head block for the contract, body for markup |
 | `Components/*.css` | one sidecar sheet per component, owner scoped at build time |
 | `web/*.css` | the four project sheets: fonts, theme, colors, base |
+| `Modules/*/` | custom modules: one folder per capability, with a lane per platform |
 | `public/` | static assets served as-is |
 
 ## Routing
@@ -47,6 +48,13 @@ static host:
 
 ```json
 { "path": "/license", "redirect": "https://legal.despia.com", "status": 302 }
+```
+
+A page row can carry `meta`, which is where the title and description for that page live:
+
+```json
+{ "path": "/lovable", "component": "site.SiteLovable",
+  "meta": { "title": "...", "description": "..." } }
 ```
 
 Both kinds live in the same ordered list, which means the site map is one file you can read
@@ -96,6 +104,42 @@ Handlers are expressions, not callbacks:
 
 Anything longer than a couple of statements becomes an `<action>`, which is where a workflow
 belongs anyway.
+
+## Custom modules
+
+Six analytics and affiliate vendors run on this site, all of them shipping as CDN JavaScript.
+The obvious move is six script tags in the page head, and it works exactly once, on one
+platform: the same pages run as an iOS app and an Android app, and neither has a document to
+paste a script into.
+
+So they live in `Modules/Tracking/` instead, as one module with a lane per platform:
+
+```
+Modules/Tracking/
+  dsx.json      the contract: scheme, actions, declared state
+  config.json   every vendor id, in one file
+  web/index.js  loads the real vendor scripts and calls their real APIs
+  swift/        no DOM, so it reports over HTTP
+  kotlin/       the Swift lane's twin
+```
+
+Markup calls the actions and never learns which platform it is on:
+
+```xml
+<button on:tap="dsx.module.tracking.goal({ name: 'nav_start_cta' })">
+<stack visible-if="dsx.module.tracking.context.referral.length > 0">
+```
+
+The toolchain assembles the rest. `dsx build` bundles the web lane into its own chunk and
+imports it from the generated bootloader. `dsx export ios` adds the Swift file to a real Xcode
+project and generates its registration table; `dsx export android` does the same for Gradle. A
+project keeps DSX markup plus a folder of custom code, and the CLI, the Swift toolchain and the
+Kotlin toolchain put the rest together.
+
+This is where app-specific native code belongs. Affiliate tracking is not something every
+Despia app needs, so it is not something DSX ships: it is four files in this repo. See
+[Modules/Tracking/README.md](./Modules/Tracking/README.md) for the actions and for which
+vendors are full on every platform and which are named as limited.
 
 ## Motion
 

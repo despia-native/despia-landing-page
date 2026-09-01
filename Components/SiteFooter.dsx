@@ -4,14 +4,6 @@
      sidecar stylesheet per component. Routing lives in dsx.config.json.
      Copyright Despia LLC-FZ. Source available, not open source: see LICENSE. -->
 <stack class="ds sitefooter-1">
-  <head>
-    <script>
-function datafastGoal(name) {
-    // the datafa.st goal beacon; absent on a surface that never loaded the script
-    if (typeof datafast === 'function') datafast(name)
-  }
-    </script>
-  </head>
   <stack class="ds sitefooter-2">
     <stack class="ds sitefooter-3">
       <stack class="ds sitefooter-4">
@@ -39,10 +31,10 @@ function datafastGoal(name) {
           <stack class="ds sitefooter-d">
             <text class="ds ds-text" value="Pages"/>
           </stack>
-          <pressable class="ds ds-a sitefooter-e" href="/" on:tap="datafastGoal('footer_contact_email')">
+          <pressable class="ds ds-a sitefooter-e" href="/" on:tap="dsx.module.tracking.goal({ name: 'footer_contact_email' })">
             <text class="ds ds-text" value="Home"/>
           </pressable>
-          <pressable class="ds ds-a sitefooter-f" href="/terms" on:tap="datafastGoal('footer_contact_email')">
+          <pressable class="ds ds-a sitefooter-f" href="/terms" on:tap="dsx.module.tracking.goal({ name: 'footer_contact_email' })">
             <text class="ds ds-text" value="Legal Stuff"/>
           </pressable>
         </stack>
@@ -51,7 +43,7 @@ function datafastGoal(name) {
             <text class="ds ds-text" value="Contact"/>
           </stack>
           <stack class="ds sitefooter-i">
-            <pressable class="ds ds-a sitefooter-j" href="mailto:hey@despia.com" on:tap="datafastGoal('footer_contact_email')">
+            <pressable class="ds ds-a sitefooter-j" href="mailto:hey@despia.com" on:tap="dsx.module.tracking.goal({ name: 'footer_contact_email' })">
               <text class="ds ds-text" value="hey@despia.com"/>
             </pressable>
           </stack>

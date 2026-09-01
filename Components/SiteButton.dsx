@@ -3,7 +3,7 @@
      contract (attributes, variables, actions, api), a body of pure markup, and one
      sidecar stylesheet per component. Routing lives in dsx.config.json.
      Copyright Despia LLC-FZ. Source available, not open source: see LICENSE. -->
-<button class="ds sitebutton-1 dark flat plain icon-only highlighted" on:tap="dsx.event('click')" on:doubleTap="dsx.event('dblclick')">
+<button class="ds sitebutton-1 {{ dsx.attribute.theme == 'dark' ? 'dark' : '' }} {{ dsx.attribute.flat == true ? 'flat' : '' }} {{ !(dsx.attribute.icon.length &gt; 0) ? 'plain' : '' }} {{ (dsx.attribute.text.length == 0 || dsx.attribute.text == null) ? 'icon-only' : '' }} {{ dsx.attribute.highlighted == true ? 'highlighted' : '' }}" on:tap="dsx.event('click')" on:doubleTap="dsx.event('dblclick')">
   <head>
     <attribute as="flat"/>
     <attribute as="icon"/>
@@ -18,7 +18,7 @@
   </head>
   <SiteIcon name="{{ dsx.attribute.icon }}" size="18"/>
   <text class="ds ds-text" value="{{ dsx.attribute.text.length &gt; 0 ? dsx.attribute.text : 'Button' }}"/>
-  <stack class="ds sitebutton-2 hidden">
+  <stack class="ds sitebutton-2 {{ dsx.attribute.loading != true ? 'hidden' : '' }}">
     <SiteSpinner sizePx="18" widthPx="2.5"/>
   </stack>
 </button>

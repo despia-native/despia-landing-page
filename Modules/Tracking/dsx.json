@@ -1,0 +1,52 @@
+{
+  "name": "Tracking",
+  "scheme": "tracking",
+  "shelf": "open",
+  "version": "1.0.0",
+  "icon": "analytics",
+  "platforms": ["phone", "desktop"],
+
+  "_note": "The site's analytics and affiliate attribution, as ONE module rather than six script tags. The vendors are ordinary third-party SDKs that happen to ship as CDN JavaScript, which is exactly the case a module exists for: the browser lane loads their real scripts and calls their real APIs, and the native lanes reach the same vendors over HTTP because a phone has no DOM to load a script into. Same actions, same resolves, same events, three lanes (constitution, Article 10).",
+
+  "web": {
+    "_note": "web/index.js IS the lane, discovered by file presence. `boot` is not a formality here: attribution has to be recorded on the FIRST page view, and a facet that registered on first call would have missed the referral that brought the visitor in.",
+    "boot": true
+  },
+
+  "context": {
+    "_note": "Declared state, so markup binds `dsx.module.tracking.context.referral` instead of calling an action in on:appear and stashing the answer. Published on every lane.",
+    "ready":    { "type": "boolean", "default": false, "_note": "At least one vendor is configured and accepting calls. False means every call settles no-op rather than failing." },
+    "referral": { "type": "string",  "default": "",    "_note": "The affiliate code that brought this visitor in, from `?via=`. Empty when the visit is direct." },
+    "visitorId":{ "type": "string",  "default": "",    "_note": "The analytics visitor id, when a vendor has assigned one. Empty before the first response." }
+  },
+
+  "actions": {
+    "goal": {
+      "_note": "One conversion goal, fanned to every configured vendor. Fire-and-forget by design: a blocked tracker must never stall a tap.",
+      "args": { "name": "string", "value": { "type": "number", "optional": true } },
+      "resolves": { "delivered": "number", "referral": "string" },
+      "broadcasts": ["goal"],
+      "tests": [
+        { "name": "reports a goal to every configured vendor", "args": { "name": "nav_start_cta" }, "resolve": { "delivered": 1 } },
+        { "name": "no-ops with nothing configured", "args": { "name": "x" }, "resolve": { "delivered": 0 } }
+      ]
+    },
+    "referral": {
+      "_note": "The affiliate code for this visitor, resolved from the URL on first sight and remembered for the cookie window.",
+      "resolves": { "code": "string", "stored": "boolean" },
+      "tests": [ { "name": "resolves empty for a direct visit", "resolve": { "code": "" } } ]
+    },
+    "identify": {
+      "_note": "Bind the visitor to a known person, for the support widget and for affiliate conversion.",
+      "args": {
+        "userId": "string",
+        "email":  { "type": "string", "optional": true },
+        "name":   { "type": "string", "optional": true },
+        "createdAt": { "type": "string", "optional": true }
+      },
+      "resolves": { "identified": "boolean", "referral": "string" },
+      "broadcasts": ["identified"],
+      "tests": [ { "name": "identifies a visitor", "args": { "userId": "u_1" }, "resolve": { "identified": true } } ]
+    }
+  }
+}

@@ -4,22 +4,44 @@
   "scheme": "site",
   "entry": "SiteHome",
   "outDir": "dist",
+  "packages": [
+    "Modules/Tracking"
+  ],
+  "modules": [
+    "tracking"
+  ],
   "routes": [
     {
       "path": "/",
-      "component": "site.SiteHome"
+      "component": "site.SiteHome",
+      "meta": {
+        "title": "Despia Native - Turn Web Apps into Mobile Apps",
+        "description": "Compile web to native, unlock device features, and publish to the App Store or Play Store."
+      }
     },
     {
       "path": "/terms",
-      "component": "site.SiteTerms"
+      "component": "site.SiteTerms",
+      "meta": {
+        "title": "Terms of Service -  Despia",
+        "description": "The rules of the road for using Despia. We\u2019ve kept it short, clear, and fair."
+      }
     },
     {
       "path": "/base44",
-      "component": "site.SiteBase44"
+      "component": "site.SiteBase44",
+      "meta": {
+        "title": "Despia Native \u2013 Turn Base44 Apps into Mobile Apps Instantly",
+        "description": "Convert Base44 Apps into Real Mobile Apps with Access to all Major Native Features - and Publish to the App Store or Google Play in One Click. No Coding Needed!"
+      }
     },
     {
       "path": "/lovable",
-      "component": "site.SiteLovable"
+      "component": "site.SiteLovable",
+      "meta": {
+        "title": "Despia Native \u2013 Turn Lovable Apps into Mobile Apps Instantly",
+        "description": "Convert Lovable Apps into Real Mobile Apps with Access to all Major Native Features - and Publish to the App Store or Google Play in One Click. No Coding Needed!"
+      }
     },
     {
       "path": "/license",

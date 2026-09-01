@@ -3,7 +3,7 @@
      contract (attributes, variables, actions, api), a body of pure markup, and one
      sidecar stylesheet per component. Routing lives in dsx.config.json.
      Copyright Despia LLC-FZ. Source available, not open source: see LICENSE. -->
-<stack class="ds sitenavbar-1 light">
+<stack class="ds sitenavbar-1 {{ dsx.attribute.themeMode == 'light' ? 'light' : '' }}">
   <head>
     <attribute as="themeMode"/>
     <attribute as="currentPage"/>
@@ -12,19 +12,13 @@
     <attribute as="mainCtaLink"/>
     <attribute as="mainCtaName"/>
     <variable as="menuOpen">return false</variable>
-    <action as="onTap1">datafastGoal('nav_start_cta'); if (dsx.variable.menuOpen) { closeMenu() }; route.path = dsx.attribute.mainCtaLink</action>
+    <action as="onTap1">dsx.module.tracking.goal({ name: 'nav_start_cta' }); if (dsx.variable.menuOpen) { closeMenu() }; route.path = dsx.attribute.mainCtaLink</action>
     <action as="closeMenu">dsx.variable.menuOpen = false</action>
-    <script>
-function datafastGoal(name) {
-    // the datafa.st goal beacon; absent on a surface that never loaded the script
-    if (typeof datafast === 'function') datafast(name)
-  }
-    </script>
   </head>
   <pressable class="ds ds-a sitenavbar-2" href="https://setup.despia.com/mcp-server">
     <text class="ds ds-text" value="Integrate with any tool via our MCP -&gt;"/>
   </pressable>
-  <stack class="ds sitenavbar-3 light">
+  <stack class="ds sitenavbar-3 {{ dsx.attribute.themeMode == 'light' ? 'light' : '' }}">
     <stack class="ds sitenavbar-4">
       <pressable class="ds ds-a" href="{{ dsx.attribute.homepageLink }}">
         <slot name="logo"/>
@@ -32,25 +26,25 @@ function datafastGoal(name) {
       <stack class="ds sitenavbar-5">
         <stack class="ds sitenavbar-6">
           <list class="ds-repeat" key="index" bind="dsx.attribute.menuOptions">
-            <button class="ds sitenavbar-7 light current current-light" visible-if="dsx.attribute.menuOptions.length &gt; 0" on:tap="datafastGoal('navbar_' + item.name.toLowerCase().replaceAll(' ', '_')); route.path = item.href">
+            <button class="ds sitenavbar-7 {{ dsx.attribute.themeMode == 'light' ? 'light' : '' }} {{ item.name == dsx.attribute.currentPage ? 'current' : '' }} {{ (item.name == dsx.attribute.currentPage &amp;&amp; dsx.attribute.themeMode == 'light') ? 'current-light' : '' }}" visible-if="dsx.attribute.menuOptions.length &gt; 0" on:tap="dsx.module.tracking.goal({ name: 'navbar_' + item.name.toLowerCase().replaceAll(' ', '_') }); route.path = item.href">
               <text class="ds ds-text" value="{{ item.name }}"/>
             </button>
           </list>
         </stack>
-        <button class="ds sitenavbar-8 light" visible-if="(dsx.attribute.mainCtaName.length &gt; 0 &amp;&amp; dsx.attribute.mainCtaLink.includes('/'))" on:tap="onTap1()">
+        <button class="ds sitenavbar-8 {{ dsx.attribute.themeMode == 'light' ? 'light' : '' }}" visible-if="(dsx.attribute.mainCtaName.length &gt; 0 &amp;&amp; dsx.attribute.mainCtaLink.includes('/'))" on:tap="onTap1()">
           <text class="ds ds-text" value="{{ dsx.attribute.mainCtaName }}"/>
         </button>
         <button class="ds sitenavbar-9" visible-if="dsx.attribute.menuOptions.length &gt; 0" on:tap="dsx.variable.menuOpen = !(dsx.variable.menuOpen)">
-          <svg class="ds ds-svg" src="&lt;svg fill=&quot;transparent&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 10 10&quot; stroke-width=&quot;.6&quot; stroke-linecap=&quot;round&quot;&gt;&lt;path d=&quot;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7&quot;/&gt;&lt;rect width=&quot;10&quot; height=&quot;10&quot; stroke=&quot;none&quot;/&gt;&lt;rect width=&quot;10&quot; height=&quot;10&quot; stroke=&quot;none&quot;/&gt;&lt;/svg&gt;"/>
+          <svg class="ds ds-svg" src="&lt;svg fill=&quot;transparent&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 10 10&quot; stroke-width=&quot;.6&quot; stroke-linecap=&quot;round&quot;&gt;&lt;path d=&quot;{{ dsx.variable.menuOpen ? 'M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7' : 'M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7' }}&quot;/&gt;&lt;rect width=&quot;10&quot; height=&quot;10&quot; stroke=&quot;none&quot;/&gt;&lt;rect width=&quot;{{ dsx.variable.menuOpen ? '0' : '10' }}&quot; height=&quot;10&quot; stroke=&quot;none&quot;/&gt;&lt;/svg&gt;"/>
         </button>
       </stack>
     </stack>
   </stack>
   <stack class="ds sitenavbar-a" visible-if="dsx.attribute.menuOptions.length &gt; 0">
-    <pressable class="ds sitenavbar-b light" visible-if="dsx.variable.menuOpen" on:tap="closeMenu()"/>
-    <stack class="ds sitenavbar-c light" visible-if="dsx.variable.menuOpen">
+    <pressable class="ds sitenavbar-b {{ dsx.attribute.themeMode == 'light' ? 'light' : '' }}" visible-if="dsx.variable.menuOpen" on:tap="closeMenu()"/>
+    <stack class="ds sitenavbar-c {{ dsx.attribute.themeMode == 'light' ? 'light' : '' }}" visible-if="dsx.variable.menuOpen">
       <list class="ds-repeat" key="index" bind="dsx.attribute.menuOptions">
-        <button class="ds sitenavbar-d light" on:tap="closeMenu(); route.path = item.href">
+        <button class="ds sitenavbar-d {{ dsx.attribute.themeMode == 'light' ? 'light' : '' }}" on:tap="closeMenu(); route.path = item.href">
           <text class="ds ds-text" value="{{ item.name }}"/>
         </button>
       </list>

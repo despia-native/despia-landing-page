@@ -6,12 +6,6 @@
 <stack class="ds-page" grow="true">
   <head>
     <api as="features" url="https://cloud.despia.com/api:Hk1puj62/features/all" method="GET" auto="true"/>
-    <script>
-function datafastGoal(name) {
-    // the datafa.st goal beacon; absent on a surface that never loaded the script
-    if (typeof datafast === 'function') datafast(name)
-  }
-    </script>
   </head>
   <stack class="ds sitebase44-1">
     <stack class="ds sitebase44-2">
@@ -49,7 +43,7 @@ function datafastGoal(name) {
                 <text class="ds ds-text" value="Base44 builds the app. Despia gets it approved. Plug in 50+ native features the App Store and Play Store require - without changing your stack."/>
               </stack>
             </stack>
-            <pressable class="ds ds-a sitebase44-o" href="https://v3.despia.com/" on:tap="datafastGoal('hero_start')">
+            <pressable class="ds ds-a sitebase44-o" href="https://v3.despia.com/" on:tap="dsx.module.tracking.goal({ name: 'hero_start' })">
               <text class="ds ds-text" value="Get Started for Free"/>
             </pressable>
           </stack>
@@ -95,7 +89,7 @@ function datafastGoal(name) {
                     </stack>
                   </stack>
                   <stack class="ds sitebase44-1a">
-                    <pressable class="ds ds-a sitebase44-1b" href="https://v3.despia.com/" on:tap="datafastGoal('features_explore')">
+                    <pressable class="ds ds-a sitebase44-1b" href="https://v3.despia.com/" on:tap="dsx.module.tracking.goal({ name: 'features_explore' })">
                       <text class="ds ds-text" value="Explore all Features"/>
                     </pressable>
                   </stack>
@@ -353,7 +347,7 @@ function datafastGoal(name) {
                     </stack>
                   </list>
                 </stack>
-                <pressable class="ds ds-a sitebase44-4k" href="https://v3.despia.com/" on:tap="datafastGoal('start_solo_pack')">
+                <pressable class="ds ds-a sitebase44-4k" href="https://v3.despia.com/" on:tap="dsx.module.tracking.goal({ name: 'start_solo_pack' })">
                   <text class="ds ds-text" value="Start for Free"/>
                 </pressable>
               </stack>
@@ -386,7 +380,7 @@ function datafastGoal(name) {
                     </stack>
                   </list>
                 </stack>
-                <pressable class="ds ds-a sitebase44-4x" href="https://v3.despia.com/" on:tap="datafastGoal('start_hybrid_pack')">
+                <pressable class="ds ds-a sitebase44-4x" href="https://v3.despia.com/" on:tap="dsx.module.tracking.goal({ name: 'start_hybrid_pack' })">
                   <text class="ds ds-text" value="Start for Free"/>
                 </pressable>
               </stack>
@@ -416,7 +410,7 @@ function datafastGoal(name) {
                     </stack>
                   </list>
                 </stack>
-                <pressable class="ds ds-a sitebase44-59" href="mailto:enterprise@despia.com" on:tap="datafastGoal('contact_platform_api')">
+                <pressable class="ds ds-a sitebase44-59" href="mailto:enterprise@despia.com" on:tap="dsx.module.tracking.goal({ name: 'contact_platform_api' })">
                   <text class="ds ds-text" value="Contact Enterprise Sales"/>
                 </pressable>
               </stack>
@@ -458,7 +452,7 @@ function datafastGoal(name) {
                 <text class="ds ds-text" value="Get started today - turn your Base44 web app into a native mobile app in under 60 minutes. No rebuilds, no hassle, just one click to test it on your phone."/>
               </stack>
             </stack>
-            <pressable class="ds ds-a sitebase44-5t" href="https://v3.despia.com/" on:tap="datafastGoal('end_cta')">
+            <pressable class="ds ds-a sitebase44-5t" href="https://v3.despia.com/" on:tap="dsx.module.tracking.goal({ name: 'end_cta' })">
               <text class="ds ds-text" value="Go from Web to Native"/>
             </pressable>
           </stack>
