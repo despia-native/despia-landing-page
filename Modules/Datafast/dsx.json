@@ -1,0 +1,159 @@
+{
+  "name": "Datafast",
+  "scheme": "datafast",
+  "shelf": "open",
+  "version": "1.0.0",
+  "icon": "analytics",
+  "platforms": [
+    "phone",
+    "desktop"
+  ],
+  "_note": "datafa.st, as a package. The vendor ships a browser script, so the browser lane loads it and calls its real API: that script also does the things only a document can do (pageviews on history changes, data-fast-goal click targets, scroll goals, outbound-link tracking, bot detection), and reimplementing those badly would be worse than loading them. A phone has no document, so the native lanes speak the ingest protocol directly - the same POST to the same endpoint, with the same visitor and session identity persisted across launches. Same four actions everywhere.",
+  "web": {
+    "_note": "web/index.js IS the lane, found by file presence. `boot` is not a formality: the vendor script counts a pageview when it loads, so a facet that registered on first CALL would miss the visit entirely on a page nobody clicks.",
+    "boot": true
+  },
+  "context": {
+    "ready": {
+      "type": "boolean",
+      "default": false,
+      "_note": "A website id is configured and events will be accepted."
+    },
+    "visitorId": {
+      "type": "string",
+      "default": "",
+      "_note": "The datafa.st visitor id, stable for a year. Empty until the first event on a lane that owns it."
+    },
+    "sessionId": {
+      "type": "string",
+      "default": "",
+      "_note": "The current session, which rolls over after 30 minutes idle."
+    },
+    "lastStatus": {
+      "type": "number",
+      "default": 0,
+      "_note": "The HTTP status of the last native send. 0 before the first one, or when the request never completed. Exists because a rejected beacon is otherwise invisible: the endpoint screens callers before it looks the website id up, so a missing header reads as silence rather than an error."
+    }
+  },
+  "actions": {
+    "goal": {
+      "_note": "A custom event. datafa.st caps custom data at 10 keys; a key is lowercase a-z, 0-9, _ or -, up to 32 characters; a value is stringified and truncated to 255. The same rules are applied on every lane so a goal that lands on web lands on a phone.",
+      "args": {
+        "name": "string",
+        "data": {
+          "type": "object",
+          "optional": true
+        }
+      },
+      "resolves": {
+        "sent": "boolean",
+        "visitorId": "string"
+      },
+      "tests": [
+        {
+          "name": "sends a custom goal",
+          "args": {
+            "name": "nav_start_cta"
+          },
+          "resolve": {
+            "sent": true
+          }
+        },
+        {
+          "name": "refuses a goal with no name",
+          "args": {
+            "name": ""
+          },
+          "expectError": "bad_event"
+        }
+      ]
+    },
+    "pageview": {
+      "_note": "One pageview. The browser lane leaves this to the vendor script, which already fires on history changes and throttles a repeat of the same URL within a minute; the native lanes send it and apply the same throttle.",
+      "args": {
+        "path": {
+          "type": "string",
+          "optional": true
+        }
+      },
+      "resolves": {
+        "sent": "boolean"
+      },
+      "tests": [
+        {
+          "name": "sends a pageview",
+          "resolve": {
+            "sent": true
+          }
+        }
+      ]
+    },
+    "identify": {
+      "_note": "Bind the visitor to a known person. datafa.st requires a user_id and refuses the event without one.",
+      "args": {
+        "userId": "string",
+        "name": {
+          "type": "string",
+          "optional": true
+        },
+        "image": {
+          "type": "string",
+          "optional": true
+        },
+        "data": {
+          "type": "object",
+          "optional": true
+        }
+      },
+      "resolves": {
+        "sent": "boolean",
+        "visitorId": "string"
+      },
+      "tests": [
+        {
+          "name": "identifies a visitor",
+          "args": {
+            "userId": "u_1"
+          },
+          "resolve": {
+            "sent": true
+          }
+        },
+        {
+          "name": "refuses without a user id",
+          "args": {
+            "userId": ""
+          },
+          "expectError": "bad_identity"
+        }
+      ]
+    },
+    "payment": {
+      "_note": "A payment, attributed to the visitor. datafa.st requires an email and refuses the event without one.",
+      "args": {
+        "email": "string"
+      },
+      "resolves": {
+        "sent": "boolean"
+      },
+      "tests": [
+        {
+          "name": "records a payment",
+          "args": {
+            "email": "a@b.com"
+          },
+          "resolve": {
+            "sent": true
+          }
+        },
+        {
+          "name": "refuses without an email",
+          "args": {
+            "email": ""
+          },
+          "expectError": "bad_payment"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_note": "The website id is a public, client-side id: it ships in the page either way. Blank it and this package goes inert on every lane rather than failing, so a fork of this repo does not report into our account.",
+  "websiteId": { "value": "685db5e50847c9e5e7178c26" },
+  "domain":    { "value": "despia.com" },
+
+  "_script": "Where the browser lane loads the vendor script from. Ours is a first-party reverse proxy so a blocker that drops datafa.st does not drop us; `origin` is the fallback for a host with no proxy configured.",
+  "script":   { "value": "/js/script.js" },
+  "origin":   { "value": "https://datafa.st/js/script.js" },
+
+  "_endpoint": "The ingest endpoint the NATIVE lanes post to directly. Point it at your own proxy to keep phone traffic first-party too.",
+  "endpoint": { "value": "https://datafa.st/api/events" }
+}

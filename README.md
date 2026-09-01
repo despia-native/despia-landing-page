@@ -141,7 +141,9 @@ The obvious move is six script tags in the page head, and it works exactly once,
 platform: the same pages run as an iOS app and an Android app, and neither has a document to
 paste a script into.
 
-So they live in `Modules/Tracking/` instead, as one module with a lane per platform:
+So they live in `Modules/` instead, as modules with a lane per platform. There are two:
+`Datafast` is our analytics, big enough to be its own package; `Tracking` is the other five
+vendors plus affiliate attribution, and it calls Datafast rather than duplicating it.
 
 ```
 Modules/Tracking/
@@ -165,10 +167,16 @@ project and generates its registration table; `dsx export android` does the same
 project keeps DSX markup plus a folder of custom code, and the CLI, the Swift toolchain and the
 Kotlin toolchain put the rest together.
 
-This is where app-specific native code belongs. Affiliate tracking is not something every
-Despia app needs, so it is not something DSX ships: it is four files in this repo. See
-[Modules/Tracking/README.md](./Modules/Tracking/README.md) for the actions and for which
-vendors are full on every platform and which are named as limited.
+This is where app-specific native code belongs. Analytics and affiliate attribution are not
+something every Despia app needs, so they are not something DSX ships: they are two folders in
+this repo. See [Modules/Datafast](./Modules/Datafast/README.md) and
+[Modules/Tracking](./Modules/Tracking/README.md) for the actions, and for which vendors are
+full on every platform and which are named as limited.
+
+One thing the Datafast page is worth reading for even if you never touch datafa.st: its ingest
+endpoint screens callers before it looks the website id up, so a native lane that omits an
+`Origin` header sends events that vanish while the code reports success. That class of bug is
+why the native lanes there publish the HTTP status instead of swallowing it.
 
 ## Movement
 

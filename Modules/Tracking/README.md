@@ -4,9 +4,13 @@ Analytics and affiliate attribution for despia.com, as one module instead of six
 
 ## Why this is a module
 
-Six vendors want to run on this site: datafa.st, Affonso, Google Analytics, the X pixel,
-PromptWatch and Intercom. Every one of them ships as CDN JavaScript, and the obvious thing to
-do is paste six snippets into the page head.
+Five vendors want to run on this site: Affonso, Google Analytics, the X pixel, PromptWatch and
+Intercom. Every one of them ships as CDN JavaScript, and the obvious thing to do is paste five
+snippets into the page head.
+
+A sixth, datafa.st, used to live here and is now its own package, `Modules/Datafast`. It earned
+one: four actions, an identity plane of its own, and a real implementation of the ingest
+protocol for the native lanes. This module calls it the way any caller would.
 
 That works exactly once, on one platform. The same site runs as an iOS app and an Android app
 through the native runtime, and neither has a document to paste a script into. Pasted snippets
@@ -64,7 +68,8 @@ programme id is the only step left to switch it on.
 Article 10 of the DSX constitution says a capability ships on every renderer: supported,
 polyfilled, or platform-limited with a named degradation. For this module:
 
-- **datafa.st is full on all three.** Its ingest endpoint takes the website id directly.
+- **datafa.st is full on all three**, and lives in its own package: see
+  [Modules/Datafast](../Datafast/README.md).
 - **The affiliate referral is full on all three.** `?via=` on the web, the opening deep link
   natively, the same persistence window on each.
 - **Google Analytics, the X pixel and Intercom are platform-limited on iOS and Android.** Each

@@ -77,31 +77,6 @@ function referralOf(cfg) {
 //  actually reported. `goal` counts those answers so a caller can tell "nothing configured"
 //  from "reported to three vendors" without knowing which vendors exist.
 
-function datafast(cfg) {
-  const id = String(cfg.datafastWebsiteId ?? "");
-  if (id === "") return false;
-  const attrs = {
-    defer: true,
-    "data-website-id": id,
-    "data-domain": cfg.datafastDomain ?? location.hostname,
-  };
-  // FIRST-PARTY FIRST. The configured path is served from our own origin by a host-level
-  // reverse proxy, which is the whole point: an ad blocker or a third-party-cookie rule that
-  // would drop datafa.st does not drop us. A static host with no proxy configured answers
-  // that path with something that is not JavaScript, so the vendor's own origin is the
-  // fallback rather than the default: analytics degrade to third-party instead of vanishing.
-  const proxied = String(cfg.datafastScript ?? "");
-  const origin = String(cfg.datafastOrigin ?? "https://datafa.st/js/script.js");
-  if (proxied === "") { script(origin, attrs); return true; }
-  // The check is BEHAVIOURAL, not transport. A static host with no proxy answers that path
-  // with a 200 and an HTML body, so the load event fires happily and the parse is what fails.
-  // What settles it is whether the vendor's own global actually turned up.
-  script(proxied, attrs).then(() => {
-    if (typeof window.datafast !== "function") script(origin, attrs);
-  });
-  return true;
-}
-
 function affonso(cfg) {
   const id = String(cfg.affonsoProgramId ?? "");
   if (id === "") return false;
@@ -169,8 +144,11 @@ export default {
     // taps a CTA before any lazy chunk resolves must still be attributed, which is why this
     // module declares web.boot.
     const { code } = referralOf(cfg);
-    const started = [datafast, affonso, googleAnalytics, xPixel, promptWatch]
-      .map((fn) => fn(cfg)).filter(Boolean).length;
+    // datafa.st is Modules/Datafast: it owns its own script, its own identity and its own
+    // native lanes, and this module reaches it the way any caller would.
+    const started = [affonso, googleAnalytics, xPixel, promptWatch]
+      .map((fn) => fn(cfg)).filter(Boolean).length
+      + (dsx.has("datafast") ? 1 : 0);
     dsx.state.set("referral", code);
     dsx.state.set("ready", started > 0);
     if (code !== "") dsx.broadcast("referred", { code });
@@ -185,9 +163,9 @@ export default {
       const { code } = referralOf(cfg);
       let delivered = 0;
 
-      // datafa.st is the primary goal sink; the script may not have resolved yet on a very
-      // early tap, and a queued goal is worth more than a thrown one.
-      if (typeof window.datafast === "function") { window.datafast(name); delivered++; }
+      // datafa.st is the primary goal sink, and it is a package: it queues an early tap
+      // itself rather than dropping it, so this is a plain call with no readiness dance.
+      if (ctx.dsx.has("datafast")) { void ctx.dsx.module.datafast.goal({ name }); delivered++; }
       if (typeof window.gtag === "function") {
         window.gtag("event", name, value === undefined ? {} : { value });
         delivered++;
@@ -219,6 +197,10 @@ export default {
         created_at: ctx.args("createdAt") ?? undefined,
       };
       let identified = intercom(cfg, visitor);
+      if (ctx.dsx.has("datafast")) {
+        void ctx.dsx.module.datafast.identify({ userId, name: ctx.args("name") ?? "" });
+        identified = true;
+      }
       if (typeof window.gtag === "function") {
         window.gtag("set", { user_id: userId });
         identified = true;
