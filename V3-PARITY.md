@@ -432,23 +432,23 @@ element at, read from the same capture the harness diffs. Each pass was taken on
 
 | Section | iPhone 402 web | iPhone 402 native | Pixel 10 Pro 427 web | Pixel 10 Pro 427 native | iPad 820 web | iPad 820 native | Pixel Tablet 1280 web | Pixel Tablet 1280 native |
 |---|---|---|---|---|---|---|---|---|
-| Page | 402x7365 | 402x7394 | 427x7320 | 427x7262 | 820x6127 | 820x6154 | 1280x4542 | 1280x4552 |
+| Page | 402x7365 | 402x7394 | 427x7320 | 427x7273 | 820x6127 | 820x6154 | 1280x4542 | 1280x4554 |
 | Hero section | 402x876 | 402x875 | 427x898 | 427x895 | 820x1155 | 820x1154 | 1280x1189 | 1280x1189 |
 | Hero card | 386x748 | 386x747 | 411x770 | 411x767 | 804x1027 | 804x1026 | 1264x1061 | 1264x1061 |
 | Hero video card | 322x183 | 322x183 | 347x197 | 347x197 | 740x418 | 740x418 | 800x452 | 800x452 |
 | Primary button | 233x54 | 234x53 | 233x54 | 234x53 | 233x54 | 234x54 | 233x54 | 234x54 |
-| Marquee | 402x82 | 402x83 | 427x82 | 427x48 | 820x82 | 820x83 | 1280x82 | 1280x82 |
-| Features | 402x2184 | 402x2194 | 427x2160 | 427x2179 | 820x1820 | 820x1828 | 1280x910 | 1280x920 |
-| Testimonials | 402x485 | 402x487 | 427x485 | 427x491 | 820x451 | 820x452 | 1280x451 | 1280x458 |
-| Pricing | 402x1812 | 402x1819 | 427x1812 | 427x1762 | 820x1187 | 820x1194 | 1280x618 | 1280x615 |
-| Ship section | 402x545 | 402x547 | 427x545 | 427x551 | 820x494 | 820x494 | 1280x494 | 1280x500 |
-| Terms | 402x832 | 402x834 | 427x791 | 427x771 | 820x566 | 820x573 | 1280x545 | 1280x531 |
-| Footer | 338x484 | 338x491 | 363x484 | 363x501 | 756x309 | 756x312 | 1216x190 | 1216x193 |
+| Marquee | 402x82 | 402x83 | 427x82 | 427x82 | 820x82 | 820x83 | 1280x82 | 1280x82 |
+| Features | 402x2184 | 402x2194 | 427x2160 | 427x2152 | 820x1820 | 820x1828 | 1280x910 | 1280x910 |
+| Testimonials | 402x485 | 402x487 | 427x485 | 427x487 | 820x451 | 820x452 | 1280x451 | 1280x453 |
+| Pricing | 402x1812 | 402x1819 | 427x1812 | 427x1777 | 820x1187 | 820x1194 | 1280x618 | 1280x620 |
+| Ship section | 402x545 | 402x547 | 427x545 | 427x547 | 820x494 | 820x494 | 1280x494 | 1280x495 |
+| Terms | 402x832 | 402x834 | 427x791 | 427x787 | 820x566 | 820x573 | 1280x545 | 1280x551 |
+| Footer | 338x484 | 338x491 | 363x484 | 363x482 | 756x309 | 756x312 | 1216x190 | 1216x190 |
 
 - iPhone 402: page 7394 native vs 7365 web, 227 of 276 paired boxes within 3 points in size
-- Pixel 10 Pro 427: page 7262 native vs 7320 web, 167 of 273 paired boxes within 3 points in size
+- Pixel 10 Pro 427: page 7273 native vs 7320 web, 198 of 275 paired boxes within 3 points in size
 - iPad 820: page 6154 native vs 6127 web, 222 of 277 paired boxes within 3 points in size
-- Pixel Tablet 1280: page 4552 native vs 4542 web, 182 of 308 paired boxes within 3 points in size
+- Pixel Tablet 1280: page 4554 native vs 4542 web, 227 of 310 paired boxes within 3 points in size
 
 Two rows need a note. The marquee's chips arrive from an API response, and a capture that
 lands before it (both phones above) reads the strip empty; the passes that had the rows
