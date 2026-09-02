@@ -1,5 +1,5 @@
 {
-  "_note": "The NATIVE half of despia.com's type: the five families the page's stylesheets name, each a variable face from the Google Fonts repository (OFL, licenses beside each file) or the framework's own Inter. The web lane loads the same designs from fonts.gstatic.com; bundling the TTFs gives native the same glyph metrics, which is what pixel parity of every text box needs. Family keys are the CSS family names the sheets declare.",
+  "_note": "The NATIVE half of despia.com's type: the five families the page's stylesheets name, each a variable face from the Google Fonts repository (OFL, licenses beside each file) or the framework's own Inter. The web lane loads the same designs from fonts.gstatic.com; bundling the TTFs gives native the same glyph metrics, which is what pixel parity of every text box needs. Family keys are the CSS family names the sheets declare. The web serves each family as static per-weight instances (no optical-size axis), so `opticalSizing` is off: the native face keeps the axis at its default rather than tracking the point size, or its glyphs come out narrower than the browser's and lines wrap a word earlier.",
   "families": {
     "Inter": {
       "variable": true,
@@ -22,7 +22,8 @@
       },
       "fallback": [
         "system"
-      ]
+      ],
+      "opticalSizing": false
     },
     "Inter Tight": {
       "variable": true,
@@ -41,7 +42,8 @@
       },
       "fallback": [
         "system"
-      ]
+      ],
+      "opticalSizing": false
     },
     "Roboto": {
       "variable": true,
@@ -64,7 +66,8 @@
       },
       "fallback": [
         "system"
-      ]
+      ],
+      "opticalSizing": false
     },
     "Geist": {
       "variable": true,
@@ -83,7 +86,8 @@
       },
       "fallback": [
         "system"
-      ]
+      ],
+      "opticalSizing": false
     },
     "Geist Mono": {
       "variable": true,
@@ -102,7 +106,8 @@
       },
       "fallback": [
         "system"
-      ]
+      ],
+      "opticalSizing": false
     }
   }
 }

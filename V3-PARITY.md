@@ -432,53 +432,68 @@ element at, read from the same capture the harness diffs. Each pass was taken on
 
 | Section | iPhone 402 web | iPhone 402 native | Pixel 10 Pro 427 web | Pixel 10 Pro 427 native | iPad 820 web | iPad 820 native | Pixel Tablet 1280 web | Pixel Tablet 1280 native |
 |---|---|---|---|---|---|---|---|---|
-| Page | 402x7365 | 402x7394 | 427x7320 | 427x7273 | 820x6127 | 820x6154 | 1280x4542 | 1280x4554 |
-| Hero section | 402x876 | 402x875 | 427x898 | 427x895 | 820x1155 | 820x1154 | 1280x1189 | 1280x1189 |
-| Hero card | 386x748 | 386x747 | 411x770 | 411x767 | 804x1027 | 804x1026 | 1264x1061 | 1264x1061 |
+| Page | 402x7365 | 402x7365 | 427x7320 | 427x7323 | 820x6127 | 820x6127 | 1280x4542 | 1280x4558 |
+| Hero section | 402x876 | 402x877 | 427x898 | 427x898 | 820x1155 | 820x1155 | 1280x1189 | 1280x1189 |
+| Hero card | 386x748 | 386x749 | 411x770 | 411x770 | 804x1027 | 804x1027 | 1264x1061 | 1264x1061 |
 | Hero video card | 322x183 | 322x183 | 347x197 | 347x197 | 740x418 | 740x418 | 800x452 | 800x452 |
-| Primary button | 233x54 | 234x53 | 233x54 | 234x53 | 233x54 | 234x54 | 233x54 | 234x54 |
-| Marquee | 402x82 | 402x83 | 427x82 | 427x82 | 820x82 | 820x83 | 1280x82 | 1280x82 |
-| Features | 402x2184 | 402x2194 | 427x2160 | 427x2152 | 820x1820 | 820x1828 | 1280x910 | 1280x910 |
-| Testimonials | 402x485 | 402x487 | 427x485 | 427x487 | 820x451 | 820x452 | 1280x451 | 1280x453 |
-| Pricing | 402x1812 | 402x1819 | 427x1812 | 427x1777 | 820x1187 | 820x1194 | 1280x618 | 1280x620 |
-| Ship section | 402x545 | 402x547 | 427x545 | 427x547 | 820x494 | 820x494 | 1280x494 | 1280x495 |
-| Terms | 402x832 | 402x834 | 427x791 | 427x787 | 820x566 | 820x573 | 1280x545 | 1280x551 |
-| Footer | 338x484 | 338x491 | 363x484 | 363x482 | 756x309 | 756x312 | 1216x190 | 1216x190 |
+| Primary button | 233x54 | 234x54 | 233x54 | 235x54 | 233x54 | 234x54 | 233x54 | 235x54 |
+| Marquee | 402x82 | 402x82 | 427x82 | 427x82 | 820x82 | 820x82 | 1280x82 | 1280x48 |
+| Features | 402x2184 | 402x2184 | 427x2160 | 427x2160 | 820x1820 | 820x1820 | 1280x910 | 1280x959 |
+| Testimonials | 402x485 | 402x485 | 427x485 | 427x485 | 820x451 | 820x451 | 1280x451 | 1280x452 |
+| Pricing | 402x1812 | 402x1812 | 427x1812 | 427x1812 | 820x1187 | 820x1187 | 1280x618 | 1280x618 |
+| Ship section | 402x545 | 402x545 | 427x545 | 427x545 | 820x494 | 820x494 | 1280x494 | 1280x494 |
+| Terms | 402x832 | 402x832 | 427x791 | 427x792 | 820x566 | 820x566 | 1280x545 | 1280x545 |
+| Footer | 338x484 | 338x484 | 363x484 | 363x485 | 756x309 | 756x309 | 1216x190 | 1216x190 |
+
+- iPhone 402: page 7365 native vs 7365 web, 277 paired boxes, 241 exact in size, 270 within a point, 270 within 3 points, 273 within a point in position
+- Pixel 10 Pro 427: page 7323 native vs 7320 web, 275 paired boxes, 202 exact in size, 238 within a point, 254 within 3 points, 204 within a point in position
+- iPad 820: page 6127 native vs 6127 web, 278 paired boxes, 204 exact in size, 256 within a point, 258 within 3 points, 231 within a point in position
+- Pixel Tablet 1280: page 4558 native vs 4542 web, 308 paired boxes, 95 exact in size, 195 within a point, 226 within 3 points, 30 within a point in position
 
 - iPhone 402: page 7394 native vs 7365 web, 227 of 276 paired boxes within 3 points in size
 - Pixel 10 Pro 427: page 7273 native vs 7320 web, 198 of 275 paired boxes within 3 points in size
 - iPad 820: page 6154 native vs 6127 web, 222 of 277 paired boxes within 3 points in size
 - Pixel Tablet 1280: page 4554 native vs 4542 web, 227 of 310 paired boxes within 3 points in size
 
-Two rows need a note. The marquee's chips arrive from an API response, and a capture that
-lands before it (both phones above) reads the strip empty; the passes that had the rows
-(the iPad and the tablet above, and the earlier phone captures) read the marquee at the
-browser's 82 or 83 points. The paired-box counts pair every probe id the browser reports with
-the same id on the device; a run inside a native paragraph has no rect of its own any more,
-which is why a third of the pairs are missing rather than wrong.
-
 What the September 2 engine work settled, in the order the page revealed it: the paint the
 bridges translate (hex order, colour words, radii, replaced boxes, text transforms, corner
 gradients, gradient text on Android, blur), the inherited ink, the reserved web-surface
-primitive folding the Dom module, a line box for a line-height below the face on both lanes, a
-paragraph rendered as segments between hard breaks, each at its own line height, the row
-model's anonymous inline box for a run of newlines under a block, the CSS root size as the em
-a layout root stamps, the inherited family and weight by name on Android, a pixel of slack on
-a hugging label's max-content width, and a page root that scrolls on Android.
+primitive folding the Dom module, a paragraph rendered as segments between hard breaks,
+each at its own line height, the row model's anonymous inline box for a run of newlines
+under a block, the CSS root size as the em a layout root stamps, the family and weight
+inherited by name on both lanes (the registry names no default family, so a text that
+inherits Inter never falls to the platform face), optical sizing pinned at the axis default
+(the browser serves instances designed at the text size), the browser's `normal` line box
+computed from the face on the reference grid, the line box every text is drawn in (SwiftUI
+draws lines at the face's fractional pitch and ceils only a text's total to the pixel, so a
+text is boxed at exactly lines times line-height, above the face and below it), the core
+laying out in fractional points with the browser's wrap tolerance and its wrapper answering
+exact heights, a button or pressable as the core container its cascade declares, a viewBox
+graphic sized from the box it is given, an inline box's vertical padding kept out of the
+flow and painted as an overhang, and `position: fixed` as a viewport overlay on the scroll's
+fixed plane, composed in the scope it was declared in, so the banner and navigation bar
+stay at the top of every screen on both lanes.
 
 What remains, and where it is written down: a wrapping text breaks where the bundled face
 breaks it, and a face built differently from the browser's moves a word across a line in a
-few paragraphs; a `line-height: normal` text measured against this 2x desktop capture drifts
-a third of a point per line, since the browser rounds a face's ascent and descent to half a
-point there while the renderers round to thirds and whole pixels at 3x (a 3x browser on the
-device rounds the way they do); the pitch between the lines of a heading whose line-height
-sits below its face's stays the face's, though the block is as tall as the web's; a mixed
-inline context wraps at the run boundary; `text-wrap: balance` has no native twin;
-`position: fixed` pins at scroll zero; a keyframe `transform` with no exact decomposition is
-inert; and the marquee's chips arrive from an API, so a capture that lands before the
-response reads the strip empty. Each is a row of the parity register
-(`ClosedSource/release/platform-parity-register.json`, `knownGapsOutsideTheLedgers`) and a line
-of the proposal's status table (`architecture/proposals/dsx-css.md`, section 10).
+few paragraphs; the glyph lines inside a `normal` paragraph sit at the face's own pitch
+between exact box edges (the register's line metrics row); a keyframe `transform` with no
+exact native decomposition (the marquee's `translateX`) is inert, so the row stands still;
+an unsized viewBox graphic asked for its max-content width answers its viewBox size; the
+Android emulator paints a `<WebView/>` embed white. The harness itself reports an inline
+run's rect at the full line width where the browser reports its widest line, and a break
+run's full-width box where the browser reports a zero-width fragment: the flow agrees, the
+rects are described differently, and the paired-box counts carry those rows as size
+mismatches on purpose. The remaining sub-point differences are the renderers' pixel grids
+(thirds of a point at 3x on iOS, whole pixels on Android), which the integer probe rounds
+either way.
+
+Two tablet rows need a note. The marquee's chips arrive from an API response and the
+capture at 1280 read the strip with one row (48 for the web's 82), which moves every
+section below it up by 34; and the feature cards' subtitles at 432 points wrap a line
+earlier on that 2x tablet than in the browser (a hairline: the browser fits its first line
+with a few pixels to spare, Compose does not), which adds 25 to each of the two card rows.
+The three phones and the iPad carry neither.
 
 ## The verdict
 
