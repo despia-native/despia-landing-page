@@ -3,256 +3,258 @@
      contract (attributes, variables, actions, api), a body of pure markup, and one
      sidecar stylesheet per component. Routing lives in dsx.config.json.
      Copyright Despia LLC-FZ. Source available, not open source: see LICENSE. -->
-<stack class="ds-page" grow="true">
-  <stack class="ds siteterms-1">
-    <SiteNavbar themeMode="light" currentPage="/terms" menuOptions="{{ [{ 'name': 'Home', 'href': '/' }, { 'name': 'Documentation', 'href': 'https://setup.despia.com' }, { 'name': 'Login', 'href': 'https://v3.despia.com' }] }}" homepageLink="/" mainCtaLink="https://v3.despia.com" mainCtaName="Ship to Native">
-      <svg class="ds ds-svg siteterms-2" slot="logo" src="&lt;svg fill=&quot;currentColor&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 400&quot;&gt;&lt;path d=&quot;M200,0C89.54,0,0,89.54,0,200c110.46,0,200-89.54,200-200&quot;/&gt;&lt;path d=&quot;M0,200H0C0,310.46,89.54,400,200,400c0-110.46-89.54-200-200-200&quot;/&gt;&lt;path d=&quot;M200,400c110.46,0,200-89.54,200-200h0c-110.46,0-200,89.54-200,200&quot;/&gt;&lt;path d=&quot;M317.75 161.05 C359.37 161.05 393.11 127.31 393.11 85.69 C393.11 44.07 359.37 10.33 317.75 10.33 C276.13 10.33 242.39 44.07 242.39 85.69 C242.39 105.677 250.33 124.845 264.462 138.978 C278.595 153.11 297.763 161.05 317.75 161.05&quot;/&gt;&lt;/svg&gt;"/>
-    </SiteNavbar>
-    <stack class="ds siteterms-3">
-      <stack class="ds siteterms-4">
-        <stack class="ds ds-inline siteterms-5">
-          <text class="ds ds-text" value="Terms of Service"/>
+<scroll grow="true">
+  <stack class="ds-page" grow="true">
+    <stack class="ds siteterms-1">
+      <SiteNavbar themeMode="light" currentPage="/terms" menuOptions="{{ [{ 'name': 'Home', 'href': '/' }, { 'name': 'Documentation', 'href': 'https://setup.despia.com' }, { 'name': 'Login', 'href': 'https://v3.despia.com' }] }}" homepageLink="/" mainCtaLink="https://v3.despia.com" mainCtaName="Ship to Native">
+        <svg class="ds ds-svg siteterms-2" slot="logo" src="&lt;svg fill=&quot;currentColor&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 400&quot;&gt;&lt;path d=&quot;M200,0C89.54,0,0,89.54,0,200c110.46,0,200-89.54,200-200&quot;/&gt;&lt;path d=&quot;M0,200H0C0,310.46,89.54,400,200,400c0-110.46-89.54-200-200-200&quot;/&gt;&lt;path d=&quot;M200,400c110.46,0,200-89.54,200-200h0c-110.46,0-200,89.54-200,200&quot;/&gt;&lt;path d=&quot;M317.75 161.05 C359.37 161.05 393.11 127.31 393.11 85.69 C393.11 44.07 359.37 10.33 317.75 10.33 C276.13 10.33 242.39 44.07 242.39 85.69 C242.39 105.677 250.33 124.845 264.462 138.978 C278.595 153.11 297.763 161.05 317.75 161.05&quot;/&gt;&lt;/svg&gt;"/>
+      </SiteNavbar>
+      <stack class="ds siteterms-3">
+        <stack class="ds siteterms-4">
+          <stack class="ds ds-inline siteterms-5">
+            <text class="ds ds-text" value="Terms of Service"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-6">
+            <text class="ds ds-text" value="The rules of the road for using Despia. We’ve kept it short, clear, and fair."/>
+          </stack>
+          <stack class="ds siteterms-7">
+            <text class="ds ds-text" value="Despia LLC – FZ"/>
+            <text class="ds ds-text" value="Dubai, UAE"/>
+            <text class="ds ds-text" value="Effective Feb 16, 2026"/>
+          </stack>
         </stack>
-        <stack class="ds ds-inline siteterms-6">
-          <text class="ds ds-text" value="The rules of the road for using Despia. We’ve kept it short, clear, and fair."/>
+        <stack class="ds siteterms-8">
+          <stack class="ds ds-inline siteterms-9">
+            <text class="ds ds-text" value="Agreement"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-a">
+            <text class="ds ds-text" value="By using Despia’s platform, APIs, SDK, build tools, or related services (“Services”), you agree to these Terms and our Privacy Policy. If you’re representing an organization, you confirm you have the authority to accept on its behalf."/>
+          </stack>
         </stack>
-        <stack class="ds siteterms-7">
-          <text class="ds ds-text" value="Despia LLC – FZ"/>
-          <text class="ds ds-text" value="Dubai, UAE"/>
-          <text class="ds ds-text" value="Effective Feb 16, 2026"/>
+        <stack class="ds siteterms-b">
+          <stack class="ds ds-inline siteterms-c">
+            <text class="ds ds-text" value="Our Services"/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="Despia is a native runtime for web applications. The platform provides a GPU-accelerated native container for iOS and Android that runs your existing web application with full hardware access, native SDK integrations, on-device local server capabilities, over-the-air update infrastructure, and developer documentation."/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="Despia also integrates with the Apple App Store and Google Play Store developer ecosystems to provide automated build, signing, and deployment tooling that simplifies your CI/CD pipeline from code to live store listing."/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="Despia does not host or serve your web application, its content, or its user data. Your application runs from your own hosting infrastructure or from an on-device local server that caches assets directly from your hosting. You retain full control of your servers, databases, and deployment pipeline."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-d">
+          <stack class="ds ds-inline siteterms-e">
+            <text class="ds ds-text" value="Hosting &amp; Infrastructure"/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="Despia is a runtime and build toolchain, not a hosting provider. All web content, application logic, end-user data, databases, APIs, and backend services remain on your own infrastructure. Despia’s native container fetches and renders content directly from your servers or from the device’s local cache. Your application content does not pass through or reside on Despia’s servers."/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="You are solely responsible for your hosting environment, its availability, security, data handling, and compliance with applicable laws. Despia has no access to, control over, or responsibility for any end-user data processed by your application or stored on your infrastructure."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-f">
+          <stack class="ds ds-inline siteterms-g">
+            <text class="ds ds-text" value="Data Despia Processes"/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="While Despia does not host your application or its user data, we do process certain app-related data to provide our build, deployment, and platform services. This includes:"/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="App store listing metadata such as app names, descriptions, categories, and keywords. App icons, screenshots, and other store listing assets you provide. Bundle identifiers, version numbers, build configurations, and signing credentials. Account information you provide during registration."/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="This data may be shared with trusted partners and service providers who assist with CI/CD pipeline operations, app store build and deployment processing, and AI-powered processing of app-related data (such as metadata optimization and asset processing). We share only the minimum data necessary for these services to function."/>
+          </stack>
+          <stack class="ds siteterms-h">
+            <text class="ds ds-text" value="Sensitive credentials such as signing keys, certificates, and API tokens are stored using encryption at rest. Access to these credentials is restricted and logged. You may revoke or rotate your credentials at any time through your account settings."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-i">
+          <stack class="ds ds-inline siteterms-j">
+            <text class="ds ds-text" value="Your Account"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-k">
+            <text class="ds ds-text" value="You must be 18 or older. Keep your credentials secure and your registration info accurate. You’re responsible for all activity under your account. If something looks wrong, let us know at "/>
+            <pressable class="ds ds-a siteterms-l" href="mailto:report@despia.com">
+              <text class="ds ds-text" value="report@despia.com"/>
+            </pressable>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-m">
+          <stack class="ds ds-inline siteterms-n">
+            <text class="ds ds-text" value="Using Despia"/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="We grant you a non-exclusive, revocable license to use the platform for building and deploying your applications. You may not reverse-engineer the platform, resell access, or build a competing product with it."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-o">
+          <stack class="ds ds-inline siteterms-p">
+            <text class="ds ds-text" value="Acceptable Use"/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="Use Despia lawfully and responsibly. Don’t use the platform to build or distribute anything illegal, access systems without authorization, spread malware or fraudulent content, infringe on intellectual property or personal rights, create harmful or exploitative material, or disrupt the platform."/>
+          </stack>
+          <stack class="ds ds-inline siteterms-q">
+            <text class="ds ds-text" value="Under UAE Federal Decree-Law No. 34 of 2021, unlawful use of technology platforms is a criminal offence. Despia complies with UAE law and cooperates with authorities when required. Report concerns to "/>
+            <pressable class="ds ds-a siteterms-r" href="mailto:report@despia.com">
+              <text class="ds ds-text" value="report@despia.com"/>
+            </pressable>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-s">
+          <stack class="ds ds-inline siteterms-t">
+            <text class="ds ds-text" value="Your Content &amp; Applications"/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="You own everything you build. Despia does not claim any ownership of your code, content, applications, or data. Because Despia does not host your application content, we do not have access to or control over the applications you deploy or the end-user data they process."/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="You are solely and entirely responsible for your applications, including their content, functionality, legality, data handling practices, end-user agreements, and compliance with all applicable laws. Despia provides runtime and build tooling only and bears no responsibility for what you build, deploy, or distribute using the Services."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-u">
+          <stack class="ds ds-inline siteterms-v">
+            <text class="ds ds-text" value="Intellectual Property"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-w">
+            <text class="ds ds-text" value="The Despia platform, SDK, runtime, brand, logo, and documentation are our property. Nothing in these Terms transfers Despia IP to you."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-x">
+          <stack class="ds ds-inline siteterms-y">
+            <text class="ds ds-text" value="Pricing &amp; Payment"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-z">
+            <text class="ds ds-text" value="Some features require a paid plan. Pricing is on our website. Fees are exclusive of applicable taxes including UAE VAT, which are your responsibility."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-10">
+          <stack class="ds ds-inline siteterms-11">
+            <text class="ds ds-text" value="Refund Policy"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-12">
+            <text class="ds ds-text" value="Refunds are only issued within 14 days of purchase. If 14 days have passed since your purchase, we cannot offer you a refund."/>
+          </stack>
+          <stack class="ds ds-inline siteterms-13">
+            <text class="ds ds-text" value="Please note that our Services are digital products delivered instantly upon purchase. Under UAE Consumer Protection laws and international digital commerce standards, by completing your purchase, you provide your express prior consent for the immediate performance of the contract and acknowledge that you lose your right of withdrawal once the digital content is delivered and the service performance has begun."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-14">
+          <stack class="ds ds-inline siteterms-15">
+            <text class="ds ds-text" value="Third-Party Services &amp; Partners"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-16">
+            <text class="ds ds-text" value="Despia integrates with the Apple App Store, Google Play Store, and third-party services including RevenueCat, OneSignal, and others. These services operate under their own terms and privacy policies."/>
+          </stack>
+          <stack class="ds ds-inline siteterms-17">
+            <text class="ds ds-text" value="Despia works with trusted partners and service providers to deliver parts of the Services, including CI/CD infrastructure, build processing, and AI-powered features. These partners may process app-related data (as described in “Data Despia Processes” above) on our behalf and are bound by confidentiality obligations. Despia is not responsible for the operation of third-party services, and your use of them is at your own risk."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-18">
+          <stack class="ds ds-inline siteterms-19">
+            <text class="ds ds-text" value="Privacy &amp; Data Protection"/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="Despia processes account and app-related data in accordance with our Privacy Policy and UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data."/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="Despia does not host your application or process your end users’ personal data. You are solely responsible for all data processing performed by your application, including compliance with all applicable data protection laws, obtaining proper consent from your users, and maintaining your own privacy policy."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-1a">
+          <stack class="ds ds-inline siteterms-1b">
+            <text class="ds ds-text" value="Availability"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-1c">
+            <text class="ds ds-text" value="We work to keep the Despia build and deployment services reliable. The runtime operates on-device and your application’s availability depends on your own hosting infrastructure, not ours. The Services are provided as-is, without warranties beyond what UAE law requires."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-1d">
+          <stack class="ds ds-inline siteterms-1e">
+            <text class="ds ds-text" value="Disclaimers"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-1f">
+            <text class="ds ds-text" value="THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE.” TO THE FULLEST EXTENT PERMITTED BY UAE LAW, DESPIA DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. DESPIA DOES NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS."/>
+          </stack>
+          <stack class="ds ds-inline siteterms-1g">
+            <text class="ds ds-text" value="DESPIA IS A RUNTIME AND BUILD TOOLCHAIN. DESPIA DOES NOT HOST, MONITOR, REVIEW, OR CONTROL USER APPLICATIONS, THEIR CONTENT, OR THEIR END-USER DATA. DESPIA EXPRESSLY DISCLAIMS ALL LIABILITY FOR USER APPLICATIONS AND ANY CONTENT, DATA, OR SERVICES PROVIDED THROUGH THEM."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-1h">
+          <stack class="ds ds-inline siteterms-1i">
+            <text class="ds ds-text" value="Limitation of Liability"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-1j">
+            <text class="ds ds-text" value="TO THE MAXIMUM EXTENT PERMITTED BY UAE LAW, DESPIA’S TOTAL LIABILITY FOR ALL CLAIMS ARISING FROM THE SERVICES SHALL NOT EXCEED THE GREATER OF: (A) THE FEES YOU PAID TO DESPIA IN THE 12 MONTHS BEFORE THE CLAIM, OR (B) USD $100."/>
+          </stack>
+          <stack class="ds ds-inline siteterms-1k">
+            <text class="ds ds-text" value="DESPIA SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR BUSINESS OPPORTUNITIES, REGARDLESS OF THE THEORY OF LIABILITY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES."/>
+          </stack>
+          <stack class="ds ds-inline">
+            <text class="ds ds-text" value="This does not affect any rights that cannot be limited under applicable UAE law."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-1l">
+          <stack class="ds ds-inline siteterms-1m">
+            <text class="ds ds-text" value="Indemnification"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-1n">
+            <text class="ds ds-text" value="You agree to indemnify and hold harmless Despia, its officers, directors, employees, and agents from any claims, damages, losses, costs, or expenses (including legal fees) arising from: your use of the Services; your applications and their content, data, or functionality; any violation of these Terms or applicable law, including UAE Federal Decree-Law No. 34 of 2021 and UAE Federal Decree-Law No. 45 of 2021; any infringement of third-party rights including intellectual property, privacy, or publicity rights; and any claims from end users of your applications or any third party."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-1o">
+          <stack class="ds ds-inline siteterms-1p">
+            <text class="ds ds-text" value="Termination"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-1q">
+            <text class="ds ds-text" value="We may suspend or terminate your account for Terms violations, legal requirements, or platform safety. You can close your account anytime. Because Despia does not host your application or end-user data, termination affects your access to the build and deployment tools only. Your application, code, and data remain on your own infrastructure."/>
+          </stack>
+          <stack class="ds ds-inline siteterms-1r">
+            <text class="ds ds-text" value="Upon termination, Despia will delete your account data and any app-related data (store metadata, icons, build configurations) within a commercially reasonable period. Encrypted credentials will be destroyed. Sections relating to liability, indemnification, intellectual property, disclaimers, and dispute resolution survive termination."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-1s">
+          <stack class="ds ds-inline siteterms-1t">
+            <text class="ds ds-text" value="Disputes"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-1u">
+            <text class="ds ds-text" value="These Terms are governed by UAE law as applied in Dubai. Disputes go to arbitration at the Dubai International Arbitration Centre, in English, with a single arbitrator. The arbitrator’s decision is final and binding. Claims must be brought within one year of the issue arising."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-1v">
+          <stack class="ds ds-inline siteterms-1w">
+            <text class="ds ds-text" value="Force Majeure"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-1x">
+            <text class="ds ds-text" value="Despia is not liable for delays or failures caused by events beyond our reasonable control, including natural disasters, pandemics, war, government actions, cyberattacks, power or internet outages, or labour disputes."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-1y">
+          <stack class="ds ds-inline siteterms-1z">
+            <text class="ds ds-text" value="General"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-20">
+            <text class="ds ds-text" value="If any provision is unenforceable, the rest still applies and the unenforceable provision will be modified to the minimum extent necessary. These Terms and our Privacy Policy are the entire agreement between you and Despia and supersede all prior agreements. No waiver of any provision constitutes a continuing waiver. We may update these Terms and will post changes with an updated date. Continued use means acceptance."/>
+          </stack>
+        </stack>
+        <stack class="ds siteterms-21">
+          <stack class="ds ds-inline siteterms-22">
+            <text class="ds ds-text" value="Report Concerns"/>
+          </stack>
+          <stack class="ds ds-inline siteterms-23">
+            <text class="ds ds-text" value="See something off? Let us know at "/>
+            <pressable class="ds ds-a siteterms-24" href="mailto:report@despia.com">
+              <text class="ds ds-text" value="report@despia.com"/>
+            </pressable>
+          </stack>
         </stack>
       </stack>
-      <stack class="ds siteterms-8">
-        <stack class="ds ds-inline siteterms-9">
-          <text class="ds ds-text" value="Agreement"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-a">
-          <text class="ds ds-text" value="By using Despia’s platform, APIs, SDK, build tools, or related services (“Services”), you agree to these Terms and our Privacy Policy. If you’re representing an organization, you confirm you have the authority to accept on its behalf."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-b">
-        <stack class="ds ds-inline siteterms-c">
-          <text class="ds ds-text" value="Our Services"/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="Despia is a native runtime for web applications. The platform provides a GPU-accelerated native container for iOS and Android that runs your existing web application with full hardware access, native SDK integrations, on-device local server capabilities, over-the-air update infrastructure, and developer documentation."/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="Despia also integrates with the Apple App Store and Google Play Store developer ecosystems to provide automated build, signing, and deployment tooling that simplifies your CI/CD pipeline from code to live store listing."/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="Despia does not host or serve your web application, its content, or its user data. Your application runs from your own hosting infrastructure or from an on-device local server that caches assets directly from your hosting. You retain full control of your servers, databases, and deployment pipeline."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-d">
-        <stack class="ds ds-inline siteterms-e">
-          <text class="ds ds-text" value="Hosting &amp; Infrastructure"/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="Despia is a runtime and build toolchain, not a hosting provider. All web content, application logic, end-user data, databases, APIs, and backend services remain on your own infrastructure. Despia’s native container fetches and renders content directly from your servers or from the device’s local cache. Your application content does not pass through or reside on Despia’s servers."/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="You are solely responsible for your hosting environment, its availability, security, data handling, and compliance with applicable laws. Despia has no access to, control over, or responsibility for any end-user data processed by your application or stored on your infrastructure."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-f">
-        <stack class="ds ds-inline siteterms-g">
-          <text class="ds ds-text" value="Data Despia Processes"/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="While Despia does not host your application or its user data, we do process certain app-related data to provide our build, deployment, and platform services. This includes:"/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="App store listing metadata such as app names, descriptions, categories, and keywords. App icons, screenshots, and other store listing assets you provide. Bundle identifiers, version numbers, build configurations, and signing credentials. Account information you provide during registration."/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="This data may be shared with trusted partners and service providers who assist with CI/CD pipeline operations, app store build and deployment processing, and AI-powered processing of app-related data (such as metadata optimization and asset processing). We share only the minimum data necessary for these services to function."/>
-        </stack>
-        <stack class="ds siteterms-h">
-          <text class="ds ds-text" value="Sensitive credentials such as signing keys, certificates, and API tokens are stored using encryption at rest. Access to these credentials is restricted and logged. You may revoke or rotate your credentials at any time through your account settings."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-i">
-        <stack class="ds ds-inline siteterms-j">
-          <text class="ds ds-text" value="Your Account"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-k">
-          <text class="ds ds-text" value="You must be 18 or older. Keep your credentials secure and your registration info accurate. You’re responsible for all activity under your account. If something looks wrong, let us know at "/>
-          <pressable class="ds ds-a siteterms-l" href="mailto:report@despia.com">
-            <text class="ds ds-text" value="report@despia.com"/>
-          </pressable>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-m">
-        <stack class="ds ds-inline siteterms-n">
-          <text class="ds ds-text" value="Using Despia"/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="We grant you a non-exclusive, revocable license to use the platform for building and deploying your applications. You may not reverse-engineer the platform, resell access, or build a competing product with it."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-o">
-        <stack class="ds ds-inline siteterms-p">
-          <text class="ds ds-text" value="Acceptable Use"/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="Use Despia lawfully and responsibly. Don’t use the platform to build or distribute anything illegal, access systems without authorization, spread malware or fraudulent content, infringe on intellectual property or personal rights, create harmful or exploitative material, or disrupt the platform."/>
-        </stack>
-        <stack class="ds ds-inline siteterms-q">
-          <text class="ds ds-text" value="Under UAE Federal Decree-Law No. 34 of 2021, unlawful use of technology platforms is a criminal offence. Despia complies with UAE law and cooperates with authorities when required. Report concerns to "/>
-          <pressable class="ds ds-a siteterms-r" href="mailto:report@despia.com">
-            <text class="ds ds-text" value="report@despia.com"/>
-          </pressable>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-s">
-        <stack class="ds ds-inline siteterms-t">
-          <text class="ds ds-text" value="Your Content &amp; Applications"/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="You own everything you build. Despia does not claim any ownership of your code, content, applications, or data. Because Despia does not host your application content, we do not have access to or control over the applications you deploy or the end-user data they process."/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="You are solely and entirely responsible for your applications, including their content, functionality, legality, data handling practices, end-user agreements, and compliance with all applicable laws. Despia provides runtime and build tooling only and bears no responsibility for what you build, deploy, or distribute using the Services."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-u">
-        <stack class="ds ds-inline siteterms-v">
-          <text class="ds ds-text" value="Intellectual Property"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-w">
-          <text class="ds ds-text" value="The Despia platform, SDK, runtime, brand, logo, and documentation are our property. Nothing in these Terms transfers Despia IP to you."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-x">
-        <stack class="ds ds-inline siteterms-y">
-          <text class="ds ds-text" value="Pricing &amp; Payment"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-z">
-          <text class="ds ds-text" value="Some features require a paid plan. Pricing is on our website. Fees are exclusive of applicable taxes including UAE VAT, which are your responsibility."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-10">
-        <stack class="ds ds-inline siteterms-11">
-          <text class="ds ds-text" value="Refund Policy"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-12">
-          <text class="ds ds-text" value="Refunds are only issued within 14 days of purchase. If 14 days have passed since your purchase, we cannot offer you a refund."/>
-        </stack>
-        <stack class="ds ds-inline siteterms-13">
-          <text class="ds ds-text" value="Please note that our Services are digital products delivered instantly upon purchase. Under UAE Consumer Protection laws and international digital commerce standards, by completing your purchase, you provide your express prior consent for the immediate performance of the contract and acknowledge that you lose your right of withdrawal once the digital content is delivered and the service performance has begun."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-14">
-        <stack class="ds ds-inline siteterms-15">
-          <text class="ds ds-text" value="Third-Party Services &amp; Partners"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-16">
-          <text class="ds ds-text" value="Despia integrates with the Apple App Store, Google Play Store, and third-party services including RevenueCat, OneSignal, and others. These services operate under their own terms and privacy policies."/>
-        </stack>
-        <stack class="ds ds-inline siteterms-17">
-          <text class="ds ds-text" value="Despia works with trusted partners and service providers to deliver parts of the Services, including CI/CD infrastructure, build processing, and AI-powered features. These partners may process app-related data (as described in “Data Despia Processes” above) on our behalf and are bound by confidentiality obligations. Despia is not responsible for the operation of third-party services, and your use of them is at your own risk."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-18">
-        <stack class="ds ds-inline siteterms-19">
-          <text class="ds ds-text" value="Privacy &amp; Data Protection"/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="Despia processes account and app-related data in accordance with our Privacy Policy and UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data."/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="Despia does not host your application or process your end users’ personal data. You are solely responsible for all data processing performed by your application, including compliance with all applicable data protection laws, obtaining proper consent from your users, and maintaining your own privacy policy."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-1a">
-        <stack class="ds ds-inline siteterms-1b">
-          <text class="ds ds-text" value="Availability"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-1c">
-          <text class="ds ds-text" value="We work to keep the Despia build and deployment services reliable. The runtime operates on-device and your application’s availability depends on your own hosting infrastructure, not ours. The Services are provided as-is, without warranties beyond what UAE law requires."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-1d">
-        <stack class="ds ds-inline siteterms-1e">
-          <text class="ds ds-text" value="Disclaimers"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-1f">
-          <text class="ds ds-text" value="THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE.” TO THE FULLEST EXTENT PERMITTED BY UAE LAW, DESPIA DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. DESPIA DOES NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS."/>
-        </stack>
-        <stack class="ds ds-inline siteterms-1g">
-          <text class="ds ds-text" value="DESPIA IS A RUNTIME AND BUILD TOOLCHAIN. DESPIA DOES NOT HOST, MONITOR, REVIEW, OR CONTROL USER APPLICATIONS, THEIR CONTENT, OR THEIR END-USER DATA. DESPIA EXPRESSLY DISCLAIMS ALL LIABILITY FOR USER APPLICATIONS AND ANY CONTENT, DATA, OR SERVICES PROVIDED THROUGH THEM."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-1h">
-        <stack class="ds ds-inline siteterms-1i">
-          <text class="ds ds-text" value="Limitation of Liability"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-1j">
-          <text class="ds ds-text" value="TO THE MAXIMUM EXTENT PERMITTED BY UAE LAW, DESPIA’S TOTAL LIABILITY FOR ALL CLAIMS ARISING FROM THE SERVICES SHALL NOT EXCEED THE GREATER OF: (A) THE FEES YOU PAID TO DESPIA IN THE 12 MONTHS BEFORE THE CLAIM, OR (B) USD $100."/>
-        </stack>
-        <stack class="ds ds-inline siteterms-1k">
-          <text class="ds ds-text" value="DESPIA SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR BUSINESS OPPORTUNITIES, REGARDLESS OF THE THEORY OF LIABILITY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES."/>
-        </stack>
-        <stack class="ds ds-inline">
-          <text class="ds ds-text" value="This does not affect any rights that cannot be limited under applicable UAE law."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-1l">
-        <stack class="ds ds-inline siteterms-1m">
-          <text class="ds ds-text" value="Indemnification"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-1n">
-          <text class="ds ds-text" value="You agree to indemnify and hold harmless Despia, its officers, directors, employees, and agents from any claims, damages, losses, costs, or expenses (including legal fees) arising from: your use of the Services; your applications and their content, data, or functionality; any violation of these Terms or applicable law, including UAE Federal Decree-Law No. 34 of 2021 and UAE Federal Decree-Law No. 45 of 2021; any infringement of third-party rights including intellectual property, privacy, or publicity rights; and any claims from end users of your applications or any third party."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-1o">
-        <stack class="ds ds-inline siteterms-1p">
-          <text class="ds ds-text" value="Termination"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-1q">
-          <text class="ds ds-text" value="We may suspend or terminate your account for Terms violations, legal requirements, or platform safety. You can close your account anytime. Because Despia does not host your application or end-user data, termination affects your access to the build and deployment tools only. Your application, code, and data remain on your own infrastructure."/>
-        </stack>
-        <stack class="ds ds-inline siteterms-1r">
-          <text class="ds ds-text" value="Upon termination, Despia will delete your account data and any app-related data (store metadata, icons, build configurations) within a commercially reasonable period. Encrypted credentials will be destroyed. Sections relating to liability, indemnification, intellectual property, disclaimers, and dispute resolution survive termination."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-1s">
-        <stack class="ds ds-inline siteterms-1t">
-          <text class="ds ds-text" value="Disputes"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-1u">
-          <text class="ds ds-text" value="These Terms are governed by UAE law as applied in Dubai. Disputes go to arbitration at the Dubai International Arbitration Centre, in English, with a single arbitrator. The arbitrator’s decision is final and binding. Claims must be brought within one year of the issue arising."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-1v">
-        <stack class="ds ds-inline siteterms-1w">
-          <text class="ds ds-text" value="Force Majeure"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-1x">
-          <text class="ds ds-text" value="Despia is not liable for delays or failures caused by events beyond our reasonable control, including natural disasters, pandemics, war, government actions, cyberattacks, power or internet outages, or labour disputes."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-1y">
-        <stack class="ds ds-inline siteterms-1z">
-          <text class="ds ds-text" value="General"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-20">
-          <text class="ds ds-text" value="If any provision is unenforceable, the rest still applies and the unenforceable provision will be modified to the minimum extent necessary. These Terms and our Privacy Policy are the entire agreement between you and Despia and supersede all prior agreements. No waiver of any provision constitutes a continuing waiver. We may update these Terms and will post changes with an updated date. Continued use means acceptance."/>
-        </stack>
-      </stack>
-      <stack class="ds siteterms-21">
-        <stack class="ds ds-inline siteterms-22">
-          <text class="ds ds-text" value="Report Concerns"/>
-        </stack>
-        <stack class="ds ds-inline siteterms-23">
-          <text class="ds ds-text" value="See something off? Let us know at "/>
-          <pressable class="ds ds-a siteterms-24" href="mailto:report@despia.com">
-            <text class="ds ds-text" value="report@despia.com"/>
-          </pressable>
-        </stack>
-      </stack>
+      <SiteFooter/>
     </stack>
-    <SiteFooter/>
   </stack>
-</stack>
+</scroll>

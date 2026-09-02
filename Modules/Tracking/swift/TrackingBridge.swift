@@ -76,17 +76,17 @@ final class TrackingBridge: Module {
     private func goal(_ ctx: Context) {
         let name = ((ctx.args("name") as? String) ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         if name.isEmpty {
-            ctx.fail("bad_goal", "A goal needs a name.", false)
+            ctx.fail("bad_goal", message: "A goal needs a name.", recoverable: false)
             return
         }
         let code = liveReferral()
         var delivered = 0
 
-        let websiteId = dsx.config.datafastWebsiteId.string ?? ""
+        let websiteId = dsx.config.datafastWebsiteId.string
         if !websiteId.isEmpty {
             post("https://datafa.st/api/events", [
                 "websiteId": websiteId,
-                "domain": dsx.config.datafastDomain.string ?? "",
+                "domain": dsx.config.datafastDomain.string,
                 "goal": name,
                 "referral": code,
             ])
@@ -95,7 +95,7 @@ final class TrackingBridge: Module {
 
         // The vendors that need a server-held secret ride the app's own collector, when there
         // is one. This is the whole native story for GA, the X pixel and Intercom.
-        let collector = dsx.config.collectorUrl.string ?? ""
+        let collector = dsx.config.collectorUrl.string
         if !collector.isEmpty {
             post(collector, ["goal": name, "referral": code, "platform": "ios"])
             delivered += 1
@@ -108,12 +108,12 @@ final class TrackingBridge: Module {
     private func identify(_ ctx: Context) {
         let userId = ((ctx.args("userId") as? String) ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         if userId.isEmpty {
-            ctx.fail("bad_identity", "Identifying a visitor needs a user id.", false)
+            ctx.fail("bad_identity", message: "Identifying a visitor needs a user id.", recoverable: false)
             return
         }
         let code = liveReferral()
         var identified = false
-        let collector = dsx.config.collectorUrl.string ?? ""
+        let collector = dsx.config.collectorUrl.string
         if !collector.isEmpty {
             post(collector, [
                 "identify": userId,
@@ -133,8 +133,8 @@ final class TrackingBridge: Module {
     @discardableResult
     private func publish() -> JSON {
         let code = liveReferral()
-        let ready = !(dsx.config.datafastWebsiteId.string ?? "").isEmpty
-            || !(dsx.config.collectorUrl.string ?? "").isEmpty
+        let ready = !dsx.config.datafastWebsiteId.string.isEmpty
+            || !dsx.config.collectorUrl.string.isEmpty
         dsx.context.set("referral", code)
         dsx.context.set("ready", ready)
         return JSON(["code": code, "stored": !code.isEmpty])

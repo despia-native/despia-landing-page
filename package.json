@@ -1,23 +1,12 @@
 {
-  "name": "despia-landing-page",
+  "name": "despia-site",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.1.0",
   "type": "module",
-  "description": "despia.com, authored in DSX. Source available, not open source.",
-  "license": "SEE LICENSE IN LICENSE",
-  "engines": {
-    "node": ">=22.18"
-  },
+  "description": "The despia.com landing page - a DSX web project built by the shipped toolchain.",
   "scripts": {
-    "dev": "dsx dev",
     "build": "dsx build",
-    "start": "node server.mjs",
+    "dev": "dsx dev",
     "lint": "dsx lint --strict"
-  },
-  "devDependencies": {
-    "@despia-native/cli": "^0.0.1"
-  },
-  "dependencies": {
-    "@despia-native/server": "^0.0.1"
   }
 }

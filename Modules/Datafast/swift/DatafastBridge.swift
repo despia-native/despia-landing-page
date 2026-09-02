@@ -90,8 +90,8 @@ final class DatafastBridge: Module {
     }
 
     private func envelope(type: String, href: String?, extra: [String: Any]) -> [String: Any] {
-        let websiteId = dsx.config.websiteId.string ?? ""
-        let domain = dsx.config.domain.string ?? ""
+        let websiteId = dsx.config.websiteId.string
+        let domain = dsx.config.domain.string
         var body: [String: Any] = [
             "type": type,
             "websiteId": websiteId,
@@ -125,10 +125,10 @@ final class DatafastBridge: Module {
     private func goal(_ ctx: Context) {
         let name = ((ctx.args("name") as? String) ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         if name.isEmpty {
-            ctx.fail("bad_event", "A goal needs a name.", false); return
+            ctx.fail("bad_event", message: "A goal needs a name.", recoverable: false); return
         }
         if name == "payment" || name == "identify" {
-            ctx.fail("bad_event", "\"\(name)\" is reserved by datafa.st; call the action of that name.", false)
+            ctx.fail("bad_event", message: "\"\(name)\" is reserved by datafa.st; call the action of that name.", recoverable: false)
             return
         }
         var extra = sanitize(ctx.args("data"))
@@ -138,7 +138,7 @@ final class DatafastBridge: Module {
     }
 
     private func pageview(_ ctx: Context) {
-        let domain = dsx.config.domain.string ?? ""
+        let domain = dsx.config.domain.string
         let path = (ctx.args("path") as? String) ?? "/"
         let href = path.hasPrefix("http") ? path : "https://\(domain)\(path.hasPrefix("/") ? path : "/" + path)"
         // The script drops a repeat of the same URL inside a minute; a screen that re-appears on
@@ -155,7 +155,7 @@ final class DatafastBridge: Module {
     private func identify(_ ctx: Context) {
         let userId = ((ctx.args("userId") as? String) ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         if userId.isEmpty {
-            ctx.fail("bad_identity", "Identifying a visitor needs a user id.", false); return
+            ctx.fail("bad_identity", message: "Identifying a visitor needs a user id.", recoverable: false); return
         }
         var extra = sanitize(ctx.args("data"))
         extra["user_id"] = userId
@@ -168,15 +168,22 @@ final class DatafastBridge: Module {
     private func payment(_ ctx: Context) {
         let email = ((ctx.args("email") as? String) ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         if email.isEmpty {
-            ctx.fail("bad_payment", "A payment needs an email.", false); return
+            ctx.fail("bad_payment", message: "A payment needs an email.", recoverable: false); return
         }
         post(envelope(type: "payment", href: nil, extra: ["email": email]))
         ctx.resolve(JSON(["sent": true]))
     }
 
+    /// `dsx.config.<key>.string` is NON-OPTIONAL on this lane and answers "" for a key that is
+    /// not set, so a real fallback needs an emptiness check rather than a `??`.
+    private func cfg(_ key: String, default fallback: String = "") -> String {
+        let value = dsx.config[key].string
+        return value.isEmpty ? fallback : value
+    }
+
     @discardableResult
     private func publish() -> Bool {
-        let ready = !(dsx.config.websiteId.string ?? "").isEmpty
+        let ready = !dsx.config.websiteId.string.isEmpty
         dsx.context.set("ready", ready)
         dsx.context.set("visitorId", dsx.container.string("visitorId") ?? "")
         dsx.context.set("sessionId", dsx.container.string("sessionId") ?? "")
@@ -197,9 +204,9 @@ final class DatafastBridge: Module {
     /// analytics that fail silently are worse than analytics that are missing - one you can
     /// see, the other you trust wrongly for a quarter.
     private func post(_ body: [String: Any]) {
-        let endpoint = dsx.config.endpoint.string ?? "https://datafa.st/api/events"
-        let domain = dsx.config.domain.string ?? ""
-        guard !(dsx.config.websiteId.string ?? "").isEmpty,
+        let endpoint = cfg("endpoint", default: "https://datafa.st/api/events")
+        let domain = dsx.config.domain.string
+        guard !dsx.config.websiteId.string.isEmpty,
               let url = URL(string: endpoint),
               let data = try? JSONSerialization.data(withJSONObject: body) else { return }
         var request = URLRequest(url: url)

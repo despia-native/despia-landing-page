@@ -1,5 +1,9 @@
 /* SiteToolIcon: the component sheet. One class per node, plus its media-query, hover and
-   entry/exit variants. Generated; edit the page, not this file. */
+   entry/exit variants. Generated; edit the page, not this file.
+   A declaration the DSX-CSS catalog has no cross-platform word for sits in a
+   `@supports (<that declaration>)` block right after its rule: the browser answers the
+   query yes, the native resolvers answer every feature query no, so it reaches exactly the
+   lane that can draw it, in the cascade position the page gave it. */
 
 .sitetoolicon-1 {
   width: 5rem;
@@ -10,10 +14,7 @@
   border-color: var(--v3-fafafa2b);
   border-style: solid;
   border-width: 1.5px;
-  border-top-left-radius: 30%;
-  border-top-right-radius: 30%;
-  border-bottom-left-radius: 30%;
-  border-bottom-right-radius: 30%;
+  border-radius: 30%;
 }
 
 .sitetoolicon-2 {

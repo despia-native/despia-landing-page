@@ -1,5 +1,9 @@
 /* SitePhone: the component sheet. One class per node, plus its media-query, hover and
-   entry/exit variants. Generated; edit the page, not this file. */
+   entry/exit variants. Generated; edit the page, not this file.
+   A declaration the DSX-CSS catalog has no cross-platform word for sits in a
+   `@supports (<that declaration>)` block right after its rule: the browser answers the
+   query yes, the native resolvers answer every feature query no, so it reaches exactly the
+   lane that can draw it, in the cascade position the page gave it. */
 
 .sitephone-1 {
   width: 100%;
@@ -133,10 +137,7 @@
   flex-direction: column;
   justify-content: center;
   transition-property: box-shadow;
-  border-top-left-radius: 26%;
-  border-top-right-radius: 26%;
-  border-bottom-left-radius: 26%;
-  border-bottom-right-radius: 26%;
+  border-radius: 26%;
 }
 
 .sitephone-b:hover {
@@ -148,10 +149,7 @@
   height: 100%;
   overflow-x: clip;
   overflow-y: clip;
-  border-top-left-radius: 0%;
-  border-top-right-radius: 0%;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
+  border-radius: 0%;
 }
 
 .sitephone-d {
@@ -159,7 +157,15 @@
   font-size: 12px;
   text-align: center;
   font-weight: 500;
-  text-shadow: 1px 4px 8px var(--v3-00000044);
+}
+
+@supports (text-shadow: 1px 4px 8px var(--v3-00000044)) {
+  .sitephone-d {
+    text-shadow: 1px 4px 8px var(--v3-00000044);
+  }
+}
+
+.sitephone-d {
   letter-spacing: -0.5px;
 }
 
@@ -181,10 +187,7 @@
   flex-direction: column;
   justify-content: center;
   transition-property: box-shadow;
-  border-top-left-radius: 26%;
-  border-top-right-radius: 26%;
-  border-bottom-left-radius: 26%;
-  border-bottom-right-radius: 26%;
+  border-radius: 26%;
 }
 
 .sitephone-g:hover {
@@ -196,10 +199,7 @@
   height: 100%;
   overflow-x: clip;
   overflow-y: clip;
-  border-top-left-radius: 0%;
-  border-top-right-radius: 0%;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
+  border-radius: 0%;
 }
 
 .sitephone-i {
@@ -207,7 +207,15 @@
   font-size: 12px;
   text-align: center;
   font-weight: 500;
-  text-shadow: 1px 4px 8px var(--v3-00000044);
+}
+
+@supports (text-shadow: 1px 4px 8px var(--v3-00000044)) {
+  .sitephone-i {
+    text-shadow: 1px 4px 8px var(--v3-00000044);
+  }
+}
+
+.sitephone-i {
   letter-spacing: -0.5px;
 }
 
@@ -225,10 +233,7 @@
   flex-direction: column;
   justify-content: center;
   transition-property: box-shadow;
-  border-top-left-radius: 26%;
-  border-top-right-radius: 26%;
-  border-bottom-left-radius: 26%;
-  border-bottom-right-radius: 26%;
+  border-radius: 26%;
 }
 
 .sitephone-k:hover {
@@ -240,10 +245,7 @@
   height: 100%;
   overflow-x: clip;
   overflow-y: clip;
-  border-top-left-radius: 0%;
-  border-top-right-radius: 0%;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
+  border-radius: 0%;
 }
 
 .sitephone-m {
@@ -251,7 +253,15 @@
   font-size: 12px;
   text-align: center;
   font-weight: 500;
-  text-shadow: 1px 4px 8px var(--v3-00000044);
+}
+
+@supports (text-shadow: 1px 4px 8px var(--v3-00000044)) {
+  .sitephone-m {
+    text-shadow: 1px 4px 8px var(--v3-00000044);
+  }
+}
+
+.sitephone-m {
   letter-spacing: -0.5px;
 }
 
@@ -302,15 +312,20 @@
   overflow-y: clip;
   align-items: center;
   aspect-ratio: 1 / 1;
-  outline-color: var(--v3-ffffff85);
-  outline-style: solid;
-  outline-width: 3px;
+}
+
+@supports (outline-color: var(--v3-ffffff85)) and (outline-style: solid) and (outline-width: 3px) {
+  .sitephone-r {
+    outline-color: var(--v3-ffffff85);
+    outline-style: solid;
+    outline-width: 3px;
+  }
+}
+
+.sitephone-r {
   flex-direction: column;
   justify-content: center;
-  border-top-left-radius: 26%;
-  border-top-right-radius: 26%;
-  border-bottom-left-radius: 26%;
-  border-bottom-right-radius: 26%;
+  border-radius: 26%;
 }
 
 .sitephone-s {
@@ -324,7 +339,15 @@
   font-size: 12px;
   text-align: center;
   font-weight: 700;
-  text-shadow: 1px 4px 8px var(--v3-00000044);
+}
+
+@supports (text-shadow: 1px 4px 8px var(--v3-00000044)) {
+  .sitephone-t {
+    text-shadow: 1px 4px 8px var(--v3-00000044);
+  }
+}
+
+.sitephone-t {
   letter-spacing: -0.5px;
 }
 
@@ -343,10 +366,7 @@
   padding-right: 5px;
   padding-bottom: 5px;
   backdrop-filter: blur(20px);
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-  border-bottom-left-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
+  border-radius: 1.5rem;
 }
 
 .sitephone-x {
@@ -354,7 +374,7 @@
   color: var(--v3-fdfcfc);
   width: 100%;
   height: 10rem;
-  background: linear-gradient(var(--v3-9900ff) 0%, var(--v3-2f0070) 62%, var(--v3-0b0019) 97%) scroll padding-box border-box repeat repeat 0% 0% / auto;
+  background: linear-gradient(var(--v3-9900ff) 0%, var(--v3-2f0070) 62%, var(--v3-0b0019) 97%);
   box-shadow: 0px 2px 40px 0px var(--v3-ffffff24);
   overflow-x: clip;
   overflow-y: clip;
@@ -363,10 +383,7 @@
   padding-right: 1rem;
   padding-bottom: 1rem;
   backdrop-filter: blur(20px);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
 }
 
 .sitephone-y {

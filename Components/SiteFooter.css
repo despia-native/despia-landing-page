@@ -1,10 +1,22 @@
 /* SiteFooter: the component sheet. One class per node, plus its media-query, hover and
-   entry/exit variants. Generated; edit the page, not this file. */
+   entry/exit variants. Generated; edit the page, not this file.
+   A declaration the DSX-CSS catalog has no cross-platform word for sits in a
+   `@supports (<that declaration>)` block right after its rule: the browser answers the
+   query yes, the native resolvers answer every feature query no, so it reaches exactly the
+   lane that can draw it, in the cascade position the page gave it. */
 
 .sitefooter-1 {
   color: var(--grey-900);
   width: 100%;
-  display: block;
+}
+
+@supports (display: block) {
+  .sitefooter-1 {
+    display: block;
+  }
+}
+
+.sitefooter-1 {
   max-width: 85rem;
   background: white;
   padding-top: 2rem;
@@ -53,7 +65,15 @@
 
 .sitefooter-6 {
   color: var(--grey-700);
-  display: block;
+}
+
+@supports (display: block) {
+  .sitefooter-6 {
+    display: block;
+  }
+}
+
+.sitefooter-6 {
   font-size: 1rem;
   max-width: 20rem;
   font-family: Inter Tight;
@@ -101,7 +121,15 @@
 
 .sitefooter-a {
   color: var(--grey-700);
-  display: block;
+}
+
+@supports (display: block) {
+  .sitefooter-a {
+    display: block;
+  }
+}
+
+.sitefooter-a {
   font-size: 1rem;
   max-width: 20rem;
   font-family: "Inter Tight";
@@ -113,7 +141,15 @@
 
 .sitefooter-b {
   color: var(--grey-700);
-  display: block;
+}
+
+@supports (display: block) {
+  .sitefooter-b {
+    display: block;
+  }
+}
+
+.sitefooter-b {
   font-size: 1rem;
   max-width: 20rem;
   font-family: Inter Tight;
@@ -133,7 +169,15 @@
 
 .sitefooter-d {
   color: var(--grey-700);
-  display: block;
+}
+
+@supports (display: block) {
+  .sitefooter-d {
+    display: block;
+  }
+}
+
+.sitefooter-d {
   font-size: 1rem;
   max-width: 20rem;
   font-family: "Inter Tight";
@@ -145,7 +189,15 @@
 
 .sitefooter-e {
   color: var(--grey-700);
-  display: block;
+}
+
+@supports (display: block) {
+  .sitefooter-e {
+    display: block;
+  }
+}
+
+.sitefooter-e {
   font-size: 1rem;
   max-width: 20rem;
   font-family: Inter Tight;
@@ -161,7 +213,15 @@
 
 .sitefooter-f {
   color: var(--grey-700);
-  display: block;
+}
+
+@supports (display: block) {
+  .sitefooter-f {
+    display: block;
+  }
+}
+
+.sitefooter-f {
   font-size: 1rem;
   max-width: 20rem;
   font-family: Inter Tight;
@@ -185,7 +245,15 @@
 
 .sitefooter-h {
   color: var(--grey-700);
-  display: block;
+}
+
+@supports (display: block) {
+  .sitefooter-h {
+    display: block;
+  }
+}
+
+.sitefooter-h {
   font-size: 1rem;
   max-width: 20rem;
   font-family: "Inter Tight";
@@ -209,7 +277,15 @@
 
 .sitefooter-j {
   color: var(--grey-700);
-  display: block;
+}
+
+@supports (display: block) {
+  .sitefooter-j {
+    display: block;
+  }
+}
+
+.sitefooter-j {
   font-size: 1rem;
   max-width: 20rem;
   font-family: Inter Tight;
@@ -230,9 +306,14 @@
   padding-top: 2rem;
   flex-direction: column;
   justify-content: space-between;
-  border-top-color: var(--grey-200);
-  border-top-style: solid;
-  border-top-width: 1px;
+}
+
+@supports (border-top-color: var(--grey-200)) and (border-top-style: solid) and (border-top-width: 1px) {
+  .sitefooter-k {
+    border-top-color: var(--grey-200);
+    border-top-style: solid;
+    border-top-width: 1px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -243,7 +324,15 @@
 
 .sitefooter-l {
   color: var(--grey-700);
-  display: block;
+}
+
+@supports (display: block) {
+  .sitefooter-l {
+    display: block;
+  }
+}
+
+.sitefooter-l {
   font-size: 0.875rem;
   font-family: 'Geist';
   font-weight: 400;

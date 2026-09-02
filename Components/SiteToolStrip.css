@@ -1,5 +1,9 @@
 /* SiteToolStrip: the component sheet. One class per node, plus its media-query, hover and
-   entry/exit variants. Generated; edit the page, not this file. */
+   entry/exit variants. Generated; edit the page, not this file.
+   A declaration the DSX-CSS catalog has no cross-platform word for sits in a
+   `@supports (<that declaration>)` block right after its rule: the browser answers the
+   query yes, the native resolvers answer every feature query no, so it reaches exactly the
+   lane that can draw it, in the cascade position the page gave it. */
 
 .sitetoolstrip-1 {
   color: var(--v3-ffffff);
@@ -14,7 +18,15 @@
 
 .sitetoolstrip-3 {
   color: inherit;
-  display: inline-block;
+}
+
+@supports (display: inline-block) {
+  .sitetoolstrip-3 {
+    display: inline-block;
+  }
+}
+
+.sitetoolstrip-3 {
   font-size: 15px;
   text-align: center;
   font-weight: 400;
@@ -62,7 +74,15 @@
 
 .sitetoolstrip-9 {
   color: inherit;
-  display: inline-block;
+}
+
+@supports (display: inline-block) {
+  .sitetoolstrip-9 {
+    display: inline-block;
+  }
+}
+
+.sitetoolstrip-9 {
   font-size: 12.5px;
   background:  var(--v3-1c1c1c);
   font-weight: 400;
@@ -71,8 +91,5 @@
   padding-right: 0.75rem;
   letter-spacing: -0.15px;
   padding-bottom: 0.25rem;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
+  border-radius: 100px;
 }

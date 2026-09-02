@@ -38,7 +38,10 @@
    tracking, leading); font:inherit hands the whole ramp back to the ancestor this
    page's own type inherits from. */
 .ds-text {
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
   line-height: inherit;
   display: inline;
   flex-grow: 0;
@@ -88,7 +91,10 @@ html, body { height: auto; min-height: 100%; overflow: visible; }
 .ds-cliptext {
   width: fit-content;
   /* it is a <text>, so .dsx-text's leading applies to it too - hand it back like .ds-text */
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
   line-height: inherit;
   /* the merged run still carries the original's newlines; without pre-line they
      collapse to spaces, max-content becomes the whole string and the box fills the
@@ -98,7 +104,10 @@ html, body { height: auto; min-height: 100%; overflow: visible; }
 .ds-br {
   display: inline;
   white-space: pre;
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
   line-height: inherit;
   width: 0;
   margin: 0;

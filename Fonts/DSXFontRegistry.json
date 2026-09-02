@@ -1,0 +1,108 @@
+{
+  "_note": "The NATIVE half of despia.com's type: the five families the page's stylesheets name, each a variable face from the Google Fonts repository (OFL, licenses beside each file) or the framework's own Inter. The web lane loads the same designs from fonts.gstatic.com; bundling the TTFs gives native the same glyph metrics, which is what pixel parity of every text box needs. Family keys are the CSS family names the sheets declare.",
+  "families": {
+    "Inter": {
+      "variable": true,
+      "faces": [
+        {
+          "weight": 400,
+          "file": "Fonts/InterVariable.ttf",
+          "postscriptName": "InterVariable"
+        }
+      ],
+      "axes": {
+        "wght": [
+          100,
+          900
+        ],
+        "opsz": [
+          14,
+          32
+        ]
+      },
+      "fallback": [
+        "system"
+      ]
+    },
+    "Inter Tight": {
+      "variable": true,
+      "faces": [
+        {
+          "weight": 400,
+          "file": "Fonts/InterTight[wght].ttf",
+          "postscriptName": "InterTight-Regular"
+        }
+      ],
+      "axes": {
+        "wght": [
+          100,
+          900
+        ]
+      },
+      "fallback": [
+        "system"
+      ]
+    },
+    "Roboto": {
+      "variable": true,
+      "faces": [
+        {
+          "weight": 400,
+          "file": "Fonts/Roboto[wdth,wght].ttf",
+          "postscriptName": "Roboto-Regular"
+        }
+      ],
+      "axes": {
+        "wght": [
+          100,
+          900
+        ],
+        "wdth": [
+          75,
+          100
+        ]
+      },
+      "fallback": [
+        "system"
+      ]
+    },
+    "Geist": {
+      "variable": true,
+      "faces": [
+        {
+          "weight": 400,
+          "file": "Fonts/Geist[wght].ttf",
+          "postscriptName": "Geist-Regular"
+        }
+      ],
+      "axes": {
+        "wght": [
+          100,
+          900
+        ]
+      },
+      "fallback": [
+        "system"
+      ]
+    },
+    "Geist Mono": {
+      "variable": true,
+      "faces": [
+        {
+          "weight": 400,
+          "file": "Fonts/GeistMono[wght].ttf",
+          "postscriptName": "GeistMono-Regular"
+        }
+      ],
+      "axes": {
+        "wght": [
+          100,
+          900
+        ]
+      },
+      "fallback": [
+        "system"
+      ]
+    }
+  }
+}

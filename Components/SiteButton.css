@@ -1,11 +1,23 @@
 /* SiteButton: the component sheet. One class per node, plus its media-query, hover and
-   entry/exit variants. Generated; edit the page, not this file. */
+   entry/exit variants. Generated; edit the page, not this file.
+   A declaration the DSX-CSS catalog has no cross-platform word for sits in a
+   `@supports (<that declaration>)` block right after its rule: the browser answers the
+   query yes, the native resolvers answer every feature query no, so it reaches exactly the
+   lane that can draw it, in the cascade position the page gave it. */
 
 .sitebutton-1 {
   gap: 0.4rem;
   color: var(--grey-800);
   width: fit-content;
-  cursor: pointer;
+}
+
+@supports (cursor: pointer) {
+  .sitebutton-1 {
+    cursor: pointer;
+  }
+}
+
+.sitebutton-1 {
   display: flex;
   font-size: 13.5px;
   box-shadow: 1px 4px 5px 0px var(--v3-00000008);

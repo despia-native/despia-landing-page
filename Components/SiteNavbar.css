@@ -1,5 +1,9 @@
 /* SiteNavbar: the component sheet. One class per node, plus its media-query, hover and
-   entry/exit variants. Generated; edit the page, not this file. */
+   entry/exit variants. Generated; edit the page, not this file.
+   A declaration the DSX-CSS catalog has no cross-platform word for sits in a
+   `@supports (<that declaration>)` block right after its rule: the browser answers the
+   query yes, the native resolvers answer every feature query no, so it reaches exactly the
+   lane that can draw it, in the cascade position the page gave it. */
 
 .sitenavbar-1 {
   top: 0px;
@@ -12,9 +16,14 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom-color: var(--grey-800);
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+}
+
+@supports (border-bottom-color: var(--grey-800)) and (border-bottom-style: solid) and (border-bottom-width: 1px) {
+  .sitenavbar-1 {
+    border-bottom-color: var(--grey-800);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
 }
 
 .sitenavbar-1.light {
@@ -29,9 +38,14 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom-color: var(--grey-200);
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+}
+
+@supports (border-bottom-color: var(--grey-200)) and (border-bottom-style: solid) and (border-bottom-width: 1px) {
+  .sitenavbar-1.light {
+    border-bottom-color: var(--grey-200);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
 }
 
 .sitenavbar-2 {
@@ -115,9 +129,14 @@
   font-weight: 400;
   padding-right: 0.75rem;
   letter-spacing: -0.3px;
-  border-right-color: var(--grey-700);
-  border-right-style: solid;
-  border-right-width: 1px;
+}
+
+@supports (border-right-color: var(--grey-700)) and (border-right-style: solid) and (border-right-width: 1px) {
+  .sitenavbar-7 {
+    border-right-color: var(--grey-700);
+    border-right-style: solid;
+    border-right-width: 1px;
+  }
 }
 
 .sitenavbar-7.current {
@@ -129,9 +148,14 @@
   font-weight: 400;
   padding-right: 0.75rem;
   letter-spacing: -0.3px;
-  border-right-color: var(--grey-300);
-  border-right-style: solid;
-  border-right-width: 1px;
+}
+
+@supports (border-right-color: var(--grey-300)) and (border-right-style: solid) and (border-right-width: 1px) {
+  .sitenavbar-7.light {
+    border-right-color: var(--grey-300);
+    border-right-style: solid;
+    border-right-width: 1px;
+  }
 }
 
 .sitenavbar-7.current-light {
@@ -139,9 +163,14 @@
   font-weight: 400;
   padding-right: 0.75rem;
   letter-spacing: -0.3px;
-  border-right-color: var(--grey-300);
-  border-right-style: solid;
-  border-right-width: 1px;
+}
+
+@supports (border-right-color: var(--grey-300)) and (border-right-style: solid) and (border-right-width: 1px) {
+  .sitenavbar-7.current-light {
+    border-right-color: var(--grey-300);
+    border-right-style: solid;
+    border-right-width: 1px;
+  }
 }
 
 .sitenavbar-8 {
@@ -151,10 +180,7 @@
   padding-right: 1rem;
   letter-spacing: -0.3px;
   padding-bottom: 0.65rem;
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
+  border-radius: 0.75rem;
 }
 
 .sitenavbar-8.light {
@@ -164,10 +190,7 @@
   padding-right: 1rem;
   letter-spacing: -0.3px;
   padding-bottom: 0.65rem;
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
+  border-radius: 0.75rem;
 }
 
 .sitenavbar-9 {
@@ -281,7 +304,15 @@
 .sitenavbar-d {
   color: var(--v3-ffffff);
   width: 100%;
-  cursor: pointer;
+}
+
+@supports (cursor: pointer) {
+  .sitenavbar-d {
+    cursor: pointer;
+  }
+}
+
+.sitenavbar-d {
   display: flex;
   font-size: 16px;
   background:  var(--v3-2e2e2e);
@@ -293,16 +324,21 @@
   letter-spacing: -0.3px;
   padding-bottom: 1rem;
   justify-content: center;
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
+  border-radius: 0.75rem;
 }
 
 .sitenavbar-d.light {
   color: var(--grey-800);
   width: 100%;
-  cursor: pointer;
+}
+
+@supports (cursor: pointer) {
+  .sitenavbar-d.light {
+    cursor: pointer;
+  }
+}
+
+.sitenavbar-d.light {
   display: flex;
   font-size: 16px;
   background: var(--v3-dedede);
@@ -314,8 +350,5 @@
   letter-spacing: -0.3px;
   padding-bottom: 1rem;
   justify-content: center;
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
+  border-radius: 0.75rem;
 }
