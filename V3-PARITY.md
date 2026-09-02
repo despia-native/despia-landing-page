@@ -432,22 +432,22 @@ element at, read from the same capture the harness diffs. Each pass was taken on
 
 | Section | iPhone 402 web | iPhone 402 native | Pixel 10 Pro 427 web | Pixel 10 Pro 427 native | iPad 820 web | iPad 820 native | Pixel Tablet 1280 web | Pixel Tablet 1280 native |
 |---|---|---|---|---|---|---|---|---|
-| Page | 402x7365 | 402x7414 | 427x7320 | 427x7262 | 820x6127 | 820x6172 | 1280x4542 | 1280x4552 |
+| Page | 402x7365 | 402x7379 | 427x7320 | 427x7262 | 820x6127 | 820x6136 | 1280x4542 | 1280x4552 |
 | Hero section | 402x876 | 402x876 | 427x898 | 427x895 | 820x1155 | 820x1154 | 1280x1189 | 1280x1189 |
 | Hero card | 386x748 | 386x748 | 411x770 | 411x767 | 804x1027 | 804x1026 | 1264x1061 | 1264x1061 |
 | Hero video card | 322x183 | 322x183 | 347x197 | 347x197 | 740x418 | 740x418 | 800x452 | 800x452 |
 | Primary button | 233x54 | 234x54 | 233x54 | 234x53 | 233x54 | 234x54 | 233x54 | 234x54 |
-| Marquee | 402x82 | 402x48 | 427x82 | 427x48 | 820x82 | 820x83 | 1280x82 | 1280x82 |
-| Features | 402x2184 | 402x2238 | 427x2160 | 427x2179 | 820x1820 | 820x1852 | 1280x910 | 1280x920 |
-| Testimonials | 402x485 | 402x499 | 427x485 | 427x491 | 820x451 | 820x458 | 1280x451 | 1280x458 |
+| Marquee | 402x82 | 402x83 | 427x82 | 427x48 | 820x82 | 820x83 | 1280x82 | 1280x82 |
+| Features | 402x2184 | 402x2190 | 427x2160 | 427x2179 | 820x1820 | 820x1828 | 1280x910 | 1280x920 |
+| Testimonials | 402x485 | 402x488 | 427x485 | 427x491 | 820x451 | 820x452 | 1280x451 | 1280x458 |
 | Pricing | 402x1812 | 402x1828 | 427x1812 | 427x1762 | 820x1187 | 820x1198 | 1280x618 | 1280x615 |
-| Ship section | 402x545 | 402x559 | 427x545 | 427x551 | 820x494 | 820x500 | 1280x494 | 1280x500 |
+| Ship section | 402x545 | 402x548 | 427x545 | 427x551 | 820x494 | 820x494 | 1280x494 | 1280x500 |
 | Terms | 402x832 | 402x813 | 427x791 | 427x771 | 820x566 | 820x551 | 1280x545 | 1280x531 |
 | Footer | 338x484 | 338x489 | 363x484 | 363x501 | 756x309 | 756x312 | 1216x190 | 1216x193 |
 
-- iPhone 402: page 7414 native vs 7365 web, 184 of 273 paired boxes within 3 points in size
+- iPhone 402: page 7379 native vs 7365 web, 217 of 275 paired boxes within 3 points in size
 - Pixel 10 Pro 427: page 7262 native vs 7320 web, 167 of 273 paired boxes within 3 points in size
-- iPad 820: page 6172 native vs 6127 web, 193 of 274 paired boxes within 3 points in size
+- iPad 820: page 6136 native vs 6127 web, 215 of 276 paired boxes within 3 points in size
 - Pixel Tablet 1280: page 4552 native vs 4542 web, 182 of 308 paired boxes within 3 points in size
 
 Two rows need a note. The marquee's chips arrive from an API response, and a capture that
